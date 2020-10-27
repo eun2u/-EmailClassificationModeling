@@ -1,0 +1,168 @@
+독일어(독일어: Deutsche Sprache, Deutsch, 문화어: 도이췰란드어, 도이취어)는 게르만어파 서게르만어군에 속하는 언어로, 독일, 오스트리아, 스위스 등 중부유럽을 중심으로 사용된다.
+독일어는 학술어로서 그 중요성이 크며 세계 출판업계에서 영어 다음으로 가장 많이 사용되는 언어이다. 모국어로서의 사용자수는 약 1억 2천만 여명으로 세계 10위 수준이며, 유럽 연합에서 가장 많은 사람들이 모국어로 사용하는 언어이다. 전 세계에서 제2언어로 배우는 사용자의 수가 영어, 스페인어, 그리고 프랑스어 다음으로 많아, 세계의 주요언어 중 하나로 여겨진다.
+
+계통
+독일어는 서게르만어계의 언어이며, 인도유럽어족 계통의 일부이다.
+
+사용 현황
+독일어는 중서부 유럽에서 모국어로서 가장 많이 사용되는 언어로, 유럽 연합의 공용어이자 공식 실무 언어이기도 하다. 독일, 오스트리아, 리히텐슈타인의 국어이며, 스위스, 벨기에, 룩셈부르크, 루마니아에서 공용어로 사용하고 아프리카 서부 나미비아에서도 공인지역어로 독일어를 채택하고 있다. 이탈리아의 남티롤 (트렌티노알토아디제 주), 프랑스의 알자스와 로렌, 헝가리, 체코, 슬로바키아 등과 동유럽 국가들의 국민, 특히 중장년층은 제2외국어로 독일어를 자유롭게 구사할 수 있다. 미국은 독일에서 이주한 사람들의 후손이 약 500만 명 정도로 영어와 혼합한 특수한 독일어를 구사할 수 있다.
+19세기에 독일과 오스트리아, 스위스 등에서 남아메리카로 이주했던 사람들의 후손이 사는 아르헨티나, 브라질(특히 히우그란지두술주, 산타카타리나주, 파라나 주, 이스피리투산투주)에 소수의 독일어 사용자가 있고, 제2차 세계 대전 이후에 소련 당국에 의해 강제로 이주당한 독일인들의 후손들이 사는 러시아와 카자흐스탄 등에도 소수의 독일어 사용자가 있다.
+독일은 1871년 프랑스와의 전쟁에서 승리하여 통일을 이룬 뒤에 독일 제국의 황제로 즉위한 빌헬름 1세의 팽창 정책으로 인해 뒤늦게 절대다수의 식민지를 개척했다. 이 때 독일어는 카메룬, 부룬디, 나미비아, 탄자니아, 르완다 등 아프리카 국가와 파푸아뉴기니, 마셜 제도, 미크로네시아 연방, 사모아, 팔라우 등 오세아니아 국가에 전파됐다. 그러나 독일이 제1차 세계 대전에서 패배한 결과, 모든 해외 식민지를 잃으면서 짧은 점령 기간 탓에 독일어를 쓰는 나라는 줄어들었다.
+반대로 벨기에의 경우 독일의 제1차 세계 대전의 패전 결과 독일 라인 지방의 일부를 할양받으면서 독일어가 공용어로 추가 지정되었다. 루마니아의 경우는 1989년까지 한동안 사용이 금지되었지만 공산주의 체제의 붕괴로 사용이 합법화되었으며, 최근에는 지방 언어로 지정되었다.
+
+문자 체계
+독일어는 로마 문자를 사용한다. 영어에서 쓰는 26개의 표준 문자에 3개의 움라우트, 즉 ä, ö 그리고 ü, 또 "ss"를 나타내는 특수한 문자인 ß(에스체트)가 추가되어 있다.
+독일어는 얼마 전까지만 해도 프락투어와 슈바바허(de) 등의 흑자체로 인쇄되고 쥐테를린이라는 독특한 글씨체로 씌었는데 훈련 없이는 이들을 읽기 힘들다. 오늘날에는 우리에게 익숙한 세리프체와 산세리프체가 사용되고 있다.
+독일에서는 에스체트의 표기 문제로 1996년 독일어 정서법 개정 당시 논란이 있었다. 그러나 오래전부터 독일 이외 즉 오스트리아, 스위스, 리히텐슈타인 등에서는 에스체트를 공문서나 웹사이트에서 모두 "ss"로 표기하여 불편함을 없애 두었다. 이들 나라에서 독일어 출판물이 나올 때는 독일어권 전체를 대상으로 하기 때문에 에스체트를 사용하는 경우도 있다.
+
+알파벳과 발음 설명
+장음
+aa, ee, oo는 중모음이 되어 장음으로 발음된다. (예: Haar, Tee, Boot)
+모음 뒤에 온 h는 묵음이 되고, 앞의 모음은 장음이 된다. (예: fahren, gehen)
+ie는 대부분 장음이 된다. 단 Familie, Asien, Italien, Ferien 등은 예외이다.
+단자음(모음 + 자음)은 장음이 된다. (예: Tag, Weg, gut, Abend, Name, Blume, Vater)
+
+문법
+관사의 변화
+독일어의 명사는 남성, 여성, 중성의 3개의 성별과 주격 (Werfall; Nominativ), 소유격 (Wes[sen]fall; Genitiv), 여격 (Wemfall; Dativ), 목적격 (Wenfall; Akkusativ)에 따라 다른 관사가 사용된다. (각각을 편의상 1격, 2격, 3격, 4격 이라고도 부른다) 특히 Dativ와 Akkusativ의 경우 문장 내에서 목적어에 해당하며 각각이 우리말로 (~에게), (~을/를)로 해석되는 경우가 많으나 항상 그런 것이 아니므로 주의해야 한다. 또한 특정한 동사 혹은 전치사는 특정한 격을 반드시 필요로 하므로 이 관계는 반드시 숙지하여야 한다.
+예시
+
+haben: Ich habe ein Auto. (나는 자동차 한 대를 가지고 있다) haben 동사는 목적어로 4격 (Akkusativ) 을 요구하여 중성 4격 ein Auto를 써야한다.
+helfen: Ich helfe dir. (나는 너를 돕는다) helfen 동사의 경우 우리말로는 (~를 돕다) 라고 해석이 되기 때문에 4격을 필요로 할 것처럼 보이나 3격을 써야 한다.
+fragen: Er fragt mich. (그가 나에게 물었다) fragen 동사의 경우 우리말로는 (~에게 묻다) 라고 해석 되기 때문에 3격을 필요로 할 것처럼 보이나 4격을 써야 한다.
+
+동사의 변화
+독일어의 동사는 영어와 같이 시제에 따라 형태가 변하며, 주어에 대해서도 변화한다. 예를 들어 "오다"라는 뜻을 가진 동사 "kommen" (영어의 come)을 보면,
+
+와 같이 동사의 어미가 변화한다. 단, 불규칙적으로 변화하는 동사도 존재한다. 영어의 can에 해당하는 조동사 "können"을 예시로 들자면,
+
+이와 같이 불규칙적으로 변화한다. 
+다시 위의 동사 "kommen"으로 돌아가, 이번에는 시제에 의한 동사변화를 살펴보자. 독일어에는 총 6개의 시제가 존재한다. 각각 현재형(Präsens), 단순과거(Präteritum), 현재완료(Perfekt), 과거완료(Plusquamperfekt), 미래형 (Futur I), 미래완료형(Futur II)이다.
+
+예제
+달력의 요일
+der Sonntag 일요일
+der Montag 월요일
+der Dienstag 화요일
+der Mittwoch 수요일
+der Donnerstag 목요일
+der Freitag 금요일
+der Samstag / der Sonnabend 토요일
+
+발음 연습
+(tsch) Deutschland 독일 [ˈdɔɪ̯tʃlant]
+(z) Mozart 모차르트
+(g) gut 좋은 [guːt]
+(m) Morgen 아침 [ˈmɔʁgən]
+(d) Abend 저녁, Geld 돈
+(ch) Bach 실개천
+(qu) Quelle 샘, 원천
+(sch) schwer 무거운, 어려운, Schüler 학생
+(w) wer 누구, was 무엇, warum 왜
+(ng) entlang (~을) 따라서 (예: diese Straße entlang; 이 길을 따라)
+(g) Berg 언덕, 산
+(v) vergessen 잊어버리다
+
+간단한 문장
+인사: "안녕."
+Guten Morgen. (아침 인사)
+Guten Tag. (낮 인사)
+Guten Abend. (저녁 인사)
+Gute Nacht. (잠 자기 전 인사)
+Hallo (언제나 사용할 수 있지만 대개 친구사이나 일정 이상 면식이 있는 사이에서 사용한다)
+Entschuldigung. / Entschuldigen Sie. / Entschuldigen Sie bitte. 실례합니다.
+Mein Name ist Suni./Ich heiße Suni./ Ich bin Suni. 내 이름은 순이입니다. (참고: Mein Name ist...라는 표현이 가장 공손한 표현이다)
+Wie geht es Ihnen? 어떻게 지내십니까? Wie geht es dir? 어떻게 지내니? (이 경우 간단히 줄여서 Wie geht's? 라고 말할 수 있다)
+Ich habe einen Euro. 나에게 1 유로가 있습니다.
+Was meinst du? "그게 무슨 말이야?" (의미를 묻는 것이 아니라 상대방의 말뜻을 물음) 혹은 "어떻게 생각해?"
+Danke! 감사합니다.
+Vielen Dank! / Herzlichen Dank! 대단히 감사합니다.
+Bitte! 천만에요.
+Tschüss! (또는 Tschüs!) 안녕!
+Auf Wiedersehen! 또 봬요!
+Auf Wiederhören! 다음에 또 통화 합시다!
+
+유명한 예문
+Deutschland über alles (도이칠란트 위버 알레스, 세계 위에 군림하는 독일)
+Einigkeit und Recht und Freiheit (아이니히카이트 운트 레흐트 운트 프라이하이트, 통일과 정의와 자유)
+Die Fahne hoch (디 파흐네 호흐, 기를 높이 올려라)
+Gott mit uns (고트 미트 운스, 신의 가호와 함께)
+Gott erhalte Franz den Kaiser (고트 에어할테 프란츠 덴 카이저, 하느님 프란츠 황제를 지켜주시옵소서)
+Heil dir im Siegerkranz (하일 디어 임 지거크란츠, 그대에게 승리의 왕관을)
+Die Wacht am Rhein (디 바흐트 암 라인, 라인 강의 파수꾼)
+Es braust unser Panzer im Sturmwind dahin (에스 브라우스트 운저 판처 임 스트룸빈트 다힌, 우리의 용맹한 전차는 폭풍속으로 돌진한다)
+Sieg Heil Viktoria (지크 하일 빅토리아, 승리 만세)
+Ein Volk, ein Reich, ein Führer (아인 볼크 아인 라이히 아인 퓌러, 하나의 민족 하나의 제국 하나의 총통)
+Seid ihr das Essen? Nein, wir sind die Jäger (자이트 이어 다스 에쎈 나인 비어 진트 디 예거, 너희는 먹이? 아니 우리는 사냥꾼)
+O mein Freund, jetzt hier ist ein Sieg (오 마인 프로인트 예츠 히어 이스트 아인 지크, 친구여 여기에 승리가 있네)
+Opfert eure Herzen (옵페어트 오이어 헤어첸, 심장을 바쳐라)
+Licht und Schatten (리흐트 운트 샤텐, 빛과 그림자)
+Ich bin ein Berliner (이히 빈 아인 베를리너, 나는 베를린 시민이다)
+Ein Gespenst geht um in Europa (아인 게스펜스트 게흐트 움 인 오이로파, 하나의 유령이 유럽을 배회하고 있다)
+Die Geschichte aller bisherigen Gesellschaft ist die Geschichte von Klassenkämpfen. (디 게쉬흐테 알러 비스헤어리겐 게셀샤프트 이스트 디 게쉬흐테 폰 클라센 켐펜, 지금까지의 모든 역사는 계급투쟁의 역사이다)
+Proletarier aller Länder, vereinigt euch! (프롤레타리에어 알레 렌더, 베어아이니흐트 오이!, 만국의 노동자여 단결하라!)
+
+담화 문장
+식당에서 주문하기직원: Hallo. Geben Sie bitte Ihre Bestellung auf. →안녕하세요. 주문하시겠습니까?
+손님: Einen Augenblick, ich muss erst nachdenken. →잠시만요, 생각 좀 할게요.
+직원: Natürlich, nehmen Sie sich Zeit. →당연히 기다리겠습니다.
+손님: Ich nehme Steak mit Pommes. Empfehlen Sie mir einen guten Wein. →감자튀김과 같이 나오는 스테이크 주문할게요. 좋은 와인 추천해주세요.
+직원: Ich empfehle Ihnen Valpolicella. →Valpolicella를 추천해드립니다.
+손님: Okay, Ich nehme das. →네, 그걸로 시킬게요.
+직원: Wie soll ich das Fleisch braten? →고기는 어떻게 구워드릴까요?
+손님: Braten Sie das Fleisch ein bisschen! →조금만 구워주세요!
+직원: Darf ich Ihnen noch etwas bringen? →다른 것 필요하신 거 있으신가요?
+손님: Ich möchte Gulaschsuppe. →굴라시수프요.
+직원: Das wären also Steak mit Pommes, Wein Valpolicella, und Gulaschsuppe. Ist das alles? →주문하신 것은 감자튀김과 나오는 스테이크, 와인 Valpolicella, 굴라시수프입니다. 전부입니까?
+손님: Ja. Soll man vorausbezahlen? →네. 선불입니까?
+직원: Ja. Das macht 12,50 € (12 Euro 50 Cent). →네. 12.50유로입니다.
+손님: Die Rechnung ist irgendwie nicht korrekt. Ich denke, das macht 11,50 €. →계산이 잘못된 것 같네요. 제 생각에는 11,50유로입니다.
+직원: Ah! Entschuldigung! Das macht 11,50 €. Verzeihen Sie bitte meinen Fehler. →아! 죄송합니다. 11.50유로 맞군요. 실수를 용서해주세요.
+손님: Keine Ursache. Kann ich mit Karte zahlen? →괜찮습니다. 카드로 계산할 수 있나요?
+직원: Es tut mir leid, dass Sie bar zahlen müssen. →죄송합니다만, 현금으로 계산하셔야 합니다.
+손님: Ah, hier. Das stimmt so. →아, 여기요. 잔돈은 됐습니다.
+직원: Vielen Dank. Guten Appetit. →감사합니다. 좋은 식사되세요.
+
+다른 언어 호칭법
+일반적으로 다른 언어에서 독일어를 이르는 명칭은 어원에 따라 6개의 그룹으로 나뉜다.
+
+시험
+독일의 독일어 관련 기관 Goethe-Institut(괴테-인스티투트)는 전 세계의 지부에서 독일어 능력 인증 시험인 Goethe-Zertifikat(괴테-체어티피카트)를 실시하고 있다. 한국에서는 Goethe-Institut Seoul(괴테-인스티투트 서울), 즉 주한독일문화원에서 시험을 볼 수 있으며, 시험 등급은 유럽 표준에 따라 A1부터 C2까지 나뉜다. 이 시험은 듣기, 읽기, 쓰기, 말하기 능력을 모두 평가하지만, TOEFL 등의 시험과는 달리 CBT 방식으로 치러지지는 않는다.
+
+대한민국 사회 속 독일어
+대한민국의 독일어 교육
+1990년대까지 독일어는 프랑스어와 함께 고등교육 정기과정의 제2외국어 과목 중 가장 많이 선택하는 언어의 하나였으나, 2000년대에 들어와서는 중국어와 일본어의 급증하는 수요에 밀려 감소하였다.
+2000년부터 대학수학능력시험에 독일어 과목도 선택할 수 있게 되었다.
+현재 한국에서 가르치는 독일어는 중부 독일어를 기초로 한 표준 독일어이다.
+
+대한민국의 언어 생활 속의 독일어
+아르바이트(Arbeit, 노동. 노동자는 Arbeiter.), 테마(Thema), 이데올로기(Ideologie), 마하(Mach), 아우토반(Autobahn), 알레르기(Allergie), 킨더가르텐(Kindergarten, 유치원. 어린이를 뜻하는 킨더와 정원을 뜻하는 가르텐을 더하여 만듦.), 비어(Bier), 벤츠(Benz), 아스피린(Aspirin), 분데스리가(Bundesliga), 에델바이스(Edelweiß), 카테고리(Kategorie), 마이스터(Meister), 호프(Hof), 로렐라이(Loreley), 비타민(Vitamin), 파밀리에(Familie) 등
+
+참고 문헌
+George O. Curme, 독일어의 문법 (A Grammar of the German Language) (1904, 1922)
+고등학교 독일어권 문화 1 (교육부, 2015)
+서울외국어고등학교 회화수업 - 예제 담화문장 부분
+
+같이 보기
+도이치 (어원)
+나미비아의 독일어
+
+각주
+외부 링크
+배우기
+(영어) Links to online resources for learners of German
+(영어) German 101 Free information on the German language
+(독일어) 온라인 독일어 문법사이트
+
+문장, 단어 번역
+(한국어) 한-독-한 사전
+(영어) 영-독 사전
+(영어) 독-영 사전
+웹스터 온라인 사전 - 로제타판
+(독일어) The LEO Online Dictionary: 독-영-독 사전
+(영어) German dictionary: 독-영-독 사전
+
+기타
+(영어) Ethnologue report for German
+(독일어) Verein Deutsche Sprache
+(독일어) Sprachatlas des Deutschen Reichs - Project publishing the 19th century Linguistic Atlas of the German Empire
