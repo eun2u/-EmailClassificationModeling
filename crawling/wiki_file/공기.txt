@@ -1,0 +1,53 @@
+공기 (空氣) 는 지구를 둘러싼 기체를 말한다. 해수면의 건조한 공기는 대략 78%의 질소, 21%의 산소, 0.93%의 아르곤,  그리고 이산화 탄소, 수증기 등으로 이루어져 있다. 공기는 우리 지구를 감싸고 있는 기체이다.
+
+역사
+고대 그리스나 중세 유럽의 4대원소에서 공기는 네 개의 원소 중 하나였다. 근대적인 원소의 개념이 정립된 이후도 공기는 일정 기간 원소 중의 하나로 여겨졌다. 공기와는 성질이 다른 다양한 기체가 발견되었지만, 그것들은 공기의 화합물이나 혼합물이라고 생각되었다. 18세기에 와서 앙투안 라부아지에는 공기가 산소와 질소의 혼합물인 것을 알아냈고, 그 후에 공기를 원소로 생각하는 사람들이 없어지게 되었다.
+
+이용
+산업용으로 압축 공기는 다양한 곳에서 사용된다. 압축 공기를 동력으로 사용하는 기계를 공압 기계라고하지만, 압축기를 이용하거나 사용자가 수동으로 이용하는 등 몇 가지 방식이 있다. 또한 순수한 공기의 이용은 봄베 등으로 충전한 압축 공기, 저온에서 액화시킨 액체 공기도 제조된다. 상압에서 약 -190 ℃에서 액화, 액체 산소의 영향에서 액체 공기는 옅은 푸른빛을 띠고 있다. 가스 실린더에 충전하는 공기는 일반적으로 수증기나 미립자 성분을 제거한 건조한 공기이다. 스쿠버 다이빙에 사용되는 탱크에 압축 공기가 충전되어 있으며, 50m 정도까지 잠수하는 경우 질소 멀미를 방지하기 위해 질소 성분을 헬륨으로 바꾼 공기를 이용한다. 또한 질소, 산소, 이산화탄소 외에도 , 크립톤, 제논, 네온 등의 대기 중에 포함된 성분은 공기를 이용하여 냉각, 압축, 화학 흡착, 막 분리 등의 방법으로 산업용 제조된다.
+
+화학 데이터
+속성
+t[℃]에 있어서의 공기의 밀도ρ[kg/m3]는 대기압을 P[atm]로 하면
+
+  
+    
+      
+        ρ
+        =
+        
+          
+            
+              1.293
+              P
+            
+            
+              1
+              +
+              0.00367
+              t
+            
+          
+        
+      
+    
+    {\displaystyle \rho ={\frac {1.293P}{1+0.00367t}}}
+  로 나타낼 수 있다.
+
+성분
+지구 대기의 성분으로 가장 변동이 심한 것은 수증기이고, 그것을 제외한 건조 공기의 성분은 장소, 계절, 시각으로는 거의 변화하지 않는다. 다만, (*)를 붙인 성분은 생물, 산업 활동, 광화학에 의한 합성, 분해에 의해 다소 변동된다.
+
+같이 보기
+지구 대기권
+해수
+
+외부 링크
+NASA 대기 모델
+NASA'의 지구 팩트 정보
+American Geophysical Union: 대기 과학
+Outreach of the GEOmon project See how Earth atmosphere is observed and monitored by a European project that combines many approaches.
+공기 속의 물질 대기 속에는 뭐가 있을까?
+공기의 층
+Answers to several questions of curious kids related to Air and Atmosphere
+The AMS Glossary of Meteorology
+Paul Crutzen Interview Free video of Paul Crutzen Nobel Laureate for his work on decomposition of ozone talking to Harry Kroto Nobel Laureate by the Vega Science Trust.
