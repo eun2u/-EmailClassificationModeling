@@ -1,0 +1,6 @@
+// [DATE ] : 2020/11/22 00:08:21
+// [ScriptPage] : /paper/news/view.php
+// [Message ] : CNeDB Execute
+// [Error Info] : Table './hyunchuk/TB_NEWS' is marked as crashed and should be repaired
+// [Error Info] : 145
+// [Error Info] : UPDATE TB_NEWS SET READCNT = READCNT + 1 WHERE NEWSNO = 8825
