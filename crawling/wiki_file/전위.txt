@@ -555,97 +555,47 @@ V
 
 전기장과의 관계
 E
-          
-            s
+              →
+            
           
         
         =
-        
-          
-            
-              −
-              δ
-              V
-            
-            
-              δ
-              s
-            
-          
-        
+        −
+        ∇
+        V
       
     
-    {\displaystyle E_{s}={-\delta V \over \delta s}}
+    {\displaystyle {\vec {E}}=-\nabla V}
   
 
   
     
       
-        
-          E
-          
-            x
-          
-        
+        V
         =
         −
+        ∫
         
           
             
-              δ
-              V
-            
-            
-              δ
-              x
+              E
+              →
             
           
         
-        ;
-        
-          E
-          
-            y
-          
-        
-        =
-        −
+        ⋅
+        d
         
           
             
-              δ
-              V
-            
-            
-              δ
-              y
-            
-          
-        
-        ;
-        
-          E
-          
-            z
-          
-        
-        =
-        −
-        
-          
-            
-              δ
-              V
-            
-            
-              δ
-              z
+              s
+              →
             
           
         
       
     
-    {\displaystyle E_{x}=-{\delta V \over \delta x};E_{y}=-{\delta V \over \delta y};E_{z}=-{\delta V \over \delta z}}
+    {\displaystyle V=-\int {\vec {E}}\cdot d{\vec {s}}}
 
 대전입자 계의 전기 퍼텐셜 에너지
 U
