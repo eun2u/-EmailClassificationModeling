@@ -1,0 +1,228 @@
+뺄셈(문화어: 덜기)은 사칙연산의 하나로 덧셈의 반대이다. 보통 계산 대상 사이의 빼기표로 표시한다.
+뺄셈의 각 항들의 이름은 전통적으로
+
+  
+    
+      
+        c
+        −
+        b
+        =
+        a
+      
+    
+    {\displaystyle c-b=a}
+  에서
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  는 차(difference), 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  는 피감수(minuend), 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  는 감수(subtrahend)라 한다. 더하기 연산이 정의되어 있을 때, 원 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  의 덧셈의 역원을 
+  
+    
+      
+        −
+        b
+      
+    
+    {\displaystyle -b}
+  라고 쓰면 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  와 
+  
+    
+      
+        −
+        b
+      
+    
+    {\displaystyle -b}
+  의 합을 
+  
+    
+      
+        c
+        −
+        b
+      
+    
+    {\displaystyle c-b}
+  라고 볼 수도 있다.
+
+정의
+점 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  와 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  가 양끝에 있고 길이가 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  가 있는 선분이 있을 때 점 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  에서 점 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  로 가려면 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  의 길이를 오른쪽의 방향으로 지나가야한다.
+이것은 덧셈이라고 하고 
+  
+    
+      
+        a
+        +
+        b
+        =
+        c
+      
+    
+    {\displaystyle a+b=c}
+  로 표현될 수 있다.
+같은 선분에서 점 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  에서 점 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  로 가려면 다시 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  의 길이를 지나가야 한다.
+하지만 이번에는 오른쪽이 아닌 왼쪽의 방향으로 지나가게 된다. 이것은 뺄셈이라고 하고 
+  
+    
+      
+        c
+        −
+        b
+        =
+        a
+      
+    
+    {\displaystyle c-b=a}
+  로 표현될 수 있다.
+
+계산법
+오스트리아
+예시:
+
+왼쪽에서 오른쪽으로
+예시:
+
+미국
+예시:
+
+Trade first
+예시:
+
+Partial differences
+예시:
+
+Nonvertical methods
+Counting up
+예시:
+1234 − 567 = :
+
+567 + 3 = 570
+570 + 30 = 600
+600 + 400 = 1000
+1000 + 234 = 1234계산 결과: 3 + 30 + 400 + 234 = 667.
+
+Breaking up the subtraction
+예시:
+1234 − 567 = :
+
+1234 − 500 = 734
+734 − 60 = 674
+674 − 7 = 667
+
+Same change
+예시:
+"1234 − 567 =" :
+
+1234 − 567 = 1237 − 570 = 1267 − 600 = 667
+
+
+== 각주 ==
