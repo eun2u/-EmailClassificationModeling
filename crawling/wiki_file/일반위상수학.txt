@@ -1,0 +1,45 @@
+일반위상수학(一般位相數學, 영어: general topology) 또는 점-집합 위상수학(點集合位相數學, 영어: point–set topology)은 위상 공간을 일반적으로 그것을 정의하는 집합론적 공리만으로 다루는 위상수학의 한 분과이다. 그러므로 일반위상수학에서 얻은 결과는 다른 모든 위상 공간을 다루는 분야에서 사용할 수 있다.
+
+역사
+일반위상수학은 주로 다음과 같은 분과의 문제를 다루면서 정립되었다.
+
+실수 집합의 부분집합에 대한 연구
+다양체 개념에 대한 연구
+거리 공간에 대한 연구, 특히 그 중에서도 현대에는 함수해석학에서 다루는 노름 공간에 대한 연구.일반위상수학은 1940년 무렵 오늘날과 비슷한 체계를 갖추었다. 이 무렵 수학의 다른 모든 분과에 응용될 수 있는 연속 등의 개념이 일반적으로 확립되었다.
+
+대상
+구체적으로 일반위상수학에서는 다음과 같은 대상을 일반적으로 정의하고 그에 관한 정리(예컨대, 티호노프의 정리나 우리손의 보조정리)들을 다룬다.
+
+열린 집합, 닫힌 집합
+내부, 폐포, 근방
+콤팩트 공간, 연결 공간
+연속 함수
+수열의 극한, 그물, 필터
+분리 공리, 가산 공리, 거리 공간보다 특수한 개념들에 집중하는 위상수학의 다른 분과로는 대수적 위상수학(호모토피와 호몰로지 등), 기하적 위상수학(다양체의 여러 기하학적/위상수학적 성질), 미분위상수학(매끄러운 다양체) 등이 있는데, 일반위상수학은 이들 분과 모두에서 사용할 수 있는 개념적 기초를 제공한다.
+일반위상수학의 중요한 변형 중 하나로 점 없는 위상수학이 있는데, 이는 위상 공간을 다룸에 있어 점의 집합으로 생각하는 것을 피하고, 격자의 연구와 장소의 범주론적 연구를 통해 위상적 개념을 다루는 접근법을 취한다.
+
+참고 문헌
+김승욱 (2004). 《위상수학: 집합론을 중심으로》 2판. 경문사. ISBN 89-7282-587-5. 
+박대희; 안승호 (2013). 《위상수학》 3판. 경문사. ISBN 978-89-6105-668-7.   CS1 관리 - 추가 문구 (링크)
+박배훈; 이부영, 박진한 (2010). 《일반위상수학》 2판. 교우사. ISBN 978-89-8172-083-4.  
+양춘우 (2006). 《일반위상수학》. 경문사. ISBN 978-89-7282-934-8. 
+유정옥 (2013). 《알기쉬운 위상수학》 2판. 교우사. ISBN 978-89-8172-528-0. 
+이석종; 이승온 (2011). 《위상수학의 기초》 4판. 교우사. ISBN 978-89-8172-859-5.   CS1 관리 - 추가 문구 (링크)
+장영식 (2010). 《위상수학기초론》. 경문사. ISBN 978-89-7282-338-4. 
+Bourbaki, Nicolas. 《Topologie générale》 (프랑스어). ISBN 0-387-19374-X. 
+Engelking, Ryszard. 《General topology》 (영어). ISBN 3-88538-006-4. 
+Kelley, John L. (1975). 《General topology》. Graduate Texts in Mathematics (영어) 27 2판. Springer. ISBN 0-387-90125-6. ISSN 0072-5285. Zbl 0306.54002. 
+Munkres, James R. (2000). 《Topology》 (영어) 2판. Prentice Hall. ISBN 978-0-13-181629-9. MR 0464128. Zbl 0951.54001. 
+Shick, Paul L. (2007년 2월). 《Topology: point–set and geometric》 (영어). Wiley. doi:10.1002/9781118031582. ISBN 978-0-470-09605-5. 
+Steen, Lynn Arthur; Seebach, J. Arthur, Jr. (1978). 《Counterexamples in topology》 (영어) 2판. Springer. doi:10.1007/978-1-4612-6290-9. ISBN 978-0-387-90312-5. MR 507446. Zbl 0386.54001. 
+Viro, O.Ya.; Ivanov, O.A.; Kharlamov, V.M.; Netsvetaev, N.Yu. (2008). 《Elementary topology: problem textbook》 (영어). American Mathematical Society. ISBN 978-0-8218-4506-6. 
+Willard, Stephen (1970). 《General Topology》. Addison-Wesley Series in Mathematics (영어). Addison-Wesley. ISBN 978-0-201-08707-9. MR 0264581. Zbl 0205.26601.
+
+외부 링크
+“General topology”. 《Encyclopedia of Mathematics》 (영어). Springer-Verlag. 2001. ISBN 978-1-55608-010-4. 
+최성우 (2012). “위상수학1”. Korea Open Courseware. 
+김동석 (2012). “위상수학2”. Korea Open Courseware. 
+이두범 (2013). “위상수학1 및 연습”. Korea Open Courseware. 
+이두범 (2013). “위상수학2 및 연습”. Korea Open Courseware. 
+채규인 (2010). “위상수학 I”. Korea Open Courseware. 
+박건 (2009). “위상수학 II”. Korea Open Courseware.
