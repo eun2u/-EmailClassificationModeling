@@ -1,0 +1,244 @@
+제곱킬로미터(미국 영어: Square kilometer, 영국 영어: Square kilometre, 문화어: 평방키로메터, 기호 ㎢ 또는 km2)는 국제단위계의 면적의 단위 (SI 유도 단위)로 한 변의 길이가 1킬로미터인 정사각형의 면적이다.
+
+1km2는 다음과 같다.
+
+  
+    
+      
+        1000000
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 1000000m^{2}}
+  (제곱미터)
+
+  
+    
+      
+        302500
+      
+    
+    {\displaystyle 302500}
+  평
+
+  
+    
+      
+        10000
+        a
+      
+    
+    {\displaystyle 10000a}
+  (아르)
+
+  
+    
+      
+        247.105381
+        a
+        c
+        r
+        e
+      
+    
+    {\displaystyle 247.105381acre}
+  (에이커)
+
+  
+    
+      
+        100
+        h
+        a
+      
+    
+    {\displaystyle 100ha}
+  (헥타르)
+
+  
+    
+      
+        0.386102
+        m
+        
+          i
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 0.386102mi^{2}}
+  (제곱마일)거꾸로 말하면 다음과 같다.
+
+  
+    
+      
+        1
+        m
+        
+          i
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 1mi^{2}}
+   = 
+  
+    
+      
+        2.588881
+        k
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 2.588881km^{2}}
+  
+
+  
+    
+      
+        1
+        h
+        a
+      
+    
+    {\displaystyle 1ha}
+   = 
+  
+    
+      
+        0.01
+        k
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 0.01km^{2}}
+  
+
+  
+    
+      
+        1
+        a
+        c
+        r
+        e
+      
+    
+    {\displaystyle 1acre}
+   = 
+  
+    
+      
+        0.0040468564224
+        k
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 0.0040468564224km^{2}}
+  
+
+  
+    
+      
+        1
+        a
+      
+    
+    {\displaystyle 1a}
+   = 
+  
+    
+      
+        0.0001
+        k
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 0.0001km^{2}}
+  
+
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  평 = 
+  
+    
+      
+        0.000003305785124
+        k
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 0.000003305785124km^{2}}
+  
+
+  
+    
+      
+        1
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 1m^{2}}
+   = 
+  
+    
+      
+        0.000001
+        k
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 0.000001km^{2}}
+
+각주
+참고 문헌
+“Conversion Factors”. 《MINFILE Coding Manual》. Ministry of Energy, Mines and Petroleum Resources. Government of British Columbia. 2008년 7월 5일에 원본 문서에서 보존된 문서. 2007년 10월 13일에 확인함.

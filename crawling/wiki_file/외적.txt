@@ -1,0 +1,1950 @@
+선형대수학에서 외적(外積, outer product)이란 벡터의 텐서곱을 일컫는 말이다. 예를 들어, 열벡터로 표현되는 두 벡터를 외적하게 되면 행렬을 얻게 된다. 이 이름은 내적의 반대말에서 나왔는데, 두 벡터를 내적하면 스칼라를 얻지만, 외적하면 스칼라가 나오지 않기 때문이다.
+
+정의
+행렬에서의 정의
+두 벡터의 외적 
+  
+    
+      
+        
+          u
+        
+        ⊗
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {u} \otimes \mathbf {v} }
+  은 
+  
+    
+      
+        
+          u
+        
+        
+          
+            v
+          
+          
+            T
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} \mathbf {v} ^{T}}
+  와 같이 두 벡터를 곱하는 것을 말한다. 여기서, 
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle \mathbf {u} }
+  은 실수공간 
+  
+    
+      
+        
+          
+            R
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} ^{m}}
+  에서 정의되는 
+  
+    
+      
+        m
+        ×
+        1
+      
+    
+    {\displaystyle m\times 1}
+   열벡터, 
+  
+    
+      
+        
+          v
+        
+      
+    
+    {\displaystyle \mathbf {v} }
+  는 
+  
+    
+      
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} ^{n}}
+  에서 정의되는 
+  
+    
+      
+        n
+        ×
+        1
+      
+    
+    {\displaystyle n\times 1}
+   열벡터를 말한다. 예를 들어, 
+  
+    
+      
+        m
+        =
+        4
+      
+    
+    {\displaystyle m=4}
+  , 
+  
+    
+      
+        n
+        =
+        3
+      
+    
+    {\displaystyle n=3}
+  인 경우
+
+  
+    
+      
+        
+          u
+        
+        ⊗
+        
+          v
+        
+        =
+        
+          u
+        
+        
+          
+            v
+          
+          
+            T
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    u
+                    
+                      1
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      2
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      4
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        
+          
+            [
+            
+              
+                
+                  
+                    v
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    v
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    v
+                    
+                      3
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+        =
+        
+          
+            [
+            
+              
+                
+                  
+                    u
+                    
+                      1
+                    
+                  
+                  
+                    v
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      1
+                    
+                  
+                  
+                    v
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      1
+                    
+                  
+                  
+                    v
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      2
+                    
+                  
+                  
+                    v
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      2
+                    
+                  
+                  
+                    v
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      2
+                    
+                  
+                  
+                    v
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      3
+                    
+                  
+                  
+                    v
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      3
+                    
+                  
+                  
+                    v
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      3
+                    
+                  
+                  
+                    v
+                    
+                      3
+                    
+                  
+                
+              
+              
+                
+                  
+                    u
+                    
+                      4
+                    
+                  
+                  
+                    v
+                    
+                      1
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      4
+                    
+                  
+                  
+                    v
+                    
+                      2
+                    
+                  
+                
+                
+                  
+                    u
+                    
+                      4
+                    
+                  
+                  
+                    v
+                    
+                      3
+                    
+                  
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} \otimes \mathbf {v} =\mathbf {u} \mathbf {v} ^{T}={\begin{bmatrix}u_{1}\\u_{2}\\u_{3}\\u_{4}\end{bmatrix}}{\begin{bmatrix}v_{1}&v_{2}&v_{3}\end{bmatrix}}={\begin{bmatrix}u_{1}v_{1}&u_{1}v_{2}&u_{1}v_{3}\\u_{2}v_{1}&u_{2}v_{2}&u_{2}v_{3}\\u_{3}v_{1}&u_{3}v_{2}&u_{3}v_{3}\\u_{4}v_{1}&u_{4}v_{2}&u_{4}v_{3}\end{bmatrix}}}
+  와 같이 외적을 쓸 수 있다. 
+좀 더 복잡한 복소수공간 
+  
+    
+      
+        
+          
+            C
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \mathbf {C} ^{m}}
+  과 
+  
+    
+      
+        
+          
+            C
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbf {C} ^{n}}
+   에서 정의되는 벡터의 경우, 외적은 전치연산 
+  
+    
+      
+        
+          
+            v
+          
+          
+            T
+          
+        
+      
+    
+    {\displaystyle \mathbf {v} ^{T}}
+   대신에 복소켤레전치 
+  
+    
+      
+        
+          
+            v
+          
+          
+            †
+          
+        
+      
+    
+    {\displaystyle \mathbf {v} ^{\dagger }}
+  를 사용해
+
+  
+    
+      
+        
+          u
+        
+        ⊗
+        
+          v
+        
+        =
+        
+          u
+        
+        
+          
+            v
+          
+          
+            †
+          
+        
+      
+    
+    {\displaystyle \mathbf {u} \otimes \mathbf {v} =\mathbf {u} \mathbf {v} ^{\dagger }}
+  로 정의된다.
+
+내적과의 비교
+만약 
+  
+    
+      
+        m
+        =
+        n
+      
+    
+    {\displaystyle m=n}
+  이면 아래와 같이 전치의 순서를 바꾸어 두 열벡터를 곱할 수 있다.
+
+  
+    
+      
+        
+          ⟨
+          
+            
+              u
+            
+            ,
+            
+              v
+            
+          
+          ⟩
+        
+        =
+        
+          
+            v
+          
+          
+            †
+          
+        
+        
+          u
+        
+      
+    
+    {\displaystyle \left\langle \mathbf {u} ,\mathbf {v} \right\rangle =\mathbf {v} ^{\dagger }\mathbf {u} }
+  이 연산의 경우 외적과 달리 스칼라(
+  
+    
+      
+        1
+        ×
+        1
+      
+    
+    {\displaystyle 1\times 1}
+   행렬)이 결과로 나오게 된다. 이 연산은 유클리드 공간의 내적으로 알려져 있고, 점곱이라 하기도 한다.
+
+추상적 정의
+주어진 벡터 
+  
+    
+      
+        v
+        ∈
+        V
+      
+    
+    {\displaystyle v\in V}
+  와 코벡터 
+  
+    
+      
+        
+          w
+          
+            ∗
+          
+        
+        ∈
+        
+          W
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle w^{*}\in W^{*}}
+  의 텐서곱 
+  
+    
+      
+        v
+        ⊗
+        
+          w
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle v\otimes w^{*}}
+  은 동형사상 
+  
+    
+      
+        
+          H
+          o
+          m
+        
+        (
+        W
+        ,
+        V
+        )
+        =
+        
+          W
+          
+            ∗
+          
+        
+        ⊗
+        V
+      
+    
+    {\displaystyle \mathrm {Hom} (W,V)=W^{*}\otimes V}
+  하의 사상 
+  
+    
+      
+         
+        A
+        :
+        W
+        →
+        V
+        
+      
+    
+    {\displaystyle \ A\colon W\to V\,}
+  을 준다.
+구체적으로, 외적은 주어진 
+  
+    
+      
+        w
+        ∈
+        W
+      
+    
+    {\displaystyle w\in W}
+  에 대해
+
+  
+    
+      
+        A
+        (
+        w
+        )
+        
+        =
+        
+        
+          w
+          
+            ∗
+          
+        
+        (
+        w
+        )
+        v
+      
+    
+    {\displaystyle A(w)\,=\,w^{*}(w)v}
+  로 정의된다. 여기서 
+  
+    
+      
+        h
+        >
+        w
+      
+    
+    {\displaystyle h>w}
+  로 계산된 
+  
+    
+      
+        
+          w
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle w^{*}}
+  로 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+  와 곱하면 스칼라를 주게 된다.
+다시말하면, 외적은 
+  
+    
+      
+         
+        
+          w
+          
+            ∗
+          
+        
+        :
+        W
+        →
+        K
+        
+      
+    
+    {\displaystyle \ w^{*}\colon W\to K\,}
+   와 
+  
+    
+      
+         
+        v
+        :
+        K
+        →
+        V
+        
+      
+    
+    {\displaystyle \ v\colon K\to V\,}
+   의 합성이다.
+
+내적과의 비교
+만약 
+  
+    
+      
+         
+        W
+        =
+        V
+        
+      
+    
+    {\displaystyle \ W=V\,}
+  이면, 코벡터 
+  
+    
+      
+        
+          w
+          
+            ∗
+          
+        
+        ∈
+        
+          V
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle w^{*}\in V^{*}}
+  와 벡터 
+  
+    
+      
+        v
+        ∈
+        V
+      
+    
+    {\displaystyle v\in V}
+  를 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  와 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+  의 쌍대의 쌍대연산 
+  
+    
+      
+        (
+        
+          w
+          
+            ∗
+          
+        
+        ,
+        v
+        )
+        ↦
+        
+          w
+          
+            ∗
+          
+        
+        (
+        v
+        )
+      
+    
+    {\displaystyle (w^{*},v)\mapsto w^{*}(v)}
+   를 통해 곱할 수 있다. 때로 이 연산은 내적이라 불리기도 한다.
+
+3차원 공간에서 벡터곱과의 관계
+여기서, 굵은 글씨체의 지표는 추상지표표기법의 지표, 보통 글씨체의 지표는 좌표계의 성분을 의미한다.
+3차원 유클리드 공간 
+  
+    
+      
+        
+          
+            R
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \mathbf {R} ^{3}}
+  에서 직교좌표계의 성분으로 표현된 두 벡터 
+  
+    
+      
+        
+          w
+          
+            
+              a
+            
+          
+        
+        =
+        (
+        
+          w
+          
+            1
+          
+        
+        ,
+        
+          w
+          
+            2
+          
+        
+        ,
+        
+          w
+          
+            3
+          
+        
+        )
+      
+    
+    {\displaystyle w^{\mathbf {a} }=(w^{1},w^{2},w^{3})}
+  와 
+  
+    
+      
+        
+          v
+          
+            
+              a
+            
+          
+        
+        =
+        (
+        
+          v
+          
+            1
+          
+        
+        ,
+        
+          v
+          
+            2
+          
+        
+        ,
+        
+          v
+          
+            3
+          
+        
+        )
+      
+    
+    {\displaystyle v^{\mathbf {a} }=(v^{1},v^{2},v^{3})}
+  의 외적은 다음과 같다.
+
+  
+    
+      
+        
+          w
+          
+            
+              a
+            
+          
+        
+        ⊗
+        
+          v
+          
+            
+              b
+            
+          
+        
+        =
+        
+          w
+          
+            
+              a
+            
+          
+        
+        
+          v
+          
+            
+              b
+            
+          
+        
+      
+    
+    {\displaystyle w^{\mathbf {a} }\otimes v^{\mathbf {b} }=w^{\mathbf {a} }v^{\mathbf {b} }}
+  여기서, 외적에 호지 쌍대를 취하면 벡터곱이 된다.
+
+  
+    
+      
+        (
+        
+          w
+          
+            
+              c
+            
+          
+        
+        ×
+        
+          v
+          
+            
+              d
+            
+          
+        
+        
+          )
+          
+            
+              a
+            
+          
+        
+        =
+        [
+        ∗
+        
+          (
+          
+            
+              w
+              
+                
+                  c
+                
+              
+            
+            
+              v
+              
+                
+                  d
+                
+              
+            
+          
+          )
+        
+        
+          ]
+          
+            
+              a
+            
+          
+        
+        =
+        
+          g
+          
+            
+              a
+              b
+            
+          
+        
+        
+          ϵ
+          
+            
+              b
+              c
+              d
+            
+          
+        
+        
+          v
+          
+            
+              c
+            
+          
+        
+        
+          w
+          
+            
+              d
+            
+          
+        
+      
+    
+    {\displaystyle (w^{\mathbf {c} }\times v^{\mathbf {d} })^{\mathbf {a} }=[*\left(w^{\mathbf {c} }v^{\mathbf {d} }\right)]^{\mathbf {a} }=g^{\mathbf {ab} }\epsilon _{\mathbf {bcd} }v^{\mathbf {c} }w^{\mathbf {d} }}
+  성분을 비교해보면 마지막 항이 벡터곱의 성분이 되는 것을 볼 수 있다. 유클리드 공간의 경우, 
+  
+    
+      
+        
+          g
+          
+            
+              a
+              b
+            
+          
+        
+        =
+        
+          δ
+          
+            
+              a
+              b
+            
+          
+        
+      
+    
+    {\displaystyle g^{\mathbf {ab} }=\delta ^{\mathbf {ab} }}
+  이므로 (이 계량의 성분은 크로네커 델타.) 이를 간단히 전개해보면,
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  g
+                  
+                    
+                      a
+                      b
+                    
+                  
+                
+                
+                  ϵ
+                  
+                    
+                      b
+                      c
+                      d
+                    
+                  
+                
+                
+                  v
+                  
+                    
+                      c
+                    
+                  
+                
+                
+                  w
+                  
+                    
+                      d
+                    
+                  
+                
+              
+              
+                
+                =
+                
+                  δ
+                  
+                    
+                      a
+                      b
+                    
+                  
+                
+                
+                  ϵ
+                  
+                    
+                      b
+                      c
+                      d
+                    
+                  
+                
+                
+                  v
+                  
+                    
+                      c
+                    
+                  
+                
+                
+                  w
+                  
+                    
+                      d
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  δ
+                  
+                    
+                      a
+                      b
+                    
+                  
+                
+                
+                  (
+                  
+                    
+                      ϵ
+                      
+                        123
+                      
+                    
+                    
+                      e
+                      
+                        
+                          b
+                        
+                      
+                      
+                        1
+                      
+                    
+                    ∧
+                    
+                      e
+                      
+                        
+                          c
+                        
+                      
+                      
+                        2
+                      
+                    
+                    ∧
+                    
+                      e
+                      
+                        
+                          d
+                        
+                      
+                      
+                        3
+                      
+                    
+                  
+                  )
+                
+                
+                  v
+                  
+                    
+                      c
+                    
+                  
+                
+                
+                  w
+                  
+                    
+                      d
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}g^{\mathbf {ab} }\epsilon _{\mathbf {bcd} }v^{\mathbf {c} }w^{\mathbf {d} }&=\delta ^{\mathbf {ab} }\epsilon _{\mathbf {bcd} }v^{\mathbf {c} }w^{\mathbf {d} }\\&=\delta ^{\mathbf {ab} }\left(\epsilon _{123}e_{\mathbf {b} }^{1}\wedge e_{\mathbf {c} }^{2}\wedge e_{\mathbf {d} }^{3}\right)v^{\mathbf {c} }w^{\mathbf {d} }\end{aligned}}}
+  여기서 
+  
+    
+      
+        
+          e
+          
+            
+              b
+            
+          
+          
+            1
+          
+        
+        ∧
+        
+          e
+          
+            
+              c
+            
+          
+          
+            2
+          
+        
+        ∧
+        
+          e
+          
+            
+              d
+            
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle e_{\mathbf {b} }^{1}\wedge e_{\mathbf {c} }^{2}\wedge e_{\mathbf {d} }^{3}}
+  를 전개하면 항이 6개가 나오고, bcd의 순열 순서에 따라 각 항의 부호가 결정되게 된다. 즉,
+
+  
+    
+      
+        
+          e
+          
+            
+              b
+            
+          
+          
+            1
+          
+        
+        ∧
+        
+          e
+          
+            
+              c
+            
+          
+          
+            2
+          
+        
+        ∧
+        
+          e
+          
+            
+              d
+            
+          
+          
+            3
+          
+        
+        =
+        
+          e
+          
+            
+              b
+            
+          
+          
+            1
+          
+        
+        
+          e
+          
+            
+              c
+            
+          
+          
+            2
+          
+        
+        
+          e
+          
+            
+              d
+            
+          
+          
+            3
+          
+        
+        +
+        
+          e
+          
+            
+              c
+            
+          
+          
+            1
+          
+        
+        
+          e
+          
+            
+              d
+            
+          
+          
+            2
+          
+        
+        
+          e
+          
+            
+              b
+            
+          
+          
+            3
+          
+        
+        +
+        
+          e
+          
+            
+              d
+            
+          
+          
+            1
+          
+        
+        
+          e
+          
+            
+              b
+            
+          
+          
+            2
+          
+        
+        
+          e
+          
+            
+              c
+            
+          
+          
+            3
+          
+        
+        −
+        
+          e
+          
+            
+              d
+            
+          
+          
+            1
+          
+        
+        
+          e
+          
+            
+              c
+            
+          
+          
+            2
+          
+        
+        
+          e
+          
+            
+              b
+            
+          
+          
+            3
+          
+        
+        −
+        
+          e
+          
+            
+              b
+            
+          
+          
+            1
+          
+        
+        
+          e
+          
+            
+              d
+            
+          
+          
+            2
+          
+        
+        
+          e
+          
+            
+              c
+            
+          
+          
+            3
+          
+        
+        −
+        
+          e
+          
+            
+              c
+            
+          
+          
+            1
+          
+        
+        
+          e
+          
+            
+              b
+            
+          
+          
+            2
+          
+        
+        
+          e
+          
+            
+              d
+            
+          
+          
+            3
+          
+        
+      
+    
+    {\displaystyle e_{\mathbf {b} }^{1}\wedge e_{\mathbf {c} }^{2}\wedge e_{\mathbf {d} }^{3}=e_{\mathbf {b} }^{1}e_{\mathbf {c} }^{2}e_{\mathbf {d} }^{3}+e_{\mathbf {c} }^{1}e_{\mathbf {d} }^{2}e_{\mathbf {b} }^{3}+e_{\mathbf {d} }^{1}e_{\mathbf {b} }^{2}e_{\mathbf {c} }^{3}-e_{\mathbf {d} }^{1}e_{\mathbf {c} }^{2}e_{\mathbf {b} }^{3}-e_{\mathbf {b} }^{1}e_{\mathbf {d} }^{2}e_{\mathbf {c} }^{3}-e_{\mathbf {c} }^{1}e_{\mathbf {b} }^{2}e_{\mathbf {d} }^{3}}
+  이다. 그리고 여기에 
+  
+    
+      
+        
+          v
+          
+            
+              c
+            
+          
+        
+        
+          w
+          
+            
+              d
+            
+          
+        
+      
+    
+    {\displaystyle v^{\mathbf {c} }w^{\mathbf {d} }}
+  를 곱하면
+
+  
+    
+      
+        (
+        
+          e
+          
+            
+              b
+            
+          
+          
+            1
+          
+        
+        ∧
+        
+          e
+          
+            
+              c
+            
+          
+          
+            2
+          
+        
+        ∧
+        
+          e
+          
+            
+              d
+            
+          
+          
+            3
+          
+        
+        )
+        
+          v
+          
+            
+              c
+            
+          
+        
+        
+          w
+          
+            
+              d
+            
+          
+        
+        =
+        
+          e
+          
+            
+              b
+            
+          
+          
+            1
+          
+        
+        (
+        
+          v
+          
+            2
+          
+        
+        
+          w
+          
+            3
+          
+        
+        −
+        
+          v
+          
+            3
+          
+        
+        
+          w
+          
+            2
+          
+        
+        )
+        +
+        
+          e
+          
+            
+              b
+            
+          
+          
+            2
+          
+        
+        (
+        
+          v
+          
+            3
+          
+        
+        
+          w
+          
+            1
+          
+        
+        −
+        
+          v
+          
+            1
+          
+        
+        
+          w
+          
+            3
+          
+        
+        )
+        +
+        
+          e
+          
+            
+              b
+            
+          
+          
+            3
+          
+        
+        (
+        
+          v
+          
+            1
+          
+        
+        
+          w
+          
+            2
+          
+        
+        −
+        
+          v
+          
+            2
+          
+        
+        
+          w
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle (e_{\mathbf {b} }^{1}\wedge e_{\mathbf {c} }^{2}\wedge e_{\mathbf {d} }^{3})v^{\mathbf {c} }w^{\mathbf {d} }=e_{\mathbf {b} }^{1}(v^{2}w^{3}-v^{3}w^{2})+e_{\mathbf {b} }^{2}(v^{3}w^{1}-v^{1}w^{3})+e_{\mathbf {b} }^{3}(v^{1}w^{2}-v^{2}w^{1})}
+  되고 마지막으로 
+  
+    
+      
+        
+          δ
+          
+            
+              a
+              b
+            
+          
+        
+        
+          ϵ
+          
+            123
+          
+        
+      
+    
+    {\displaystyle \delta ^{\mathbf {ab} }\epsilon _{123}}
+  을 곱하면
+
+  
+    
+      
+        
+          g
+          
+            
+              a
+              b
+            
+          
+        
+        
+          ϵ
+          
+            
+              b
+              c
+              d
+            
+          
+        
+        
+          v
+          
+            
+              c
+            
+          
+        
+        
+          w
+          
+            
+              d
+            
+          
+        
+        =
+        
+          e
+          
+            1
+          
+          
+            
+              b
+            
+          
+        
+        (
+        
+          v
+          
+            2
+          
+        
+        
+          w
+          
+            3
+          
+        
+        −
+        
+          v
+          
+            3
+          
+        
+        
+          w
+          
+            2
+          
+        
+        )
+        +
+        
+          e
+          
+            2
+          
+          
+            
+              b
+            
+          
+        
+        (
+        
+          v
+          
+            3
+          
+        
+        
+          w
+          
+            1
+          
+        
+        −
+        
+          v
+          
+            1
+          
+        
+        
+          w
+          
+            3
+          
+        
+        )
+        +
+        
+          e
+          
+            3
+          
+          
+            
+              b
+            
+          
+        
+        (
+        
+          v
+          
+            1
+          
+        
+        
+          w
+          
+            2
+          
+        
+        −
+        
+          v
+          
+            2
+          
+        
+        
+          w
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle g^{\mathbf {ab} }\epsilon _{\mathbf {bcd} }v^{\mathbf {c} }w^{\mathbf {d} }=e_{1}^{\mathbf {b} }(v^{2}w^{3}-v^{3}w^{2})+e_{2}^{\mathbf {b} }(v^{3}w^{1}-v^{1}w^{3})+e_{3}^{\mathbf {b} }(v^{1}w^{2}-v^{2}w^{1})}
+  이 된다. 보다시피 벡터곱의 성분 표현을 얻을 수 있다. 때문에 이 벡터곱을 외적이라 부르기도 한다.

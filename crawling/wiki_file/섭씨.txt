@@ -1,0 +1,78 @@
+섭씨 온도(Celsius, 攝氏溫度, centigrade scale)는 1 atm에서의 물의 어는점을 0도, 끓는점을 100도로 정한 온도 체계이며, 기호는 °C이다. 1742년 스웨덴의 천문학자 안데르스 셀시우스가 처음으로 제안하였으며, 영어 등에서는 제안자의 이름을 따 ‘셀시어스’로 부르고 있다. 셀시우스는 물의 어는점을 100도, 끓는점을 0도로 제안하였으나 사용이 불편하여 후에 끓는 점과 어는 점의 기준을 바꾸었다. 하지만 온도 단위는 여전히 같은 100등분 이므로 섭씨 온도라고 부른다. 현재는 위와 같이 정의하지 않고 볼츠만 상수 
+  
+    
+      
+        
+          k
+          
+            B
+          
+        
+      
+    
+    {\displaystyle k_{B}}
+  를 
+  
+    
+      
+        J
+        ⋅
+        
+          K
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle J\cdot K^{-1}}
+  로 표기할 때, 그 값이 
+  
+    
+      
+        1.380649
+        ×
+        
+          10
+          
+            −
+            23
+          
+        
+      
+    
+    {\displaystyle 1.380649\times 10^{-23}}
+   가 되게 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+  를 정의하고, 거기에 
+  
+    
+      
+        273.15
+      
+    
+    {\displaystyle 273.15}
+  를 뺀 값으로 정의한다. ‘섭씨(攝氏)’라는 이름은 셀시우스의 중국 음역어 ‘섭이수사’(중국어: 攝爾修斯, 병음: Shè'ĕrxiūsī 서얼슈쓰[*])에서 유래한다.
+
+변환
+같이 보기
+화씨
+켈빈
+온도
+
+각주
+외부 링크
+ 위키낱말사전에 섭씨 관련 글이 있습니다.
+
+NIST, 기본 단위 정의: 켈빈
+The Uppsala Astronomical Observatory, 섭씨 온도 단위의 역사
+London South Bank University, Water, scientific data
+BIPM, SI brochure, section 2.1.1.5, Unit of thermodynamic temperature
+TAMPILE, Comparison of temperature scales
