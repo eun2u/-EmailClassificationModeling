@@ -1,10 +1,4 @@
-척추동물(脊椎動物)은 등뼈가 있는 동물을 말한다. 척추동물인 인간의 척추(Vertebral column 척주 脊柱 라고도 함)는 척추뼈들(vertebra들 보통 33개)로 구성된다.
-
-목뼈: 7 vertebrae, 경추부 cervix 경골, cervical spine (C-spine: C1 ~ C7)
-등뼈: 12 vertebrae, 흉추부 thorax 흉골, thoracic spine (Th-spine: Th1 ~ Th12)
-허리뼈: 5 vertebrae, 요추부 lumbar 요추, lumbar spine (L-spine: L1 ~ L5)
-엉치뼈: 5 (fused) vertebrae, 천추부 sacrum 천골, sacral bone (S1 ~ S5)
-꼬리뼈: 미저골 3-5 (fused) vertebrae, 미추 미추골, coccyx 미골, tailbone coccygeal bone
+척추동물(脊椎動物) 또는 등뼈동물은 등뼈가 있는 동물을 말한다.
 
 형태
 척추동물은 그 서식 장소가 넓어 지구상 어디든 광범위하게 분포하고 있다. 이들은 체제가 복잡하여 분화한 기능과 다양한 생활양식을 나타내는, 동물계의 가장 진화된 종류이다. 현존하는 척추동물은 동물 전체의 1/20인 45,000종 가량이 알려져 있다.
