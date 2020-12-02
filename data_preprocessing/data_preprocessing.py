@@ -3,7 +3,6 @@ import konlpy
 from konlpy.tag import *
 import re
 def make_sentence(data):
-    print(data)
     sentence = ""
     for i in data:
         if(i.endswith('다.\n')):
@@ -27,29 +26,41 @@ def data_text_cleaning(data):
     mecab = Mecab()
     noun_data = mecab.nouns(delete_blank)
 
-    delete_list = ["이", "것", "수"]
+    delete_list = ["이", "것", "수", "를", "개", "후", "을","메", "의", "은", "년", "만", "그", "만", "외"]
     for i in delete_list:
         if(i in noun_data):
             noun_data.remove(i)
     return noun_data
 
 
-f = open("./testset/가옥.txt")
+f = open("./crawling/wiki_data.txt")
 readdata = []
 line = f.readline()
 while(line):
     readdata.append(line)
     line = f.readline()
 readdata = make_sentence(readdata)
+print(len(readdata))
 f.close()
 result = []
+num = 0
 for line in readdata:
-    print(line)
+    num+=1
+    if(num%1000==0):
+        print(num)
     if(line!="\n"):
         data = data_text_cleaning(line)
         if(len(data)!=1):
             result.append(data)
 
 
+f = open("./data_preprocessing/insert_data.txt","w")
+num = 0
 for i in result:
-    print(i)
+    for j in i:
+        f.write(j+" ")
+    num+=1
+    if(num%1000==0):
+        print(num)
+    f.write("\n")
+f.close()
