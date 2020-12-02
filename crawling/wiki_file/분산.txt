@@ -1,0 +1,561 @@
+확률론과 통계학에서 어떤 확률변수의 분산(分散, 영어: variance,
+  
+    
+      
+        Var
+      
+    
+    {\displaystyle \operatorname {Var} }
+  )은 그 확률변수가 기댓값으로부터 얼마나 떨어진 곳에 분포하는지를 가늠하는 숫자이다. 기댓값은 확률변수의 위치를 나타내고 분산은 그것이 얼마나 넓게 퍼져 있는지를 나타낸다. 분산보다는 분산의 제곱근인 표준편차가 더 자주 사용된다.
+분산(variance)은 관측값에서 평균을 뺀 값을 제곱하고, 그것을 모두 더한 후 전체 개수로 나눠서 구한다. 즉, 차이값의 제곱의 평균이다. 관측값에서 평균을 뺀 값인 편차를 모두 더하면 0이 나오므로 제곱해서 더한다.
+모 분산(population variance) σ2은 모 집단의 분산이다. 관측값에서 모 평균을 빼고 그것을 제곱한 값을 모두 더하여 전체 데이터 수 n으로 나눈 것이다.
+표본 분산(sample variance) s2은 표본의 분산이다. 관측값에서 표본 평균을 빼고 제곱한 값을 모두 더한 것을 n-1로 나눈 것이다.
+
+정의
+μ
+        =
+        E
+        ⁡
+        (
+        X
+        )
+      
+    
+    {\displaystyle \mu =\operatorname {E} (X)}
+  가 확률변수 X의 기댓값(혹은 평균)일 때, 분산 
+  
+    
+      
+        var
+        ⁡
+        (
+        X
+        )
+      
+    
+    {\displaystyle \operatorname {var} (X)}
+  는 다음과 같이 계산한다.
+
+  
+    
+      
+        var
+        ⁡
+        (
+        X
+        )
+        =
+        E
+        ⁡
+        (
+        (
+        X
+        −
+        μ
+        
+          )
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle \operatorname {var} (X)=\operatorname {E} ((X-\mu )^{2})}
+  즉, X의 평균에서 떨어진 거리의 제곱의 평균과 같다.
+즉 편차의 제곱의 평균으로 표현할 수 있다.
+X의 분산은 보통 
+  
+    
+      
+        var
+        ⁡
+        (
+        X
+        )
+      
+    
+    {\displaystyle \operatorname {var} (X)}
+   또는 
+  
+    
+      
+        
+          σ
+          
+            X
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \sigma _{X}^{2}}
+  , 혹은 간단히 
+  
+    
+      
+        
+          σ
+          
+            2
+          
+        
+        
+      
+    
+    {\displaystyle \sigma ^{2}\,}
+  으로 표현한다. 
+  
+    
+      
+        σ
+        
+      
+    
+    {\displaystyle \sigma \,}
+  는 표준편차를 가리킨다.위의 정의는 이산확률변수와 연속확률변수에 모두 적용될 수 있다.
+
+성질
+어떤 실수의 제곱은 0 이상이므로 만약 분산이 존재한다면 그 값은 음수가 될 수 없다. 분산의 단위는 확률변수를 나타내는 데 사용된 단위의 제곱이 되어야 한다. 예를 들면 센티미터로 잰 높이 집단의 분산은 제곱센티미터가 될 것이다. 이것은 여러 가지 불편을 유발하므로 많은 통계학자들은 집단과 같은 단위를 사용하는 표준편차를 주로 쓴다.
+정의에 의해 분산이 평균값 μ에 대해 독립변수라는 것은 쉽게 알 수 있다. 즉, 전체 집단의 값이 b만큼 이동해 X + b가 되어도 전체 집단의 분산은 변하지 않는다. 그러나 전체 집단에 같은 값 a를 곱하면 분산은 a2배가 된다. 식으로 쓰면 다음과 같다.
+
+  
+    
+      
+        Var
+        ⁡
+        (
+        a
+        X
+        +
+        b
+        )
+        =
+        
+          a
+          
+            2
+          
+        
+        Var
+        ⁡
+        (
+        X
+        )
+      
+    
+    {\displaystyle \operatorname {Var} (aX+b)=a^{2}\operatorname {Var} (X)}
+  평균값의 선형성으로부터 다음과 같은 식을 얻을 수 있다.
+
+  
+    
+      
+        
+          
+            
+              
+                Var
+                ⁡
+                (
+                X
+                )
+              
+              
+                
+                =
+                E
+                ⁡
+                
+                  [
+                  
+                    (
+                    X
+                    −
+                    E
+                    ⁡
+                    [
+                    X
+                    ]
+                    
+                      )
+                      
+                        2
+                      
+                    
+                  
+                  ]
+                
+              
+            
+            
+              
+              
+                
+                =
+                E
+                ⁡
+                
+                  [
+                  
+                    
+                      X
+                      
+                        2
+                      
+                    
+                    −
+                    2
+                    X
+                    E
+                    ⁡
+                    [
+                    X
+                    ]
+                    +
+                    (
+                    E
+                    ⁡
+                    [
+                    X
+                    ]
+                    
+                      )
+                      
+                        2
+                      
+                    
+                  
+                  ]
+                
+              
+            
+            
+              
+              
+                
+                =
+                E
+                ⁡
+                
+                  [
+                  
+                    X
+                    
+                      2
+                    
+                  
+                  ]
+                
+                −
+                2
+                E
+                ⁡
+                [
+                X
+                ]
+                E
+                ⁡
+                [
+                X
+                ]
+                +
+                (
+                E
+                ⁡
+                [
+                X
+                ]
+                
+                  )
+                  
+                    2
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                E
+                ⁡
+                
+                  [
+                  
+                    X
+                    
+                      2
+                    
+                  
+                  ]
+                
+                −
+                (
+                E
+                ⁡
+                [
+                X
+                ]
+                
+                  )
+                  
+                    2
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\operatorname {Var} (X)&=\operatorname {E} \left[(X-\operatorname {E} [X])^{2}\right]\\&=\operatorname {E} \left[X^{2}-2X\operatorname {E} [X]+(\operatorname {E} [X])^{2}\right]\\&=\operatorname {E} \left[X^{2}\right]-2\operatorname {E} [X]\operatorname {E} [X]+(\operatorname {E} [X])^{2}\\&=\operatorname {E} \left[X^{2}\right]-(\operatorname {E} [X])^{2}\end{aligned}}}
+  이 식은 실제로 분산을 구할 때 자주 사용된다.
+분포를 가늠하는 여러 가지 수치 가운데 분산을 사용하는 이유 중에 하나로는 독립된 두 확률변수의 합의 분산은 각각의 분산의 합과 같다는 성질이 있다. 더 일반적으로 쓰면 다음과 같다.
+
+  
+    
+      
+        Var
+        ⁡
+        (
+        a
+        X
+        +
+        b
+        Y
+        )
+        =
+        
+          a
+          
+            2
+          
+        
+        Var
+        ⁡
+        (
+        X
+        )
+        +
+        
+          b
+          
+            2
+          
+        
+        var
+        ⁡
+        (
+        Y
+        )
+        +
+        2
+        a
+        b
+        
+        Cov
+        ⁡
+        (
+        X
+        ,
+        Y
+        )
+      
+    
+    {\displaystyle \operatorname {Var} (aX+bY)=a^{2}\operatorname {Var} (X)+b^{2}\operatorname {var} (Y)+2ab\,\operatorname {Cov} (X,Y)}
+  여기서 
+  
+    
+      
+        cov
+      
+    
+    {\displaystyle \operatorname {cov} }
+  는 공분산을 나타내며, 두 변수가 독립일 경우 0이 된다.
+
+통계적 추정
+모집단의 분산은 
+  
+    
+      
+        
+          σ
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \sigma ^{2}}
+  로 나타내고, 표본의 분산은 
+  
+    
+      
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s^{2}}
+  로 나타낸다. 
+  
+    
+      
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s^{2}}
+  은 모집단 분산의 추정치라고 할 수 있다. 표본 내의 어떤 변인 Y가 가지는 모집단 분산의 추정치인 표본 분산 
+  
+    
+      
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s^{2}}
+  는 다음과 같다.
+
+  
+    
+      
+        
+          s
+          
+            2
+          
+        
+        =
+        
+          
+            
+              Σ
+              (
+              y
+              −
+              
+                
+                  y
+                  ¯
+                
+              
+              
+                )
+                
+                  2
+                
+              
+            
+            
+              n
+              −
+              1
+            
+          
+        
+        =
+        
+          
+            
+              S
+              S
+            
+            
+              d
+              f
+            
+          
+        
+      
+    
+    {\displaystyle s^{2}={\frac {\Sigma (y-{\overline {y}})^{2}}{n-1}}={\frac {SS}{df}}}
+  
+
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  : 표본의 표준편차
+
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  : 변인
+
+  
+    
+      
+        
+          
+            y
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {y}}}
+  : 표본의 평균
+
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  : 표본의 크기
+
+  
+    
+      
+        S
+        S
+      
+    
+    {\displaystyle SS}
+  : 제곱합
+
+  
+    
+      
+        d
+        f
+      
+    
+    {\displaystyle df}
+  : 자유도분모를 n-1로 나누는 이유는 분산을 계산할 때 모평균이 아닌 표본 평균을 사용했기 때문에 모집단의 편의된 추정값(biased estimator)이 되므로, 분산이 불편 추정량(unbiased estimator)이 되도록 하기 위해서이다.
+
+컴퓨팅
+컴퓨터 프로그램의 대표적인 경우에서 스프레드 시트는 var() 함수로 결과값을 간단히 처리할수있다.
+
+같이 보기
+표준 편차
+평균
+분산 분석
+t-test
+피어슨 상관 계수
+
+
+== 각주 ==

@@ -1,0 +1,83 @@
+외상(injury) 또는 신체적 트라우마(physical trauma)은 외력에 의한 신체 손상을 의미한다. 사고, 추락, 타격, 무기, 기타 원인으로 인해 발생한다. 주요 외상은 장기적인 장애 또는 사망을 유발할 수 있다.
+
+분류
+세계보건기구(WHO)는 국제 외상 원인 분류(International Classification of External Causes of Injury, ICECI)를 개발했다. 이 시스템에서 외상은 다음과 같이 분류된다.
+
+부상의 메커니즘(Mechanism of injury)
+부상을 초래하는 물건/물질(Objects/substance producing injury)
+발생 장소(Place of occurrance)
+다칠 때의 활동(Activity of injured)
+인간 의도의 역할(The role of human intent)이 코드를 통해 특정 집단의 부상 분포를 식별하고 원인과 예방 노력에 대한 자세한 조사를 위해 사례를 식별 할 수 있다.
+
+외상의 원인
+의도적인 외상(Intentional injury)
+자살(Suicide)
+자해(Self-harm)
+폭력(Violence)
+전쟁(War)
+사고(Accident)
+가오리 부상(Stingray injury)
+번개 부상(Lightning injury)
+
+외상의 양상
+갑작스런 물리적 충돌 또는 움직임으로 인한 외상성 부상, 신체적 상처 또는 충격(Traumatic injury, a body wound or shock produced by sudden physical collision or movement)
+견열 외상(Avulsion injury)
+폭발 외상(Blast injury)
+골절(Bone fracture)
+내출혈(Internal bleeding)
+압궤 외상(Crush injury)
+주사 바늘 찔림 외상(Needlestick injury)
+치명적인 외상(Catastrophic injury)
+반복사용긴장성손상증후군 또는 스트레스 외상(Repetitive Strain Injury)
+급성방사선 증후군, 화상 또는 동상과 같은 외부 신체적 원인으로 인한 기타 부상(Radiation Poisoning, Burn)
+방사선 유발 폐 외상(Radiation-induced lung injury)
+전자레인지 화상(Microwave Burn)
+독소로 인한 부상 또는 약물의 부작용(Injury from toxin or adverse effects of pharmaceutical drugs)
+독성 외상(Toxin injury)
+허혈재관류 손상과 같은 내부 원인으로 인한 외상(Injury from internal causes such as reperfusion injury)
+
+외상의 위치
+상처, 피부가 찢어지며 구멍이 뚫린 상처(Open wound) 또는 둔기로 인해 타박상(Close wound)이 발생하는 부상
+뇌손상(Brain injury)
+후천성 뇌 손상(Acquired brain injury)
+전두엽 손상(Frontal lobe injury)
+신경 손상(Nerve injury)
+척수 손상(Spinal cord injury)
+상완 신경총 부상(Brachial plexus injury)
+말초신경 손상(Peripheral nerve injury)
+좌골신경 손상(Sciatic nerve injury)
+겨드랑 신경 손상(Injury of axillary nerve)
+연조직 손상(Soft tissue injury)
+음경 손상(Penile injury)
+직접적인 DNA 손상을 포함한 세포 손상(Cell damage including direct DNA damage)
+기관지 손상(Tracheobronchial injury)
+눈 부상(Eye injury)
+화학적 눈 부상(Chemical eye injury)
+전신 마취 중 눈 부상(Eye injury during general anaesthesia)
+급성 신부전(Acute kidney injury)
+무릎 부상(Knee injury)
+전방 십자 인대 손상(Anterior cruciate ligament injury)
+내측 무릎 부상(Medial knee injury)
+허리 부상(Back injury)
+손 부상(Hand injury)
+간 손상(Liver injury)
+머리 부상(Head injury)
+관통 머리 부상(Penetrating head injury)
+닫힌 머리 부상(Closed head injury)
+근골격계 손상(Musculoskeletal injury)
+관절 연골 부상(Articular cartilage damage)
+급성 폐 손상(Acute lung injury)
+췌장 손상(Pancreatic injury)
+흉부 대동맥 손상(Thoracic aorta injury)
+담관 손상(Biliary injury)
+가슴 부상(Chest injury)
+기절
+
+부상 심각도 점수
+ISS(상해 심각도 점수)는 외상 심각도를 평가하기 위한 의료 점수이다. 외상 후 사망률, 입원 시간과 관련이 있다. ISS가 15보다 클 때에는, 주요 외상(polytrauma)이라는 용어를 사용한다.
+
+참고
+응급처치
+
+
+== 각주 ==

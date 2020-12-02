@@ -1,0 +1,3021 @@
+수학에서, 함수(函數, 영어: function) 또는 사상(寫像, 영어: map, mapping)은 어떤 집합의 각 원소를 다른 집합의 유일한 원소에 대응시키는 이항 관계다. 즉, 한 변수의 값에 따라 정해지는 다른 변수의 값을 먼저 주어지는 값에 상대하여 일컫는 말이다.
+
+정의
+함수 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  는 다음과 같은 튜플 
+  
+    
+      
+        (
+        X
+        ,
+        Y
+        ,
+        graph
+        ⁡
+        f
+        )
+      
+    
+    {\displaystyle (X,Y,\operatorname {graph} f)}
+  이다.
+
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  는 집합이며, 이를 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 정의역이라고 한다.
+
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  는 집합이며, 이를 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 공역이라고 한다.
+
+  
+    
+      
+        graph
+        ⁡
+        f
+      
+    
+    {\displaystyle \operatorname {graph} f}
+  는 곱집합 
+  
+    
+      
+        X
+        ×
+        Y
+      
+    
+    {\displaystyle X\times Y}
+  의 부분 집합이며, 이를 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 그래프라고 한다.이 튜플이 다음 조건을 만족시켜야지만 함수라고 한다.
+
+임의의 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  에 대하여, 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        )
+        ∈
+        graph
+        ⁡
+        f
+      
+    
+    {\displaystyle (x,y)\in \operatorname {graph} f}
+  인 
+  
+    
+      
+        y
+        ∈
+        Y
+      
+    
+    {\displaystyle y\in Y}
+  가 유일하게 존재한다. 이러한 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  를 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  라고  쓴다.다시 말해, 함수는 정의역의 각 원소를 정확히 하나의 공역 원소에 대응시킨다.
+표기
+
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  는 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  가 정의역 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  , 공역 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  를 갖는 함수라는 뜻이다. 표기
+
+  
+    
+      
+        f
+        :
+        x
+        ↦
+        y
+      
+    
+    {\displaystyle f\colon x\mapsto y}
+  는 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        y
+      
+    
+    {\displaystyle f(x)=y}
+  와 같은 뜻이다.
+함수를 정의역과 공역을 생략하여 다음과 같이 표기하기도 한다.
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        
+        (
+        x
+        ∈
+        X
+        )
+      
+    
+    {\displaystyle f(x)\qquad (x\in X)}
+  
+
+  
+    
+      
+        y
+        =
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle y=f(x)}
+
+예
+만약 어떤 가족의 각 구성원 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  에 대하여, 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  가 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  의 생년월일이라면, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  는 함수가 된다. 이는 각 가족 구성원이 어느 날엔가 태어났고 동시에 두 날에 태어났을 수 없기 때문이다. 이 경우 정의역은 가족 구성원의 집합, 공역은 모든 날짜의 집합으로 취할 수 있다.
+함수
+
+  
+    
+      
+        f
+        :
+        {
+        1
+        ,
+        2
+        ,
+        3
+        }
+        →
+        {
+        
+          A
+        
+        ,
+        
+          B
+        
+        ,
+        
+          C
+        
+        ,
+        
+          D
+        
+        }
+      
+    
+    {\displaystyle f\colon \{1,2,3\}\to \{\mathrm {A} ,\mathrm {B} ,\mathrm {C} ,\mathrm {D} \}}
+  
+
+  
+    
+      
+        f
+        :
+        1
+        ↦
+        
+          D
+        
+      
+    
+    {\displaystyle f\colon 1\mapsto \mathrm {D} }
+  
+
+  
+    
+      
+        f
+        :
+        2
+        ↦
+        
+          A
+        
+      
+    
+    {\displaystyle f\colon 2\mapsto \mathrm {A} }
+  
+
+  
+    
+      
+        f
+        :
+        3
+        ↦
+        
+          B
+        
+      
+    
+    {\displaystyle f\colon 3\mapsto \mathrm {B} }
+  는 정의역이 
+  
+    
+      
+        {
+        1
+        ,
+        2
+        ,
+        3
+        }
+      
+    
+    {\displaystyle \{1,2,3\}}
+  , 공역이 
+  
+    
+      
+        {
+        
+          A
+        
+        ,
+        
+          B
+        
+        ,
+        
+          C
+        
+        ,
+        
+          D
+        
+        }
+      
+    
+    {\displaystyle \{\mathrm {A} ,\mathrm {B} ,\mathrm {C} ,\mathrm {D} \}}
+  이며, 1, 2, 3을 각각 
+  
+    
+      
+        
+          D
+        
+      
+    
+    {\displaystyle \mathrm {D} }
+  , 
+  
+    
+      
+        
+          A
+        
+      
+    
+    {\displaystyle \mathrm {A} }
+  , 
+  
+    
+      
+        
+          B
+        
+      
+    
+    {\displaystyle \mathrm {B} }
+  로 대응시키는 이항 관계를 나타낸다.
+
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  가 실수의 집합이라고 하자. 그렇다면
+
+  
+    
+      
+        f
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f\colon \mathbb {R} \to \mathbb {R} }
+  
+
+  
+    
+      
+        f
+        :
+        x
+        ↦
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle f\colon x\mapsto x^{2}}
+  는 각 실수를 제곱시키는 함수이다. 반면, 각 실수에 그보다 큰 실수를 대응시키는 이항 관계는 함수가 아니다. 이는 각 실수보다 큰 실수는 무한히 많으므로 유일하지 않기 때문이다.
+
+  
+    
+      
+        {
+        c
+        }
+      
+    
+    {\displaystyle \{c\}}
+  가 하나의 원소만을 갖는 집합이라고 하자. 그렇다면 임의의 집합 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  에 대하여, 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  를 정의역, 
+  
+    
+      
+        {
+        c
+        }
+      
+    
+    {\displaystyle \{c\}}
+  를 공역으로 하는 유일한 함수
+
+  
+    
+      
+        f
+        :
+        X
+        →
+        {
+        c
+        }
+      
+    
+    {\displaystyle f\colon X\to \{c\}}
+  
+
+  
+    
+      
+        f
+        :
+        x
+        ↦
+        c
+      
+    
+    {\displaystyle f\colon x\mapsto c}
+  가 존재한다.
+
+  
+    
+      
+        ∅
+      
+    
+    {\displaystyle \varnothing }
+  이 공집합이라고 하자. 그렇다면 임의의 집합 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  에 대하여, 
+  
+    
+      
+        ∅
+      
+    
+    {\displaystyle \varnothing }
+  을 정의역, 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  를 공역으로 하는 유일한 함수
+
+  
+    
+      
+        f
+        :
+        ∅
+        →
+        Y
+      
+    
+    {\displaystyle f\colon \varnothing \to Y}
+  가 존재한다. 
+  
+    
+      
+        Y
+        =
+        ∅
+      
+    
+    {\displaystyle Y=\varnothing }
+  일 경우 이는 공역이 공집합인 유일한 함수이다.
+
+종류
+단사 함수와 전사 함수
+함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  에 대하여, 다음과 같은 성질들을 정의할 수 있다.
+
+단사 함수: 임의의 정의역 원소 
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        X
+      
+    
+    {\displaystyle x,y\in X}
+  에 대하여, 만약 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        f
+        (
+        y
+        )
+      
+    
+    {\displaystyle f(x)=f(y)}
+  라면, 
+  
+    
+      
+        x
+        =
+        y
+      
+    
+    {\displaystyle x=y}
+  이다. 즉, 서로 다른 정의역 원소는 서로 다른 공역 원소에 대응한다.
+전사 함수: 임의의 공역 원소 
+  
+    
+      
+        y
+        ∈
+        Y
+      
+    
+    {\displaystyle y\in Y}
+  에 대하여, 
+  
+    
+      
+        y
+        =
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle y=f(x)}
+  인 정의역 원소 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  가 존재한다. 즉, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 치역은 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 공역과 같다.
+전단사 함수: 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  는 단사 함수이며, 전사 함수이다. 이는 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  가 역함수를 갖는 것과 동치이다.
+
+특별한 정의역·공역을 갖는 함수
+특별한 정의역 또는 공역을 갖는 함수는 특별한 이름이 붙는다.
+
+특별한 정의역을 갖는 함수에 대하여 추가적인 성질들을 정의할 수 있다. 예컨대 두 위상 공간 사이의 함수에 대하여 연속 함수의 개념을 정의할 수 있으며, 두 매끄러운 다양체 사이의 함수의 각종 매끄러움 성질들을 정의할 수 있다. 실변수 실숫값 함수 
+  
+    
+      
+        f
+        :
+        U
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f\colon U\to \mathbb {R} }
+   (
+  
+    
+      
+        U
+      
+    
+    {\displaystyle U}
+  는 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  의 열린집합)의 경우 추가로 다음과 같은 성질들을 정의할 수 있다.
+
+단조함수증가함수: 임의의 
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        U
+      
+    
+    {\displaystyle x,y\in U}
+  에 대하여, 만약 
+  
+    
+      
+        x
+        ≤
+        y
+      
+    
+    {\displaystyle x\leq y}
+  라면, 
+  
+    
+      
+        f
+        (
+        x
+        )
+        ≤
+        f
+        (
+        y
+        )
+      
+    
+    {\displaystyle f(x)\leq f(y)}
+  . 즉, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 그래프는 오른쪽으로 갈수록 상승하는 곡선이다. 예를 들어, 
+  
+    
+      
+        U
+        =
+        
+          R
+        
+      
+    
+    {\displaystyle U=\mathbb {R} }
+  , 
+  
+    
+      
+        x
+        ↦
+        2
+        x
+      
+    
+    {\displaystyle x\mapsto 2x}
+  
+감소함수: 임의의 
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        U
+      
+    
+    {\displaystyle x,y\in U}
+  에 대하여, 만약 
+  
+    
+      
+        x
+        ≤
+        y
+      
+    
+    {\displaystyle x\leq y}
+  라면, 
+  
+    
+      
+        f
+        (
+        x
+        )
+        ≥
+        f
+        (
+        y
+        )
+      
+    
+    {\displaystyle f(x)\geq f(y)}
+  . 즉, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 그래프는 오른쪽으로 갈수록 하강한다. 예를 들어, 
+  
+    
+      
+        U
+        =
+        
+          R
+        
+      
+    
+    {\displaystyle U=\mathbb {R} }
+  , 
+  
+    
+      
+        x
+        ↦
+        −
+        2
+        x
+      
+    
+    {\displaystyle x\mapsto -2x}
+  
+홀함수와 짝함수:130
+홀함수: 임의의 
+  
+    
+      
+        x
+        ∈
+        U
+      
+    
+    {\displaystyle x\in U}
+  에 대하여, 
+  
+    
+      
+        −
+        x
+        ∈
+        U
+      
+    
+    {\displaystyle -x\in U}
+  이며 
+  
+    
+      
+        f
+        (
+        −
+        x
+        )
+        =
+        −
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(-x)=-f(x)}
+  . 즉, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 그래프는 원점에 대하여 대칭이다. 예를 들어, 
+  
+    
+      
+        U
+        =
+        
+          R
+        
+      
+    
+    {\displaystyle U=\mathbb {R} }
+  , 
+  
+    
+      
+        x
+        ↦
+        
+          x
+          
+            3
+          
+        
+      
+    
+    {\displaystyle x\mapsto x^{3}}
+  
+짝함수: 임의의 
+  
+    
+      
+        x
+        ∈
+        U
+      
+    
+    {\displaystyle x\in U}
+  에 대하여, 
+  
+    
+      
+        −
+        x
+        ∈
+        U
+      
+    
+    {\displaystyle -x\in U}
+  이며 
+  
+    
+      
+        f
+        (
+        −
+        x
+        )
+        =
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(-x)=f(x)}
+  . 즉, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 그래프는 y축에 대하여 대칭이다. 예를 들어, 
+  
+    
+      
+        U
+        =
+        
+          R
+        
+      
+    
+    {\displaystyle U=\mathbb {R} }
+  , 
+  
+    
+      
+        x
+        ↦
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle x\mapsto x^{2}}
+  
+주기 함수: 임의의 
+  
+    
+      
+        x
+        ∈
+        U
+      
+    
+    {\displaystyle x\in U}
+  에 대하여, 
+  
+    
+      
+        x
+        +
+        T
+        ∈
+        U
+      
+    
+    {\displaystyle x+T\in U}
+  이며 
+  
+    
+      
+        f
+        (
+        x
+        +
+        T
+        )
+        =
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x+T)=f(x)}
+  . 즉, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 그래프는 x축 방향의 평행 이동 대칭을 갖는다. 대표적으로 모든 삼각 함수는 주기 함수다.
+
+조각마다 정의된 함수
+두 매끄러운 다양체 
+  
+    
+      
+        X
+        ,
+        Y
+      
+    
+    {\displaystyle X,Y}
+   사이의 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  에 대하여, 다음 두 조건을 만족시키는 유한 개의 서로소 집합 
+  
+    
+      
+        
+          X
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            n
+          
+        
+        ⊂
+        X
+      
+    
+    {\displaystyle X_{1},\dots ,X_{n}\subset X}
+  이 존재한다면, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  를 조각마다 〜 함수라고 한다.
+
+  
+    
+      
+        X
+        =
+        
+          X
+          
+            1
+          
+        
+        ∪
+        ⋯
+        ∪
+        
+          X
+          
+            n
+          
+        
+      
+    
+    {\displaystyle X=X_{1}\cup \cdots \cup X_{n}}
+  
+각 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle i=1,\dots ,n}
+  에 대하여, 
+  
+    
+      
+        
+          D
+          
+            i
+          
+        
+        ⊆
+        
+          X
+          
+            i
+          
+        
+        ⊆
+        cl
+        ⁡
+        
+          D
+          
+            i
+          
+        
+      
+    
+    {\displaystyle D_{i}\subseteq X_{i}\subseteq \operatorname {cl} D_{i}}
+  인 영역 
+  
+    
+      
+        
+          D
+          
+            i
+          
+        
+        ⊆
+        X
+      
+    
+    {\displaystyle D_{i}\subseteq X}
+  가 존재한다.
+각 
+  
+    
+      
+        i
+        =
+        1
+        ,
+        …
+        ,
+        n
+      
+    
+    {\displaystyle i=1,\dots ,n}
+  에 대하여, 
+  
+    
+      
+        f
+        ↾
+        
+          X
+          
+            i
+          
+        
+      
+    
+    {\displaystyle f\upharpoonright X_{i}}
+  는 〜 함수이다.특히, 정의역이 실수 구간인 경우, 정의역은 작은 구간들로 분할되어야 한다. 예를 들어, 
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+        ⊆
+        
+          R
+        
+      
+    
+    {\displaystyle [0,1]\subseteq \mathbb {R} }
+  의 분할의 한 가지 예는 다음과 같다.
+
+  
+    
+      
+        [
+        0
+        ,
+        1
+        ]
+        =
+        [
+        0
+        ,
+        1
+        
+          /
+        
+        4
+        )
+        ⊔
+        [
+        1
+        
+          /
+        
+        4
+        ,
+        1
+        
+          /
+        
+        2
+        )
+        ⊔
+        {
+        1
+        
+          /
+        
+        2
+        }
+        ⊔
+        [
+        1
+        
+          /
+        
+        2
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle [0,1]=[0,1/4)\sqcup [1/4,1/2)\sqcup \{1/2\}\sqcup [1/2,1]}
+  예를 들어, 실수 절댓값 함수는 조각마다 일차 함수이다. 부호 함수는 조각마다 상수 함수이다. 함수
+
+  
+    
+      
+        f
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f\colon \mathbb {R} \to \mathbb {R} }
+  
+
+  
+    
+      
+        f
+        :
+        x
+        ↦
+        
+          
+            {
+            
+              
+                
+                  
+                    x
+                    
+                      2
+                    
+                  
+                
+                
+                  x
+                  <
+                  1
+                  
+                    /
+                  
+                  2
+                
+              
+              
+                
+                  −
+                  
+                    x
+                    
+                      2
+                    
+                  
+                  +
+                  2
+                  x
+                
+                
+                  x
+                  ≥
+                  1
+                  
+                    /
+                  
+                  2
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle f\colon x\mapsto {\begin{cases}x^{2}&x<1/2\\-x^{2}+2x&x\geq 1/2\end{cases}}}
+  는 조각마다 연속 함수이다.
+
+다가 함수
+다가 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  의 정의는 함수의 조건을 다음과 같이 약화시켜 얻는다.
+
+임의의 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  에 대하여, 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        )
+        ∈
+        graph
+        ⁡
+        f
+      
+    
+    {\displaystyle (x,y)\in \operatorname {graph} f}
+  인 
+  
+    
+      
+        y
+        ∈
+        Y
+      
+    
+    {\displaystyle y\in Y}
+  가 적어도 하나 존재한다.즉, 다가 함수는 정의역의 각 원소를 적어도 하나의 공역 원소에 대응시키지만, 함수와 달리 여러 개의 공역 원소에 대응시킬 수 있다. 다가 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  는 일반적으로 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  에서 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  로 가는 함수가 아니지만 멱집합으로 가는 함수
+
+  
+    
+      
+        f
+        :
+        X
+        →
+        
+          
+            P
+          
+        
+        (
+        Y
+        )
+      
+    
+    {\displaystyle f\colon X\to {\mathcal {P}}(Y)}
+  와 동치이다.
+복소수의 거듭제곱은 대표적인 다가 함수이다. 특히 음이 아닌 실수의 제곱근
+
+  
+    
+      
+        f
+        :
+        [
+        0
+        ,
+        ∞
+        )
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f\colon [0,\infty )\to \mathbb {R} }
+  
+
+  
+    
+      
+        f
+        :
+        x
+        ↦
+        ±
+        
+          
+            x
+          
+        
+      
+    
+    {\displaystyle f\colon x\mapsto \pm {\sqrt {x}}}
+  은 (양의 실수가 두 개의 제곱근을 가지므로) 다가 함수이다.
+일반적인 함수를 다가 함수와 구별하기 위해 일가 함수(一價函數, 영어: single-valued function)라고 부르기도 한다.
+
+부분 정의 함수
+부분 정의 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  는 다음과 같이 약화된 조건을 사용하여 정의한다.
+
+임의의 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+   및 
+  
+    
+      
+        y
+        ,
+        z
+        ∈
+        Y
+      
+    
+    {\displaystyle y,z\in Y}
+  에 대하여, 만약 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        )
+        ,
+        (
+        x
+        ,
+        z
+        )
+        ∈
+        graph
+        ⁡
+        f
+      
+    
+    {\displaystyle (x,y),(x,z)\in \operatorname {graph} f}
+  라면 
+  
+    
+      
+        y
+        =
+        z
+      
+    
+    {\displaystyle y=z}
+  이다.즉, 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  의 각 원소는 유일한 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  의 원소에 대응하거나, 어떤 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  의 원소에도 대응하지 않는다. 부분 정의 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  는 일반적으로 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  에서 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  로 가는 함수가 아니다. 그러나 이는 다음과 같은 꼴의 함수와 동치이다.
+
+  
+    
+      
+        f
+        :
+        X
+        ∪
+        {
+        
+          ∙
+          
+            X
+          
+        
+        }
+        →
+        Y
+        ∪
+        {
+        
+          ∙
+          
+            Y
+          
+        
+        }
+      
+    
+    {\displaystyle f\colon X\cup \{\bullet _{X}\}\to Y\cup \{\bullet _{Y}\}}
+  
+
+  
+    
+      
+        f
+        (
+        
+          ∙
+          
+            X
+          
+        
+        )
+        =
+        
+          ∙
+          
+            Y
+          
+        
+      
+    
+    {\displaystyle f(\bullet _{X})=\bullet _{Y}}
+  
+
+  
+    
+      
+        
+          ∙
+          
+            X
+          
+        
+        ∉
+        X
+      
+    
+    {\displaystyle \bullet _{X}\not \in X}
+  
+
+  
+    
+      
+        
+          ∙
+          
+            Y
+          
+        
+        ∉
+        Y
+      
+    
+    {\displaystyle \bullet _{Y}\not \in Y}
+  예를 들어, 역수를 취하는 함수
+
+  
+    
+      
+        f
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f\colon \mathbb {R} \to \mathbb {R} }
+  
+
+  
+    
+      
+        f
+        :
+        x
+        ↦
+        
+          
+            1
+            x
+          
+        
+      
+    
+    {\displaystyle f\colon x\mapsto {\frac {1}{x}}}
+  는 (0의 역수가 정의되지 않으므로) 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+   위의 부분 정의 함수이다. 이 부분 정의 함수는 정의역을 0이 아닌 실수로 축소하거나 공역에 (음과 양을 구분하지 않는) 무한대 
+  
+    
+      
+        
+          
+            
+              ∞
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\widehat {\infty }}}
+  를 추가하여 함수로 만들 수 있다.
+일반적인 함수를 부분 정의 함수와 구별하기 위해 전함수(全函數, 영어: total function)라고 부르기도 한다.
+
+연산
+상과 원상
+집합 
+  
+    
+      
+        A
+        ⊆
+        X
+      
+    
+    {\displaystyle A\subseteq X}
+   및 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  에 대하여,
+
+  
+    
+      
+        {
+        f
+        (
+        a
+        )
+        :
+        a
+        ∈
+        A
+        }
+      
+    
+    {\displaystyle \{f(a)\colon a\in A\}}
+  를 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  의 상이라고 하며, 
+  
+    
+      
+        f
+        (
+        A
+        )
+      
+    
+    {\displaystyle f(A)}
+  로 쓴다. 집합 
+  
+    
+      
+        B
+        ⊆
+        Y
+      
+    
+    {\displaystyle B\subseteq Y}
+   및 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  에 대하여,
+
+  
+    
+      
+        {
+        x
+        ∈
+        X
+        :
+        f
+        (
+        x
+        )
+        ∈
+        B
+        }
+      
+    
+    {\displaystyle \{x\in X\colon f(x)\in B\}}
+  를 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+  의 원상이라고 하며, 
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+        (
+        B
+        )
+      
+    
+    {\displaystyle f^{-1}(B)}
+  로 쓴다. 정의역의 상 
+  
+    
+      
+        f
+        (
+        X
+        )
+      
+    
+    {\displaystyle f(X)}
+  을 치역이라고 한다.
+예를 들어, 사인 함수
+
+  
+    
+      
+        sin
+        :
+        
+          R
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle \sin \colon \mathbb {R} \to \mathbb {R} }
+  의 치역은 
+  
+    
+      
+        [
+        −
+        1
+        ,
+        1
+        ]
+      
+    
+    {\displaystyle [-1,1]}
+  이며, 
+  
+    
+      
+        {
+        1
+        }
+      
+    
+    {\displaystyle \{1\}}
+  의 원상은
+
+  
+    
+      
+        
+          {
+          
+            
+              (
+              
+                2
+                n
+                +
+                
+                  
+                    1
+                    2
+                  
+                
+              
+              )
+            
+            π
+            :
+            n
+            ∈
+            
+              Z
+            
+          
+          }
+        
+      
+    
+    {\displaystyle \left\{\left(2n+{\frac {1}{2}}\right)\pi \colon n\in \mathbb {Z} \right\}}
+  이다. 여기서 
+  
+    
+      
+        
+          Z
+        
+      
+    
+    {\displaystyle \mathbb {Z} }
+  는 정수의 집합, 
+  
+    
+      
+        π
+      
+    
+    {\displaystyle \pi }
+  는 원주율이다.
+
+역함수
+함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  에 대하여, 다음 두 조건이 서로 동치이다.
+
+임의의 
+  
+    
+      
+        y
+        ∈
+        Y
+      
+    
+    {\displaystyle y\in Y}
+  에 대하여, 
+  
+    
+      
+        y
+        =
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle y=f(x)}
+  인 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  가 유일하게 존재한다.
+
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  는 전단사 함수이다.이 경우 정의역과 공역이 뒤바뀌고 대응의 방향이 반대로 바뀐 함수
+
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+        :
+        Y
+        →
+        X
+      
+    
+    {\displaystyle f^{-1}\colon Y\to X}
+  
+
+  
+    
+      
+        
+          f
+          
+            −
+            1
+          
+        
+        :
+        f
+        (
+        x
+        )
+        ↦
+        x
+      
+    
+    {\displaystyle f^{-1}\colon f(x)\mapsto x}
+  를 생각할 수 있다. 이를 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 역함수라고 한다.
+예를 들어, 지수 함수
+
+  
+    
+      
+        exp
+        :
+        
+          R
+        
+        →
+        (
+        0
+        ,
+        ∞
+        )
+      
+    
+    {\displaystyle \exp \colon \mathbb {R} \to (0,\infty )}
+  는 전단사 함수이며, 그 역함수는 로그 함수
+
+  
+    
+      
+        ln
+        :
+        (
+        0
+        ,
+        ∞
+        )
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle \ln \colon (0,\infty )\to \mathbb {R} }
+  이다.
+
+합성
+첫째 함수의 공역과 둘째 함수의 정의역이 같은 두 함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+   및 
+  
+    
+      
+        g
+        :
+        Y
+        →
+        Z
+      
+    
+    {\displaystyle g\colon Y\to Z}
+  에 대하여, 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  의 원소를 먼저 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  를 통해 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  의 원소에 대응시키고, 다시 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  에 따라 
+  
+    
+      
+        Z
+      
+    
+    {\displaystyle Z}
+  의 원소로 대응시키는 함수
+
+  
+    
+      
+        g
+        ∘
+        f
+        :
+        X
+        →
+        Z
+      
+    
+    {\displaystyle g\circ f\colon X\to Z}
+  
+
+  
+    
+      
+        g
+        ∘
+        f
+        :
+        x
+        ↦
+        g
+        (
+        f
+        (
+        x
+        )
+        )
+      
+    
+    {\displaystyle g\circ f\colon x\mapsto g(f(x))}
+  를 생각할 수 있다. 이를 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  와 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  의 합성이라고 한다.
+예를 들어, 만약
+
+  
+    
+      
+        X
+        =
+        Y
+        =
+        Z
+        =
+        
+          R
+        
+      
+    
+    {\displaystyle X=Y=Z=\mathbb {R} }
+  
+
+  
+    
+      
+        f
+        :
+        x
+        ↦
+        2
+        x
+      
+    
+    {\displaystyle f\colon x\mapsto 2x}
+  
+
+  
+    
+      
+        g
+        :
+        y
+        ↦
+        y
+        +
+        1
+      
+    
+    {\displaystyle g\colon y\mapsto y+1}
+  일 경우
+
+  
+    
+      
+        g
+        ∘
+        f
+        :
+        x
+        ↦
+        2
+        x
+        +
+        1
+      
+    
+    {\displaystyle g\circ f\colon x\mapsto 2x+1}
+  이다.
+
+제한
+함수 
+  
+    
+      
+        f
+        :
+        X
+        →
+        Y
+      
+    
+    {\displaystyle f\colon X\to Y}
+  의 정의역의 부분 집합 
+  
+    
+      
+        A
+        ⊆
+        X
+      
+    
+    {\displaystyle A\subseteq X}
+  으로의 제한(制限, 영어: restriction)은 다음과 같은 함수를 일컫는다.
+
+  
+    
+      
+        f
+        ↾
+        A
+        :
+        A
+        →
+        Y
+      
+    
+    {\displaystyle f\upharpoonright A\colon A\to Y}
+  
+
+  
+    
+      
+        f
+        ↾
+        A
+        :
+        x
+        ↦
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f\upharpoonright A\colon x\mapsto f(x)}
+  즉, 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  의 대응 규칙을 유지한 채 정의역만 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  로 줄인 함수이다.
+
+호환되는 함수족으로 유도되는 함수
+함수족 
+  
+    
+      
+        (
+        
+          f
+          
+            i
+          
+        
+        :
+        
+          X
+          
+            i
+          
+        
+        →
+        
+          Y
+          
+            i
+          
+        
+        
+          )
+          
+            i
+            ∈
+            I
+          
+        
+      
+    
+    {\displaystyle (f_{i}\colon X_{i}\to Y_{i})_{i\in I}}
+  가 다음 조건을 만족시킨다고 하자.
+
+임의의 
+  
+    
+      
+        i
+        ,
+        j
+        ∈
+        I
+      
+    
+    {\displaystyle i,j\in I}
+   및 
+  
+    
+      
+        x
+        ∈
+        
+          X
+          
+            i
+          
+        
+        ∩
+        
+          X
+          
+            j
+          
+        
+      
+    
+    {\displaystyle x\in X_{i}\cap X_{j}}
+  에 대하여, 
+  
+    
+      
+        
+          f
+          
+            i
+          
+        
+        (
+        x
+        )
+        =
+        
+          f
+          
+            j
+          
+        
+        (
+        x
+        )
+      
+    
+    {\displaystyle f_{i}(x)=f_{j}(x)}
+  그렇다면 함수들을 정의역의 합집합에서 공역의 합집합으로 가는 하나의 함수
+
+  
+    
+      
+        f
+        :
+        
+          ⋃
+          
+            i
+            ∈
+            I
+          
+        
+        
+          X
+          
+            i
+          
+        
+        →
+        
+          ⋃
+          
+            i
+            ∈
+            I
+          
+        
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle f\colon \bigcup _{i\in I}X_{i}\to \bigcup _{i\in I}Y_{i}}
+  
+
+  
+    
+      
+        f
+        ↾
+        
+          X
+          
+            i
+          
+        
+        =
+        
+          f
+          
+            i
+          
+        
+      
+    
+    {\displaystyle f\upharpoonright X_{i}=f_{i}}
+  로 합칠 수 있다.:16, 21
+
+점별 연산
+정의역이 같은 함수족 
+  
+    
+      
+        (
+        
+          f
+          
+            i
+          
+        
+        :
+        X
+        →
+        
+          Y
+          
+            i
+          
+        
+        
+          )
+          
+            i
+            ∈
+            I
+          
+        
+      
+    
+    {\displaystyle (f_{i}\colon X\to Y_{i})_{i\in I}}
+  에 대하여, 공역의 곱집합으로 가는 함수
+
+  
+    
+      
+        (
+        
+          f
+          
+            i
+          
+        
+        
+          )
+          
+            i
+            ∈
+            I
+          
+        
+        :
+        X
+        →
+        
+          ∏
+          
+            i
+            ∈
+            I
+          
+        
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle (f_{i})_{i\in I}\colon X\to \prod _{i\in I}Y_{i}}
+  
+
+  
+    
+      
+        (
+        
+          f
+          
+            i
+          
+        
+        
+          )
+          
+            i
+            ∈
+            I
+          
+        
+        :
+        x
+        ↦
+        (
+        
+          f
+          
+            i
+          
+        
+        (
+        x
+        )
+        
+          )
+          
+            i
+            ∈
+            I
+          
+        
+      
+    
+    {\displaystyle (f_{i})_{i\in I}\colon x\mapsto (f_{i}(x))_{i\in I}}
+  를 정의할 수 있다.
+특수한 공역을 갖는 함수에 대하여 점별 연산을 정의할 수 있으며, 이는 위 함수와 공역 위 연산의 합성을 통해 나타낼 수 있다. 예를 들어, 두 실숫값 함수 
+  
+    
+      
+        f
+        ,
+        g
+        :
+        X
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f,g\colon X\to \mathbb {R} }
+  에 대하여, 
+  
+    
+      
+        (
+        f
+        ,
+        g
+        )
+        :
+        X
+        →
+        
+          
+            R
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle (f,g)\colon X\to \mathbb {R} ^{2}}
+  와 실수의 덧셈의 합성을 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  와 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  의 점별합(點別合, 영어: pointwise sum) 
+  
+    
+      
+        f
+        +
+        g
+      
+    
+    {\displaystyle f+g}
+  라고 하며, 실수의 곱셈과의 합성을 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  와 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  의 점별곱(點別-, 영어: pointwise product) 
+  
+    
+      
+        f
+        g
+      
+    
+    {\displaystyle fg}
+  라고 한다. 구체적으로 이들은 각각 다음과 같다.
+
+  
+    
+      
+        f
+        +
+        g
+        :
+        X
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle f+g\colon X\to \mathbb {R} }
+  
+
+  
+    
+      
+        f
+        +
+        g
+        :
+        x
+        ↦
+        f
+        (
+        x
+        )
+        +
+        g
+        (
+        x
+        )
+      
+    
+    {\displaystyle f+g\colon x\mapsto f(x)+g(x)}
+  
+
+  
+    
+      
+        f
+        g
+        :
+        X
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle fg\colon X\to \mathbb {R} }
+  
+
+  
+    
+      
+        f
+        g
+        :
+        x
+        ↦
+        f
+        (
+        x
+        )
+        g
+        (
+        x
+        )
+      
+    
+    {\displaystyle fg\colon x\mapsto f(x)g(x)}
+
+역사
+삼각함수와 같은 특정 함수에 대한 연구는 오래전부터 있어 왔다. 16세기 라이프치히 대학교의 수학 교수이자 코페르니쿠스의 《천구의 회전에 관하여》가 출간되는데 큰 역할을 하였던 레티쿠스는 1596년 《팔라티누스 삼각형 서(書)》(라틴어: Opus Palatinum de triangulis)에서 삼각함수표를 정리하여 발표하기도 하였다. 그러나 당시의 연구는 현재의 함수 정의에 확립되어 있는 관계에 대한 개념이 없이 단순히 계산의 편의를 도모하기 위한 것이었다. 한편, 르네 데카르트는 직교좌표계를 이용하여 오늘날 함수의 관계식에 해당하는 방정식을 그래프로 표현하는 방법을 제시하였다.17세기에 도입한 대부분의 함수는 함수 개념이 충분히 인식되기 이전에는 곡선, 특히 운동 궤적으로서 연구되었다. 1667년, 제임스 그레고리(영어: James Gregory)는 논문 《원과 쌍곡선의 구적법에 대하여》(라틴어: Vera Circuli et Hyperbolae Quadratura)에서 함수를 다른 양들에 대한 대수 연산 및 극한 연산을 통해 얻는 양으로 정의하였다. 1665년부터, 아이작 뉴턴은 줄곧 “플루언트”(영어: fluent)라는 용어로 변수 간 관계를 지칭하였다. 1673년, 고트프리트 빌헬름 라이프니츠는 오늘날 쓰이는 용어인 “함수”(영어: function)을 곡선 위 점에 따라 변화하는 양으로 정의하였다. 1697년, 요한 베르누이는 함수를 상수와 변수가 대수 연산 및 초월 연산을 통해 구성하는 양으로 정의하였으며, 1698년에 라이프니츠의 용어를 채택하였다. 1714년, 라이프니츠는 저서 《역사》(라틴어: historia)에서 함수를 변수에 의존하는 양으로 정의하였다. 그러나, 그는 여태 미분 가능한 함수만을 다루었다.
+레온하르트 오일러는 1734년에 오늘날 쓰이는 표기법 
+  
+    
+      
+        f
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)}
+  를 도입하였다. 또한, 오일러는 1748년에 저서 《무한 해석 입문》(라틴어: Introductio in Analysin Infinitorum)에서 함수를 변수와 상수로 구성된 임의의 해석적 수식으로 정의하였으며, 1775년에 저서 《미분학 입문》(라틴어: Institutiones Calculi Differentialis)에서 변수에 의존하며 그 변화에 따라 변화하는 또 다른 변수로 정의하였다.
+1797년, 실베스트르 프랑수아 라크루아(프랑스어: Sylvestre-François Lacroix)는 저서 《미분과 적분에 대하여》(프랑스어: Traité du Calcul Différentiel et du Calcul Intégral)에서 수식으로 표현될 필요가 없는, 더 넓은 함수의 개념을 도입하였으며, 5차 방정식의 근이 5차 방정식의 계수의 함수라는 예시를 들었다. 1811~15년, 조제프루이 라그랑주는 저서 《역학 해석》(라틴어: Mecanique analytique)에서 “함수”라는 용어를 거의 모든 유형의 함수에서 사용하였다.
+조제프 푸리에는 함수가 해석적 수식으로 표현될 수 있을 필요가 없다고 주장하였으나, 동시에 모든 함수는 푸리에 급수로 표현될 수 있다고 주장하였다. 그러나 그는 임의의 유한 구간에서 유한 개의 불연속점만을 갖는 함수만을 다루었다.
+1837년, 페터 구스타프 르죈 디리클레는 논문 《완전히 임의인 함수의 사인 및 코사인 함수 표현에 대하여》(독일어: Ober die Darstellung ganz willkurlicher Functionen durch Sinus-und Cosinusreihen)에서, 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  가 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  의 함수라는 것을 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  의 주어진 구간에서의 임의의 값에 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  의 유일한 값이 대응하는 것으로 정의하였으며, 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  가 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  에 따라 어떤 법칙을 통해 결정되거나, 수학 공식으로 표현될 필요는 없다고 설명하였다. 이는 오늘날에도 사용되는 정의이다.
+함수의 현대적 정의는 게오르크 칸토어가 제기한 집합론에 기반한 것이다. 버트런드 러셀은 집합을 기반으로 수학의 공리를 재서술하면서 함수 역시 이를 기반으로 재정의하였다.
+
+어원
+17세기 고트프리트 빌헬름 라이프니츠는 수학 저서에서 라틴어 단어 functio를 주로 ‘기능’이란 뜻으로 썼다. 이후 요한 베르누이 등이 functio를 기술적인 해석학 용어로 쓰기 시작했다. 이것이 다른 유럽 언어로 전파되었다.
+영어 function의 번역어로 ‘함수(函數)’를 쓰기 시작한 사람은 이선란과 알렉산더 와일리이다. 그들은 번역서 《대수학(代數學)》(1859)과 《대미적습급(代微積拾級)》(1859)에서 ‘함수(函數)’라는 용어를 썼다. 함(函)은 ‘상자’·‘담다’라는 뜻으로, 한 변수가 다른 변수를 담고 있다는 뜻으로 용어를 의역한 것이다.
+
+‘함수’가 영어 단어 function의 발음을 음역한 단어라는 설이 있지만 두 발음이 크게 달라 근거가 희박하다. 이선란은 상수·변수·계수·지수·급수 등의 번역어도 만들었지만 그 어떤 것도 음역이 아니다.
+
+참고 문헌
+외부 링크
+이철희. “함수”. 《수학노트》. 
+“Function”. 《Encyclopedia of Mathematics》 (영어). Springer-Verlag. 2001. ISBN 978-1-55608-010-4. 
+Weisstein, Eric Wolfgang. “Function”. 《Wolfram MathWorld》 (영어). Wolfram Research. 
+“Function”. 《nLab》 (영어).

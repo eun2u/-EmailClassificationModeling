@@ -1,0 +1,357 @@
+집합론(集合論, 영어: set theory)은 추상적 대상들의 모임인 집합을 연구하는 수학 이론이다. 집합론은 술어논리학과 함께 대부분의 수학기초론 체계의 근본으로, 현대 수학을 논리적으로 지탱하는 밑바탕이 된다.
+소박한 집합론에서는 집합을 단순히 대상들을 모아서 만들어지는 자명한 개념으로 이해한다. 중학교 및 고등학교 등의 교육과정에서 다루는 집합의 개념은 이에 해당한다.
+소박한 집합론의 모순을 해결하기 위해 등장한 공리적 집합론은 집합들과 그 포함관계가 만족하는 공리들을 규정하는 방법으로 집합을 간접적으로 정의한다. 여기에서 집합과 그 포함관계는 유클리드 기하에서의 점이나 선과 같은 무정의 용어로 볼 수 있다. 공리적 집합론은 대부분의 경우 대학에서 수학을 전공하지 않는 이상 배우지 않는다.
+
+공리적 집합론
+공리적 집합론은 술어논리를 이용하여 기술한 체계를 가지고 집합의 성질을 규명하는 수학의 한 분야이다.
+
+일차 술어논리를 사용한 공리적 집합론
+단항 술어기호 '
+  
+    
+      
+        
+          S
+          e
+          t
+        
+      
+    
+    {\displaystyle \mathrm {Set} }
+  '과 양항 술어기호인 포함관계 기호 '
+  
+    
+      
+        ∈
+      
+    
+    {\displaystyle \in }
+  '모두를 포함하거나 오로지 포함관계 기호만을 포함한 일차 술어논리 언어를 가지고 집합론을 구성할 수 있다.
+일반적으로 대상 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  가 
+  
+    
+      
+        
+          S
+          e
+          t
+        
+        (
+        x
+        )
+      
+    
+    {\displaystyle \mathrm {Set} (x)}
+  를 만족하면 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  를 집합이라 한다.
+이 술어기호가 없는 집합론에서는 모든 대상을 집합으로 간주한다. 집합이 없는 대상을 원자(아톰, atom)이라 한다.
+만일 
+  
+    
+      
+        x
+        ∈
+        X
+      
+    
+    {\displaystyle x\in X}
+  이면 '
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  가 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  의 원소다' 혹은 '
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  가 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  를 포함한다((원소로) 가진다)'고 한다. 이는 기호로 표현한 것을 설명한다기보다는 자연어로 옮기는 방법을 서술한 것에 가깝다.
+어떤 공리적 집합론에서도 보통 확장 공리는 채택하는 편이다.
+확장 공리는 `집합 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  와 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  가 가지는 원소가 서로 꼭 같다면 
+  
+    
+      
+        X
+        =
+        Y
+      
+    
+    {\displaystyle X=Y}
+  이다.'를 말한다.
+기호로 
+  
+    
+      
+        ∀
+        X
+        ∀
+        Y
+        (
+        (
+        
+          S
+          e
+          t
+        
+        (
+        X
+        )
+        ∧
+        
+          S
+          e
+          t
+        
+        (
+        Y
+        )
+        )
+        →
+        (
+        ∀
+        z
+        (
+        z
+        ∈
+        X
+        ↔
+        z
+        ∈
+        Y
+        )
+        →
+        (
+        X
+        =
+        Y
+        )
+        )
+      
+    
+    {\displaystyle \forall X\forall Y((\mathrm {Set} (X)\wedge \mathrm {Set} (Y))\rightarrow (\forall z(z\in X\leftrightarrow z\in Y)\rightarrow (X=Y))}
+  로 쓸 수 있다.
+이제 소박한 집합론에서 말하는 '분명히 구별되는 대상들의 모임이 집합'이라는 정의를 공리적 집합론으로 가져오면 다음과 같이 표현할 수 있다.
+'임의의 
+  
+    
+      
+        (
+        n
+        +
+        1
+        )
+      
+    
+    {\displaystyle (n+1)}
+  개 자유변수 
+  
+    
+      
+        ν
+        ,
+        
+          ν
+          
+            1
+          
+        
+        ,
+        
+          ν
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          ν
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \nu ,\nu _{1},\nu _{2},\ldots ,\nu _{n}}
+  를 가지는 논리 공식 
+  
+    
+      
+        φ
+      
+    
+    {\displaystyle \varphi }
+  에 대하여 
+  
+    
+      
+        ∀
+        
+          ν
+          
+            1
+          
+        
+        ∀
+        
+          ν
+          
+            2
+          
+        
+        ⋯
+        
+          ν
+          
+            n
+          
+        
+        ∃
+        X
+        (
+        ∀
+        ν
+        (
+        ν
+        ∈
+        X
+        ↔
+        φ
+        (
+        ν
+        ,
+        
+          ν
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          ν
+          
+            n
+          
+        
+        )
+        )
+      
+    
+    {\displaystyle \forall \nu _{1}\forall \nu _{2}\cdots \nu _{n}\exists X(\forall \nu (\nu \in X\leftrightarrow \varphi (\nu ,\nu _{1},\ldots ,\nu _{n}))}
+  가 성립한다'로 표현할 수 있다.
+여기서 변수자리에 쓴 
+  
+    
+      
+        ν
+      
+    
+    {\displaystyle \nu }
+  는 그것이 어느 변수라도 될 수 있음을 표현하고자 한 것이다.
+물론 변수 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  는 
+  
+    
+      
+        ν
+      
+    
+    {\displaystyle \nu }
+  들 중 어느 하나라도 같아서는 안 된다.
+그런데 이 공리는 도입하는 즉시 러셀의 역설과 유사한 역설에 직면하게 된다.
+이를 피하기 위해 여러 방법이 사용되는데, 크게 세 가지로 구분된다.
+하나는 분리공리만을 허용하는 것이고, 또 하나는 변수의 타입을 집합과 유로 구분하는 것이고, 또 하나는 사용할 수 있는 논리 공식에 제한을 두는 것이다.
+ZFC에서는 분리공리만을 허용하며, 변수 타입을 집합과 유로 구분하는 것은 NBG, 논리 공식에 제한을 두는 것은 New foundation에서 볼 수 있다.
+
+같이 보기
+게오르크 칸토어 (1845년-1918년) - 독일의 수학자 및 철학자로, 집합론의 창시자로 잘 알려져 있다.
+주세페 페아노 (1858년-1932년) - 이탈리아의 수학자 및 철학자로, 합집합과 교집합 기호를 발명했고 산술을 형식화했다.
+소박한 집합론
+공리적 집합론
+집합
+체르멜로 집합론은 독일의 수학자 에른스트 체르멜로가 개발한 공리계이다.
+체르멜로-프렝켈 집합론은 가장 널리 사용되는 집합론의 공리계이다.
+
+참고 문헌
+최창선 (2006). 《수학, 철학, 전산학, 언어학도를 위한 집합론 입문》. 경문사. ISBN 89-7282-777-0. 
+이식 (2007). 《집합론》. 경문사. ISBN 978-89-6105-051-7. 
+허걸 (2008). 《집합론》. 경문사. ISBN 89-7282-702-9. 
+이병무 (2009). 《쉬운 설명 다양한 예제 집합론의 이해》. 경문사. ISBN 978-89-6105-234-4. 
+Jech, Thomas (2003). 《Set theory》. Springer Monographs in Mathematics (영어) 3판. Springer-Verlag. doi:10.1007/3-540-44761-X. ISBN 978-3-540-44085-7. ISSN 1439-7382. Zbl 1007.03002. 
+Roitman, Judith (2011). 《Introduction to modern set theory》 (영어) 2판. Virginia Commonwealth University Press. ISBN 978-0-9824062-4-3. Zbl 0689.0400.  CS1 관리 - 추가 문구 (링크)
+Halmos, Paul R. (1974). 《Naive set theory》. Undergraduate Texts in Mathematics (영어). Springer-Verlag. doi:10.1007/978-1-4757-1645-0. ISBN 978-0-387-90092-6. ISSN 0172-6056. MR 0453532. Zbl 0287.04001. 
+Kunen, Kenneth (1980). 《Set theory: an introduction to independence proofs》. Studies in Logic and the Foundations of Mathematics (영어) 102. North-Holland. ISBN 978-0-444-86839-8. MR 597342. Zbl 0534.03026. 2016년 9월 11일에 원본 문서에서 보존된 문서. 2016년 8월 11일에 확인함. 
+Schindler, Ralf (2014). 《Set theory: exploring independence and truth》. Universitext (영어). Springer-Verlag. doi:10.1007/978-3-319-06725-4. ISBN 978-3-319-06724-7. ISSN 0172-5939.
+
+외부 링크
+“Set theory”. 《Encyclopedia of Mathematics》 (영어). Springer-Verlag. 2001. ISBN 978-1-55608-010-4. 
+“Axiomatic set theory”. 《Encyclopedia of Mathematics》 (영어). Springer-Verlag. 2001. ISBN 978-1-55608-010-4. 
+“Descriptive set theory”. 《Encyclopedia of Mathematics》 (영어). Springer-Verlag. 2001. ISBN 978-1-55608-010-4. 
+“Alternative set theory”. 《Encyclopedia of Mathematics》 (영어). Springer-Verlag. 2001. ISBN 978-1-55608-010-4. 
+Weisstein, Eric Wolfgang. “SetTheory”. 《Wolfram MathWorld》 (영어). Wolfram Research. 
+Bagaria, Joan (2014년 10월 8일). “Set theory”. 《Stanford Encyclopedia of Philosophy》 (영어). 
+“Set theory”. 《nLab》 (영어). 
+이석종 (2011). “집합론 및 실습”. Korea Open Courseware.

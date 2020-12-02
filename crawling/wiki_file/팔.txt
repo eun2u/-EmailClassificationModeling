@@ -1,0 +1,30 @@
+팔(Arm)은 인체의 부위 중 하나로, 어깨와 손목 사이를 말한다. 팔꿈치로 나눠서 어깨 쪽을 위팔(upper arm) 또는 상완(上腕), 손목 쪽을 아래팔 또는 전완(前腕)으로 부른다. 포유류의 앞다리에 해당한다. 그러나 인체 해부학에서 arm은 팔꿈치에서 어깨 사이의 위팔만을 의미한다.
+
+팔의 뼈대
+팔뼈대 64개
+
+팔이음뼈 4개
+빗장뼈(쇄골, clavicle) 2개
+어깨뼈(견갑골, scapula) 2개
+팔뼈 6개
+위팔뼈(상완골, humerus) 2개
+자뼈(척골, ulna) 2개
+노뼈(요골, radius) 2개
+손뼈 54개
+손목뼈(수근골, 완골 carpal bone) 16개
+손배뼈(주상골, scaphoid) 2개
+반달뼈(월상골, lunate) 2개
+세모뼈(삼각골, triquetrum) 2개
+콩알뼈(두상골, pisiform) 2개
+큰마름뼈(대능형골, trapezium) 2개
+작은마름뼈(소능형골, trapezoid) 2개
+알머리뼈(유두골, capitate) 2개
+갈고리뼈(유구골, hamate) 2개
+손허리뼈(중수골, metacarpal bone) 10개
+손가락뼈(지골, phalanges) 28개
+
+위팔의 근육
+위팔 앞면부리위팔근(coracobrachialis muscle)
+위팔두갈래근(상완이두근, biceps brachii muscle)
+위팔근(brachialis muscle)위팔 뒷면위팔세갈래근(상완삼두근, triceps brachii muscle)
+팔꿈치근(anconeus muscle)

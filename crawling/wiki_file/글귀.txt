@@ -1,0 +1,20 @@
+구(句)는 둘 또는 그 이상의 어절로 이루어져 한 덩어리로서 절이나 문장의 성분이 나되는되는 통사적인 말의 단위이다. 문법 체계에서 구는 절보다 더 낮은 곳에 속한다.
+
+분류
+구는 그 핵어가 무엇인가에 따라 몇 가지로 나뉠 수 있다. 한국어에는 다음과 같은 구들이 있다.
+
+명사구 (Noun phrase, NP)
+동사구 (Verb phrase, VP)
+형용사구 (Adjective phrase, AP)
+부사구 (Adverb phrase, AdvP)
+관형사구 (Prenoun phrase)이 밖에도 전치사가 있는 언어에서는 전치사구(preposition phrase, PP)를 설정하기도 한다. 일부 후치사가 있는 언어에서 후치사구(postpositional phrase)를 설정하기도 한다. 이 둘은 모두 부치사(adpositional phrase)에 속한다.
+또한 문학 시조나 사설(辭說)의 짧은 토막을 뜻하기도 한다. (낱 글자보다는 많고 한 문장 보다는 작다.)
+
+각주
+참고 문헌
+Kroeger, Paul 2005. Analyzing grammar: An introduction. Cambridge University Press.
+
+같이 보기
+통사적 단위문장
+절
+단어
