@@ -1,0 +1,165 @@
+원둘레는 기하학에서 원의 둘레를 일컫는 말이다. 이는 원주(圓周)라고도 하며 영어로는 circumference라고 한다.
+
+원의 지름 또는 반지름과의 관계
+지름의 길이가 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  인 원의 둘레는 
+  
+    
+      
+        π
+        d
+      
+    
+    {\displaystyle \pi d}
+  이다. 이의 증명은 다음과 같다.
+"지름의 길이가 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  인 원의 둘레를 
+  
+    
+      
+        l
+      
+    
+    {\displaystyle l}
+  이라고 하면 원주율의 정의에 의하여 
+  
+    
+      
+        π
+        =
+        
+          
+            l
+            d
+          
+        
+      
+    
+    {\displaystyle \pi ={\frac {l}{d}}}
+   이므로 
+  
+    
+      
+        l
+        =
+        π
+        d
+      
+    
+    {\displaystyle l=\pi d}
+  이다. 따라서 지름의 길이가 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  인 원의 둘레는 
+  
+    
+      
+        π
+        d
+      
+    
+    {\displaystyle \pi d}
+  이다."
+그리고 반지름의 길이가 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  인 원의 둘레의 길이는 
+  
+    
+      
+        2
+        π
+        r
+      
+    
+    {\displaystyle 2\pi r}
+  이다. 이는 어떤 원의 지름의 길이는 그 원의 반지름의 길이의 2배라는 사실과 위의 원의 지름과 둘레의 관계를 이용하여 증명할 수 있다. 그 증명은 다음과 같다.
+"반지름의 길이가 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  인 원은 지름의 길이가 
+  
+    
+      
+        2
+        r
+      
+    
+    {\displaystyle 2r}
+  이므로 둘레가 
+  
+    
+      
+        π
+        2
+        r
+      
+    
+    {\displaystyle \pi 2r}
+   인데 
+  
+    
+      
+        π
+        2
+        r
+        =
+        2
+        π
+        r
+      
+    
+    {\displaystyle \pi 2r=2\pi r}
+   이므로 반지름의 길이가 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+  인 원의 둘레는 
+  
+    
+      
+        2
+        π
+        r
+      
+    
+    {\displaystyle 2\pi r}
+  이다."
+
+같이 보기
+원주율
+지름
+반지름
