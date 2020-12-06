@@ -12,7 +12,7 @@ def make_sentence(data):
 def data_text_cleaning(data):
  
     # 특수문자 제거
-    delete_spe = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\《\(\)\[\]\<\>`\'…》]', ' ', data)
+    delete_spe = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\《\(\)\[\]\<\>`\'…》→㎏▶▲]', ' ', data)
     # 영어 제거
     delete_eng = re.sub('[a-zA-z]',' ',delete_spe)
     #숫자 제거
@@ -33,7 +33,7 @@ def data_text_cleaning(data):
     return noun_data
 
 
-f = open("./crawling/wiki_data.txt")
+f = open("./crawling/naver_file.txt")
 readdata = []
 line = f.readline()
 while(line):
@@ -54,7 +54,7 @@ for line in readdata:
             result.append(data)
 
 
-f = open("./data_preprocessing/insert_data.txt","w")
+f = open("./data_preprocessing/insert_data_naver.txt","w")
 num = 0
 for i in result:
     for j in i:
