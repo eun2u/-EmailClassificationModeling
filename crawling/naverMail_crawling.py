@@ -25,8 +25,9 @@ def get_mail_list():
             soup = BeautifulSoup(str(div), "html.parser")
             title = soup.select_one("div.name > a").text
             subject = soup.select_one("div.subject > a:nth-of-type(1) > span > strong").text
-            print("{} / {}".format(title, subject),file=fileOut)    
-        
+            #print("{} / {}".format(title, subject),file=fileOut)    
+            print(subject[6:],file=fileOut)
+
         if(i%10==1):
             path='//*[@id="next_page"]'
         else: 
@@ -72,6 +73,4 @@ driver.get('https://mail.naver.com/')
 
 move_to_mailbox()
 get_mail_list()
-#get_mails_from_mailbox()
-#get_maillist_from_mailbox()
 prevent_close()
