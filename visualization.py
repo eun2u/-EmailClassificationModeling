@@ -61,6 +61,7 @@ def add_keyword():
     newKeyword = input("추가할 키워드를 입력하세요: ")
     keywordSet.add(newKeyword)
 
+
 def del_keyword():
     delKeyword = input("삭제할 키워드를 입력하세요: ")
     if delKeyword in list(keywordSet):
@@ -68,16 +69,23 @@ def del_keyword():
     else:
         print("해당 키워드는 존재하지 않습니다.")
 
+
 def lookup_keyword():
-    
+    print(list(keywordSet))
+
+
 def classify_mail():
     model = KeyedVectors.load_word2vec_format("data")
     
+    print(keywordSet)
     for keyword in list(keywordSet):
         for rLine in result:
-            print("{rLine}과 {keyword}사이의 유사도")
+            print("{}과 {}사이의 유사도".format(rLine, keyword))
             for rWord in rLine:
-                print(model.wv.similarity(rWord, keyword))
+                try:
+                    print(model.wv.similarity(rWord, keyword))
+                except KeyError:
+                    continue
 
 if __name__ == "__main__":
     f = open("/Users/user/Downloads/dayoon98_naver.txt")
@@ -96,7 +104,7 @@ if __name__ == "__main__":
     
     # print(result)
 
-    keyword_File = open("/Users/user/Downloads/keyword.txt", "w+")
+    keyword_File = open("/Users/user/Downloads/keyword.txt", "a+")
     keywordSet = set(splitFilebyLine(keyword_File))
 
     while True:
