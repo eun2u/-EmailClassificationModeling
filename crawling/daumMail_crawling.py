@@ -31,7 +31,7 @@ def print_mails(link_list,fileOut):
 
 
 def get_mail_list():
-    fileOut = open('/Users/han-eunju/Desktop/mailCrawl/'+ myId+ '_daum.txt', 'w', encoding='utf-8')
+    fileOut = open('/Users/han-eunju/Desktop/mailCrawl/daum_'+ myId+ '.txt', 'w', encoding='utf-8')
 
     html=driver.page_source
     soup=BeautifulSoup(html,'html.parser')
@@ -51,14 +51,14 @@ def get_mail_list():
                 
                 nextPath='//*[@id="mailList"]/div[1]/div/div[3]/div/span/a['+str(i)+']'
                 driver.find_element_by_xpath(nextPath).click()
-                time.sleep(0.2)
+                time.sleep(0.3)
                 link_list = driver.find_elements_by_css_selector('div#mailList a.link_subject')
             
             print_mails(link_list,fileOut)
             if(length==10): 
                 nextPath='//*[@id="mailList"]/div[1]/div/div[3]/div/span/a[11]' 
                 driver.find_element_by_xpath(nextPath).click()
-                time.sleep(0.2)
+                time.sleep(0.3)
             else:
                 break
 
