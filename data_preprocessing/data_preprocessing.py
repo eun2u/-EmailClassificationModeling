@@ -5,7 +5,7 @@ import re
 def make_sentence(data):
     sentence = ""
     for i in data:
-        if(i.endswith('다.\n')):
+        if(i.endswith('.\n')):
             sentence+=i.replace("\n"," ")
     result = sentence.split(".")
     return result
@@ -32,8 +32,8 @@ def data_text_cleaning(data):
             noun_data.remove(i)
     return noun_data
 
-
-f = open("./crawling/naver_file.txt")
+a = input("파일명을 입력하세요(_phase2.txt 제외) : ")
+f = open("./preprocessing_phase2/"+a+"_phase2.txt","r")
 readdata = []
 line = f.readline()
 while(line):
@@ -54,7 +54,7 @@ for line in readdata:
             result.append(data)
 
 
-f = open("./data_preprocessing/insert_data_naver.txt","w")
+f = open("./preprocessing_phase3/"+a+"_phase3.txt","w")
 num = 0
 for i in result:
     for j in i:
