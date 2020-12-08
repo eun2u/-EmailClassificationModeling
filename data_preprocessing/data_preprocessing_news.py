@@ -1,7 +1,8 @@
 import kss
 
-f = open("./NaverCrawlingTotal.txt","r")
-f2 = open("./file.txt","w")
+a = input("문장으로 구분할 파일 이름을 입력하세요(.txt 제외) : ")
+f = open("./"+a+".txt","r")
+f2 = open("./file_"+a+".txt","w")
 line = f.readline()
 num = 0
 while(line):
