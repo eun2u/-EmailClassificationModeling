@@ -17,14 +17,17 @@ def get_mail_list():
     soup=BeautifulSoup(html,'html.parser')
     pages=soup.select('span.pageSelector')
     lastpage=pages[0].attrs["lastpage"]
-    fileOut = open('/Users/han-eunju/Desktop/mailCrawl/'+ myId+ '_naver.txt', 'w', encoding='utf-8')
+    fileOut = open('/Users/han-eunju/Desktop/mailCrawl/naver_'+ myId+ '.txt', 'w', encoding='utf-8')
 
-    for i in range(2,int(lastpage)+1):            
+    for i in range(2,int(lastpage)+1):    
+                
         div_list = soup.select("ol.mailList > li > div.mTitle")
         for div in div_list:
             soup = BeautifulSoup(str(div), "html.parser")
             title = soup.select_one("div.name > a").text
             subject = soup.select_one("div.subject > a:nth-of-type(1) > span > strong").text
+            if 'facebook' in title:
+                print()
             #print("{} / {}".format(title, subject),file=fileOut)    
             print(subject[6:],file=fileOut)
 
@@ -34,7 +37,7 @@ def get_mail_list():
             path='//*[@id="'+ str(i) +'"]'
         
         driver.find_element_by_xpath(path).click()
-        #time.sleep(2) 
+        time.sleep(0.3) 
         html=driver.page_source
         soup=BeautifulSoup(html,'html.parser')
     
