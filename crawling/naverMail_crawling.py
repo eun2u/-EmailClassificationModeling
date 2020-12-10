@@ -28,8 +28,9 @@ def get_mail_list():
             subject = soup.select_one("div.subject > a:nth-of-type(1) > span > strong").text
             if 'facebook' in title:
                 print()
-            #print("{} / {}".format(title, subject),file=fileOut)    
-            print(subject[6:],file=fileOut)
+            #print("{} / {}".format(title, subject),file=fileOut)
+            else:     
+                print(subject[6:],file=fileOut)
 
         if(i%10==1):
             path='//*[@id="next_page"]'
