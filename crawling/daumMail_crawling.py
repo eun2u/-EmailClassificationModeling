@@ -38,50 +38,60 @@ def move_to_mailbox():
     driver.get(mail_url)
     time.sleep(1)
 
-def print_mails(link_list,fileOut):
-    for a in link_list:
-        link = a.get_attribute('href')
-        title = a.text.strip()
+def print_mails(div_list,fileOut):
+    for div in div_list:
+        soup=BeautifulSoup(str(div),'html.parser')
+        sender = soup.select_one("div.info_from > a").text
+        title = soup.select_one("div.info_subject > a").text.strip()
+        if 'Facebook' in sender:
+            continue
         print(title,file=fileOut)
-
+        #print("{} / {}".format(sender, title),file=fileOut)
 
 def get_mail_list():
-    fileOut = open('/Users/han-eunju/Desktop/mailCrawl/daum_'+ myId+ '.txt', 'w', encoding='utf-8')
 
     html=driver.page_source
     soup=BeautifulSoup(html,'html.parser')
-    pages=soup.select('.link_page')
-    length=len(pages)
-    print(length)
-
-    while(True):
-        link_list = driver.find_elements_by_css_selector('div#mailList a.link_subject')
+    btns=soup.select('a.btn_page > span.img_mail.ico_next') #되는지 확인
+    fileOut = open('/Users/han-eunju/Desktop/mailCrawl/daum_'+ myId+ '.txt', 'w', encoding='utf-8')
+   
+    #다음 버튼 존재하면
+    while(len(btns)==1):
         
-        if(length==1):
-            print_mails(link_list,fileOut)
-            break
-        else:
-            for i in range(2,length+1):
-                print_mails(link_list,fileOut)
-                
-                nextPath='//*[@id="mailList"]/div[1]/div/div[3]/div/span/a['+str(i)+']'
-                driver.find_element_by_xpath(nextPath).click()
-                time.sleep(0.3)
-                link_list = driver.find_elements_by_css_selector('div#mailList a.link_subject')
-            
-            print_mails(link_list,fileOut)
-            if(length==10): 
-                nextPath='//*[@id="mailList"]/div[1]/div/div[3]/div/span/a[11]' 
-                driver.find_element_by_xpath(nextPath).click()
-                time.sleep(0.3)
-            else:
-                break
+        for i in range(2, 12):
+            div_list=soup.select('div.inner_list > ul.list_mail > li')
 
-        html=driver.page_source
-        soup=BeautifulSoup(html,'html.parser')
-        pages=soup.select('.link_page')
-        length=len(pages)
-        print(length)
+            print_mails(div_list,fileOut)
+
+            nextPath='//*[@id="mailList"]/div[1]/div/div[3]/div/span/a['+str(i)+']'
+            driver.find_element_by_xpath(nextPath).click()
+            time.sleep(0.3)
+            html=driver.page_source
+            soup=BeautifulSoup(html,'html.parser')
+
+        btns=soup.select('a.btn_page > span.img_mail.ico_next')
+    
+    #다음 버튼 없으면
+    pages=soup.select('.link_page')
+    if(len(pages)==1):
+        print_mails(div_list,fileOut)
+
+    else:
+        print("total page: "+ str(len(pages)))
+        for i in range(2,len(pages)+1):
+            print(i)
+            div_list=soup.select('div.inner_list > ul.list_mail > li')
+
+            print_mails(div_list,fileOut)
+            nextPath='//*[@id="mailList"]/div[1]/div/div[3]/div/span/a['+str(i)+']'
+            driver.find_element_by_xpath(nextPath).click()
+            time.sleep(0.3)
+            html=driver.page_source
+            soup=BeautifulSoup(html,'html.parser')
+
+        div_list=soup.select('div.inner_list > ul.list_mail > li')
+        print_mails(div_list,fileOut)
+
 
 def prevent_close():
     user_choice=input('Press [ENTER] to terminate')
@@ -94,7 +104,7 @@ myId=DAUM["id"]
 myPass=DAUM["password"]
 
 driver=webdriver.Chrome('/Users/han-eunju/Downloads/chromedriver')
-login_to_kakao
+login_to_kakao()
 #login_to_daum()
 move_to_mailbox()
 get_mail_list()

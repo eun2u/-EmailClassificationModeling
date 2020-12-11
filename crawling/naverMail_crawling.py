@@ -24,13 +24,12 @@ def get_mail_list():
         div_list = soup.select("ol.mailList > li > div.mTitle")
         for div in div_list:
             soup = BeautifulSoup(str(div), "html.parser")
-            title = soup.select_one("div.name > a").text
+            sender = soup.select_one("div.name > a").text
             subject = soup.select_one("div.subject > a:nth-of-type(1) > span > strong").text
-            if 'facebook' in title:
-                print()
-            #print("{} / {}".format(title, subject),file=fileOut)
-            else:     
-                print(subject[6:],file=fileOut)
+            if 'Facebook' in sender:
+                continue
+            #print("{} / {}".format(sender, subject),file=fileOut)
+            print(subject[6:],file=fileOut)
 
         if(i%10==1):
             path='//*[@id="next_page"]'
