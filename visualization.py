@@ -3,11 +3,33 @@ import konlpy
 from konlpy.tag import *
 import re
 from gensim.models import KeyedVectors
+from datetime import datetime
+
+def folder_name(option1, option2, option3): #폴더명 생성
+    timestr = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+    full_name = "testresult_"+str(option1)+"_"+str(option2)+"_"+str(option3)+"_"+timestr
+    return full_name
+def word_list(option2):
+    wordlist = []
+    
+    if option2 == 1:
+        for i in list(keywordSet):
+            newlist = []
+            newlist.append([i,1])
+            wordlist.append(newlist)
+    elif option2 == 2:
+        loaded_model = KeyedVectors.load_word2vec_format("data")
+        for i in list(keywordSet):
+            model_result=loaded_model.most_similar(i, topn=4)
+            b = [[i[0],round(i[1],4)] for i in model_result]
+            b.insert(0, [i,1])
+            wordlist.append(b)
+    return wordlist
 
 def make_sentence(data):
     sentence = ""
     for i in data:
-        if(i.endswith('다.\n')):
+        if(i.endswith('.\n')):
             sentence+=i.replace("\n"," ")
     result = sentence.split(".")
     return result
@@ -75,17 +97,30 @@ def lookup_keyword():
 
 
 def classify_mail():
-    model = KeyedVectors.load_word2vec_format("data")
+    option1 = input("[option1] 1. avg, 2. sum : ")
+    option2 = input("[option2] 1. user category ,2. user category+neighbor word : ")
+    option3 = input("[option3] 1. title, 2. title+neibor word, 3. main+title, 4. main+title+freq : ")
+
+    wordlist = word_list(option2)
+    if option3 == 1:
+        #함수호출
+    elif option3 == 2:
+        #함수호출
+    elif option3 == 3:
+        #함수호출
+    elif option3 == 4:
+        #함수호출
+    # model = KeyedVectors.load_word2vec_format("data")
     
-    print(keywordSet)
-    for keyword in list(keywordSet):
-        for rLine in result:
-            print("{}과 {}사이의 유사도".format(rLine, keyword))
-            for rWord in rLine:
-                try:
-                    print(model.wv.similarity(rWord, keyword))
-                except KeyError:
-                    continue
+    # print(keywordSet)
+    # for keyword in list(keywordSet):
+    #     for rLine in result:
+    #         print("{}과 {}사이의 유사도".format(rLine, keyword))
+    #         for rWord in rLine:
+    #             try:
+    #                 print(model.wv.similarity(rWord, keyword))
+    #             except KeyError:
+    #                 continue
 
 if __name__ == "__main__":
     f = open("./mail_data/input.txt")
@@ -111,6 +146,7 @@ if __name__ == "__main__":
         menu = print_menu()
         if menu == 1:
             add_keyword()
+            print(keywordSet)
         elif menu == 2:
             del_keyword()
         elif menu == 3:
