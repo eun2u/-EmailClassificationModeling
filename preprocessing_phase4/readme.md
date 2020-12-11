@@ -13,3 +13,7 @@
     + preprocessing_final/clean_data_final_ver1.txt
     + preprocessing_phase3/naver_news_data2_phase3.txt
     + preprocessing_phase3/naver_news_data3_phase3.txt
+
++ insert_data_total_ver3.txt : 아래 파일을 합친 파일
+    + preprocessing_final/clean_data_final_ver2.txt
+    + preprocessing_final/daum_hhaneunjoo_phase3.txt
