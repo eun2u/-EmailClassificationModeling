@@ -88,7 +88,7 @@ def classify_mail():
                     continue
 
 if __name__ == "__main__":
-    f = open("/Users/user/Downloads/dayoon98_naver.txt")
+    f = open("./mail_data/input.txt")
     
     readdata = splitFilebyLine(f)
     result = []
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     
     # print(result)
 
-    keyword_File = open("/Users/user/Downloads/keyword.txt", "a+")
+    keyword_File = open("./visualizing_data/keyword.txt", "a+")
     keywordSet = set(splitFilebyLine(keyword_File))
 
     while True:
