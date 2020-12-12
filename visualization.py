@@ -10,22 +10,33 @@ def folder_name(option1, option2, option3): #폴더명 생성
     full_name = "testresult_"+str(option1)+"_"+str(option2)+"_"+str(option3)+"_"+timestr
     return full_name
 
-def word_list(option2):
+def findNeighborWords(loaded_model, keyword):
+    flag = True
+    newlist = []
+    try:
+        model_result=loaded_model.most_similar(keyword, topn=1)
+        newlist = [[i[0],round(i[1],4)] for i in model_result if i[1] >= 0.5]
+    except:
+        flag = False
+
+    return newlist, flag
+
+def word_list(option, listData):
     wordlist = []
 
-    if option2 == 1:
-        for i in list(keywordSet):
+    if option == 1:
+        for keyword in listData:
             newlist = []
-            newlist.append([i,1])
+            newlist.append([keyword, 1])
             wordlist.append(newlist)
 
-    elif option2 == 2:
+    elif option == 2:
         loaded_model = KeyedVectors.load_word2vec_format("data")
-        for i in list(keywordSet):
-            model_result=loaded_model.most_similar(i, topn=4)
-            b = [[i[0],round(i[1],4)] for i in model_result]
-            b.insert(0, [i,1])
-            wordlist.append(b)
+        for keyword in listData:
+            newlist, flag = findNeighborWords(loaded_model, keyword)
+            if flag:
+                newlist.insert(0, [keyword, 1])
+                wordlist.append(newlist)
     
     return wordlist
 
@@ -69,8 +80,8 @@ def print_menu():
     menu = input("메뉴 선택: ")
     return int(menu)
 
-def splitFilebyLine():
-    mailFile = open("/Users/user/Downloads/dayoon98_naver.txt", "r")
+def splitMailHead():
+    mailFile = open("/Users/user/Downloads/shortText.txt", "r")
 
     readdata = []
     line = mailFile.readline()
@@ -84,8 +95,9 @@ def splitFilebyLine():
 
     return readdata
 
+
 def splitKeyword():
-    keywordFile = open("./visualizing_data/keyword.txt", "r")
+    keywordFile = open("./visualizing_data/naver_dayoon98.txt", "r")
 
     keywordList = keywordFile.read().split()
     
@@ -117,13 +129,14 @@ def classify_mail():
 
     model = KeyedVectors.load_word2vec_format("data")
 
-    wordlist = word_list(option2)
+    wordlist = word_list(option2, list(keywordSet))
     print(wordlist)
     # 함수 파라미터: option1, wordlist, model로 통일1
 
-    if option3 == 1:
-        #함수호출
-        printByTitle(option1, wordlist, model)
+    printByTitle(option1, option3, wordlist, model)
+
+    #if option3 == 1:
+        # 함수호출
     # elif option3 == 2:
     #     #함수호출
     # elif option3 == 3:
@@ -131,41 +144,58 @@ def classify_mail():
     # elif option3 == 4:
         #함수호출
 
-def findSimilarityBySum(model, rLine, word):
+def findSimilarityBySum(model, mailData, keyword):
     sum = 0
-    for rWord in rLine:
-        try:
-            sum += model.wv.similarity(rWord, word)
-            # print(model.wv.similarity(rWord, word))
-        except KeyError:
-            # print("no similarity")
-            continue
+    count = 0
 
-    return sum
+    for neighborWords in mailData:
+        for wordInfo in neighborWords:
+            mWord = wordInfo[0]
+            mFrequency = wordInfo[1]
 
-def findSimilarityByAvg(model, rLine, word):
-    sum = findSimilarityBySum(model, rLine, word)
+            try:
+                sum += model.wv.similarity(mWord, keyword) * mFrequency
+                # print(model.wv.similarity(rWord, word))
+            except KeyError:
+                count += 1
+                continue
+    # for rWord in rLine:
+    #     try:
+    #         sum += model.wv.similarity(rWord, keyword)
+    #         # print(model.wv.similarity(rWord, word))
+    #     except KeyError:
+    #         # print("no similarity")
+    #         continue
+
+    return sum, count
+
+def findSimilarityByAvg(model, mailData, word):
+    sum, count = findSimilarityBySum(model, mailData, word)
     try:
-        avg = sum / len(rLine)
+        avg = sum / (len(mailData) - count)
     except ZeroDivisionError:
         avg = 0
 
     return avg
 
-def printByTitle(option1, wordlist, model):
+def printByTitle(option1, option3, wordlist, model):
+    # print(wordlist)
+
     for neighborKeywords in wordlist:
-        print("-------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
+        print("---------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
         rankList = []
         for rLine in result:
             weightFigure = 0
+            mailList = word_list(option3, rLine[1])
+            print(mailList)
             for keywordInfo in neighborKeywords:
                 word = keywordInfo[0]
                 frequency = keywordInfo[1]
 
                 if option1 == 1:
-                    weightFigure += findSimilarityByAvg(model, rLine[1], word) * frequency
+                    weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
                 elif option1 == 2:
-                    weightFigure += findSimilarityBySum(model, rLine[1], word) * frequency
+                    weightFigure += findSimilarityBySum(model, mailList, word) * frequency
                 
             rankList.append(["{}과 {}사이의 유사도".format(rLine[0], neighborKeywords[0][0]), weightFigure])
 
@@ -174,8 +204,7 @@ def printByTitle(option1, wordlist, model):
             print(sortedRankList[idx])
     
 if __name__ == "__main__":
-
-    readdata = splitFilebyLine()
+    readdata = splitMailHead()
     keywordSet = set(splitKeyword())
 
     result = []
