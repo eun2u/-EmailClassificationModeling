@@ -31,7 +31,7 @@ def word_list(option, listData):
             wordlist.append(newlist)
 
     elif option == 2:
-        loaded_model = KeyedVectors.load_word2vec_format("data")
+        loaded_model = KeyedVectors.load_word2vec_format("training_data/vector_clean_data_final_ver2_iter1000")
         for keyword in listData:
             newlist, flag = findNeighborWords(loaded_model, keyword)
             if flag:
@@ -127,7 +127,7 @@ def classify_mail():
     option2 = int(input("[option2] 1. user category, 2. user category+neighbor word : "))
     option3 = int(input("[option3] 1. title, 2. title+neibor word, 3. main+title, 4. main+title+freq : "))
 
-    model = KeyedVectors.load_word2vec_format("data")
+    model = KeyedVectors.load_word2vec_format("training_data/vector_clean_data_final_ver2_iter1000")
 
     wordlist = word_list(option2, list(keywordSet))
     print(wordlist)
@@ -155,17 +155,9 @@ def findSimilarityBySum(model, mailData, keyword):
 
             try:
                 sum += model.wv.similarity(mWord, keyword) * mFrequency
-                # print(model.wv.similarity(rWord, word))
             except KeyError:
                 count += 1
                 continue
-    # for rWord in rLine:
-    #     try:
-    #         sum += model.wv.similarity(rWord, keyword)
-    #         # print(model.wv.similarity(rWord, word))
-    #     except KeyError:
-    #         # print("no similarity")
-    #         continue
 
     return sum, count
 
@@ -187,7 +179,6 @@ def printByTitle(option1, option3, wordlist, model):
         for rLine in result:
             weightFigure = 0
             mailList = word_list(option3, rLine[1])
-            print(mailList)
             for keywordInfo in neighborKeywords:
                 word = keywordInfo[0]
                 frequency = keywordInfo[1]
