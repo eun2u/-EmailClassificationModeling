@@ -12,7 +12,7 @@ def folder_name(option1, option2, option3): #폴더명 생성
 
 def word_list(option2):
     wordlist = []
-    
+
     if option2 == 1:
         for i in list(keywordSet):
             newlist = []
@@ -26,6 +26,7 @@ def word_list(option2):
             b = [[i[0],round(i[1],4)] for i in model_result]
             b.insert(0, [i,1])
             wordlist.append(b)
+    
     return wordlist
 
 def make_sentence(data):
@@ -98,9 +99,9 @@ def lookup_keyword():
 
 
 def classify_mail():
-    option1 = input("[option1] 1. avg, 2. sum : ")
-    option2 = input("[option2] 1. user category ,2. user category+neighbor word : ")
-    option3 = input("[option3] 1. title, 2. title+neibor word, 3. main+title, 4. main+title+freq : ")
+    option1 = int(input("[option1] 1. avg, 2. sum : "))
+    option2 = int(input("[option2] 1. user category, 2. user category+neighbor word : "))
+    option3 = int(input("[option3] 1. title, 2. title+neibor word, 3. main+title, 4. main+title+freq : "))
 
     model = KeyedVectors.load_word2vec_format("data")
 
@@ -132,7 +133,7 @@ def printByTitle(option1, wordlist, model):
                     try:
                         print(model.wv.similarity(rWord, word))
                     except KeyError:
-                        print("no similarity")
+                        # print("no similarity")
                         continue
 
 if __name__ == "__main__":
