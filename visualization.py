@@ -156,7 +156,6 @@ def classify_mail():
     print(wordlist)
     # 함수 파라미터: option1, wordlist, model로 통일1
 
-
     if option3 == 1:
         printByTitle(option1, option3, wordlist, model)
     elif option3 == 2:
