@@ -54,7 +54,7 @@ def word_list(option, listData):
             wordlist.append(newlist)
 
     elif option == 2:
-        loaded_model = KeyedVectors.load_word2vec_format("data")
+        loaded_model = KeyedVectors.load_word2vec_format("training_data/vector_clean_data_final_ver2_iter1000")
         for keyword in listData:
             newlist, flag = findNeighborWords(loaded_model, keyword)
             if flag:
@@ -120,7 +120,7 @@ def splitMailHead():
 
 
 def splitKeyword():
-    keywordFile = open("./visualizing_data/naver_dayoon98.txt", "r")
+    keywordFile = open("./visualizing_data/keyword.txt", "r")
 
     keywordList = keywordFile.read().split()
     
@@ -150,20 +150,17 @@ def classify_mail():
     option2 = int(input("[option2] 1. user category, 2. user category+neighbor word : "))
     option3 = int(input("[option3] 1. title, 2. title+neibor word, 3. main+title, 4. main+title+freq : "))
 
-    model = KeyedVectors.load_word2vec_format("data")
+    model = KeyedVectors.load_word2vec_format("training_data/vector_clean_data_final_ver2_iter1000")
 
     wordlist = word_list(option2, list(keywordSet))
     print(wordlist)
     # 함수 파라미터: option1, wordlist, model로 통일1
 
-    printByTitle(option1, option3, wordlist, model)
-
-    #if option3 == 1:
-        # 함수호출
-    # elif option3 == 2:
-    #     #함수호출
+    if option3 == 1:
+        printByTitle(option1, option3, wordlist, model)
+    elif option3 == 2:
+        printByTitle(option1, option3, wordlist, model)
     elif option3 == 3:
-        #함수호출
         folderName = input("폴더명을 입력해주세요 : ")
         filelist = file_list_in_folder(folderName)
         print(filelist)
@@ -215,7 +212,6 @@ def printByTitle(option1, option3, wordlist, model):
         for rLine in result:
             weightFigure = 0
             mailList = word_list(option3, rLine[1])
-            print(mailList)
             for keywordInfo in neighborKeywords:
                 word = keywordInfo[0]
                 frequency = keywordInfo[1]
@@ -260,7 +256,7 @@ if __name__ == "__main__":
         elif menu == 4:
             classify_mail()
         elif menu == 5:
-            keywordFileforUpdate = open("./visualizing_data/keyword.txt", "a+")
+            keywordFileforUpdate = open("./visualizing_data/keyword.txt", "w")
             for keyword in list(keywordSet):
                 keywordFileforUpdate.write("{}\n".format(keyword))
             keywordFileforUpdate.close()
