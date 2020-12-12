@@ -81,7 +81,7 @@ def print_menu():
     return int(menu)
 
 def splitMailHead():
-    mailFile = open("/Users/user/Downloads/shortText.txt", "r")
+    mailFile = open("./visualizing_data/input.txt", "r")
 
     readdata = []
     line = mailFile.readline()
@@ -97,7 +97,7 @@ def splitMailHead():
 
 
 def splitKeyword():
-    keywordFile = open("./visualizing_data/naver_dayoon98.txt", "r")
+    keywordFile = open("./visualizing_data/keyword.txt", "r")
 
     keywordList = keywordFile.read().split()
     
