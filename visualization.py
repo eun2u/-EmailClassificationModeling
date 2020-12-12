@@ -69,17 +69,29 @@ def print_menu():
     menu = input("메뉴 선택: ")
     return int(menu)
 
-def splitFilebyLine(fileName):
+def splitFilebyLine():
+    mailFile = open("/Users/user/Downloads/dayoon98_naver.txt", "r")
+
     readdata = []
-    line = fileName.readline()
+    line = mailFile.readline()
     while(line):
         readdata.append(line)
-        line = f.readline()
+        line = mailFile.readline()
     readdata = make_sentence(readdata)
     # print(readdata)
     # print(len(readdata))
-    f.close()
+    mailFile.close()
+
     return readdata
+
+def splitKeyword():
+    keywordFile = open("./visualizing_data/keyword.txt", "r")
+
+    keywordList = keywordFile.read().split()
+    
+    keywordFile.close()
+
+    return keywordList
 
 def add_keyword():
     newKeyword = input("추가할 키워드를 입력하세요: ")
@@ -141,27 +153,31 @@ def findSimilarityByAvg(model, rLine, word):
     return avg
 
 def printByTitle(option1, wordlist, model):
-    rankList = []
-
     for neighborKeywords in wordlist:
-        for keywordInfo in neighborKeywords:
-            word = keywordInfo[0]
-            frequency = keywordInfo[1]
+        print("-------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
+        rankList = []
+        for rLine in result:
+            weightFigure = 0
+            for keywordInfo in neighborKeywords:
+                word = keywordInfo[0]
+                frequency = keywordInfo[1]
 
-            for rLine in result:
                 if option1 == 1:
-                    rankList.append(["{}과 {}사이의 유사도".format(rLine, word), findSimilarityByAvg(model, rLine, word)])
+                    weightFigure += findSimilarityByAvg(model, rLine[1], word) * frequency
                 elif option1 == 2:
-                    rankList.append(["{}과 {}사이의 유사도".format(rLine, word), findSimilarityBySum(model, rLine, word)])
+                    weightFigure += findSimilarityBySum(model, rLine[1], word) * frequency
+                
+            rankList.append(["{}과 {}사이의 유사도".format(rLine[0], neighborKeywords[0][0]), weightFigure])
 
-    sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
-    for idx in range(100):
-        print(sortedRankList[idx])
+        sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
+        for idx in range(30):
+            print(sortedRankList[idx])
     
 if __name__ == "__main__":
-    f = open("/Users/user/Downloads/dayoon98_naver.txt")
-    
-    readdata = splitFilebyLine(f)
+
+    readdata = splitFilebyLine()
+    keywordSet = set(splitKeyword())
+
     result = []
     num = 0
     for line in readdata:
@@ -171,12 +187,9 @@ if __name__ == "__main__":
         if(line!="\n"):
             data = data_text_cleaning(line)
             if(len(data)!=1):
-                result.append(data)
+                result.append([line, data])
     
     # print(result)
-
-    keyword_File = open("./visualizing_data/keyword.txt", "a+")
-    keywordSet = set(splitFilebyLine(keyword_File))
 
     while True:
         menu = print_menu()
@@ -190,6 +203,10 @@ if __name__ == "__main__":
         elif menu == 4:
             classify_mail()
         elif menu == 5:
+            keywordFileforUpdate = open("./visualizing_data/keyword.txt", "a+")
+            for keyword in list(keywordSet):
+                keywordFileforUpdate.write("{}\n".format(keyword))
+            keywordFileforUpdate.close()
             break
 
 
