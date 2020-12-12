@@ -1,9 +1,32 @@
+import os
 import warnings
 import konlpy
 from konlpy.tag import *
 import re
 from gensim.models import KeyedVectors
 from datetime import datetime
+def file_list_in_folder(folderName):
+    path_dir = "./mail_data/"+folderName
+    file_list = os.listdir(path_dir)
+    return file_list
+def list_of_word_in_file(folderName, fileName):
+    f = open("./mail_data/"+folderName+"/"+fileName, 'r')
+    full_data = ""
+    line = f.readline()
+    title = line.replace("\n","")
+    while(line):
+        if(line != "\n"):
+            if("본 메일은" in line):
+                line = line.split("본 메일은")
+                line = ' '.join(line[0].split())
+                full_data+=line
+                break
+            line = line.replace("\n"," ")
+            line = ' '.join(line.split())
+            full_data+=line
+        line = f.readline()
+    f.close()
+    return full_data, title
 
 def folder_name(option1, option2, option3): #폴더명 생성
     timestr = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
@@ -70,7 +93,7 @@ def print_menu():
     return int(menu)
 
 def splitFilebyLine():
-    mailFile = open("/Users/user/Downloads/dayoon98_naver.txt", "r")
+    mailFile = open("./mail_data/input.txt", "r")
 
     readdata = []
     line = mailFile.readline()
@@ -126,8 +149,13 @@ def classify_mail():
         printByTitle(option1, wordlist, model)
     # elif option3 == 2:
     #     #함수호출
-    # elif option3 == 3:
-    #     #함수호출
+    elif option3 == 3:
+        #함수호출
+        folderName = input("폴더명을 입력해주세요 : ")
+        filelist = file_list_in_folder(folderName)
+        print(filelist)
+        full_content , title = list_of_word_in_file(folderName, "1.txt")
+        print(data_text_cleaning(full_content))
     # elif option3 == 4:
         #함수호출
 
