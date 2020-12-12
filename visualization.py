@@ -223,7 +223,7 @@ if __name__ == "__main__":
         elif menu == 4:
             classify_mail()
         elif menu == 5:
-            keywordFileforUpdate = open("./visualizing_data/keyword.txt", "a+")
+            keywordFileforUpdate = open("./visualizing_data/keyword.txt", "w")
             for keyword in list(keywordSet):
                 keywordFileforUpdate.write("{}\n".format(keyword))
             keywordFileforUpdate.close()
