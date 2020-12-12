@@ -9,14 +9,16 @@ def folder_name(option1, option2, option3): #폴더명 생성
     timestr = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     full_name = "testresult_"+str(option1)+"_"+str(option2)+"_"+str(option3)+"_"+timestr
     return full_name
+
 def word_list(option2):
     wordlist = []
-    
+
     if option2 == 1:
         for i in list(keywordSet):
             newlist = []
             newlist.append([i,1])
             wordlist.append(newlist)
+
     elif option2 == 2:
         loaded_model = KeyedVectors.load_word2vec_format("data")
         for i in list(keywordSet):
@@ -24,6 +26,7 @@ def word_list(option2):
             b = [[i[0],round(i[1],4)] for i in model_result]
             b.insert(0, [i,1])
             wordlist.append(b)
+    
     return wordlist
 
 def make_sentence(data):
@@ -35,7 +38,6 @@ def make_sentence(data):
     return result
 
 def data_text_cleaning(data):
- 
     # 특수문자 제거
     delete_spe = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\《\(\)\[\]\<\>`\'…》]', ' ', data)
     # 영어 제거
@@ -51,7 +53,7 @@ def data_text_cleaning(data):
     mecab = Mecab()
     noun_data = mecab.nouns(delete_blank)
 
-    delete_list = ["이", "것", "수", "를", "개", "후", "을","메", "의", "은", "년", "만", "그", "만", "외"]
+    delete_list = ["이", "것", "수", "를", "개", "후", "을", "메", "의", "은", "년", "만", "그", "만", "외"]
     for i in delete_list:
         if(i in noun_data):
             noun_data.remove(i)
@@ -97,33 +99,67 @@ def lookup_keyword():
 
 
 def classify_mail():
-    option1 = input("[option1] 1. avg, 2. sum : ")
-    option2 = input("[option2] 1. user category ,2. user category+neighbor word : ")
-    option3 = input("[option3] 1. title, 2. title+neibor word, 3. main+title, 4. main+title+freq : ")
+    option1 = int(input("[option1] 1. avg, 2. sum : "))
+    option2 = int(input("[option2] 1. user category, 2. user category+neighbor word : "))
+    option3 = int(input("[option3] 1. title, 2. title+neibor word, 3. main+title, 4. main+title+freq : "))
+
+    model = KeyedVectors.load_word2vec_format("data")
 
     wordlist = word_list(option2)
+    print(wordlist)
+    # 함수 파라미터: option1, wordlist, model로 통일1
+
     if option3 == 1:
         #함수호출
-    elif option3 == 2:
+        printByTitle(option1, wordlist, model)
+    # elif option3 == 2:
+    #     #함수호출
+    # elif option3 == 3:
+    #     #함수호출
+    # elif option3 == 4:
         #함수호출
-    elif option3 == 3:
-        #함수호출
-    elif option3 == 4:
-        #함수호출
-    # model = KeyedVectors.load_word2vec_format("data")
-    
-    # print(keywordSet)
-    # for keyword in list(keywordSet):
-    #     for rLine in result:
-    #         print("{}과 {}사이의 유사도".format(rLine, keyword))
-    #         for rWord in rLine:
-    #             try:
-    #                 print(model.wv.similarity(rWord, keyword))
-    #             except KeyError:
-    #                 continue
 
+def findSimilarityBySum(model, rLine, word):
+    sum = 0
+    for rWord in rLine:
+        try:
+            sum += model.wv.similarity(rWord, word)
+            # print(model.wv.similarity(rWord, word))
+        except KeyError:
+            # print("no similarity")
+            continue
+
+    return sum
+
+def findSimilarityByAvg(model, rLine, word):
+    sum = findSimilarityBySum(model, rLine, word)
+    try:
+        avg = sum / len(rLine)
+    except ZeroDivisionError:
+        avg = 0
+
+    return avg
+
+def printByTitle(option1, wordlist, model):
+    rankList = []
+
+    for neighborKeywords in wordlist:
+        for keywordInfo in neighborKeywords:
+            word = keywordInfo[0]
+            frequency = keywordInfo[1]
+
+            for rLine in result:
+                if option1 == 1:
+                    rankList.append(["{}과 {}사이의 유사도".format(rLine, word), findSimilarityByAvg(model, rLine, word)])
+                elif option1 == 2:
+                    rankList.append(["{}과 {}사이의 유사도".format(rLine, word), findSimilarityBySum(model, rLine, word)])
+
+    sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
+    for idx in range(100):
+        print(sortedRankList[idx])
+    
 if __name__ == "__main__":
-    f = open("./mail_data/input.txt")
+    f = open("/Users/user/Downloads/dayoon98_naver.txt")
     
     readdata = splitFilebyLine(f)
     result = []
