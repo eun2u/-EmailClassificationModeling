@@ -118,9 +118,30 @@ def classify_mail():
     #     #함수호출
     # elif option3 == 4:
         #함수호출
-    
+
+def findSimilarityBySum(model, rLine, word):
+    sum = 0
+    for rWord in rLine:
+        try:
+            sum += model.wv.similarity(rWord, word)
+            # print(model.wv.similarity(rWord, word))
+        except KeyError:
+            # print("no similarity")
+            continue
+
+    return sum
+
+def findSimilarityByAvg(model, rLine, word):
+    sum = findSimilarityBySum(model, rLine, word)
+    try:
+        avg = sum / len(rLine)
+    except ZeroDivisionError:
+        avg = 0
+
+    return avg
+
 def printByTitle(option1, wordlist, model):
-    print(keywordSet)
+    rankList = []
 
     for neighborKeywords in wordlist:
         for keywordInfo in neighborKeywords:
@@ -128,14 +149,15 @@ def printByTitle(option1, wordlist, model):
             frequency = keywordInfo[1]
 
             for rLine in result:
-                print("{}과 {}사이의 유사도".format(rLine, word))
-                for rWord in rLine:
-                    try:
-                        print(model.wv.similarity(rWord, word))
-                    except KeyError:
-                        # print("no similarity")
-                        continue
+                if option1 == 1:
+                    rankList.append(["{}과 {}사이의 유사도".format(rLine, word), findSimilarityByAvg(model, rLine, word)])
+                elif option1 == 2:
+                    rankList.append(["{}과 {}사이의 유사도".format(rLine, word), findSimilarityBySum(model, rLine, word)])
 
+    sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
+    for idx in range(100):
+        print(sortedRankList[idx])
+    
 if __name__ == "__main__":
     f = open("/Users/user/Downloads/dayoon98_naver.txt")
     
