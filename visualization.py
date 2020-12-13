@@ -285,14 +285,22 @@ def printResult(option1, option2, option3, wordlist, model, foldername):
             if option2 == 1:
                 score_norm = 0.3
             elif option2 == 2:
-                score_norm = 0.6
-            weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, score_norm)
+                score_norm = 1.0
+            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, score_norm)
         elif option3 == 2:
-            weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, 0.5)
+            if option2 == 1:
+                score_norm = 0.3
+            elif option2 == 2:
+                score_norm = 1.0
+            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, score_norm)
         elif(option3 == 3):
-            weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.27)
+            if option2 == 1:
+                score_norm = 0.3
+            elif option2 == 2:
+                score_norm = 1.0
+            weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
         elif(option3 == 4):
-            weightFigureList = printByContent_freq(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.28)
+            weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
 
         #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
         for wF in weightFigureList:
