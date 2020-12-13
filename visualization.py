@@ -6,7 +6,6 @@ from konlpy.tag import *
 import re
 from gensim.models import KeyedVectors
 from datetime import datetime
-import pandas as pd
  
 def createFolder(directory):
     try:
@@ -286,18 +285,18 @@ def printResult(option1, option2, option3, wordlist, model, foldername):
                 score_norm = 0.3
             elif option2 == 2:
                 score_norm = 1.0
-            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, score_norm)
+            weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, score_norm)
         elif option3 == 2:
             if option2 == 1:
                 score_norm = 0.3
             elif option2 == 2:
                 score_norm = 1.0
-            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, score_norm)
+            weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, score_norm)
         elif(option3 == 3):
             if option2 == 1:
                 score_norm = 0.3
             elif option2 == 2:
-                score_norm = 1.0
+                score_norm = 1.2
             weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
         elif(option3 == 4):
             weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
@@ -335,7 +334,10 @@ def findSimilarityBySum(model, mailData, keyword):
             mFrequency = wordInfo[1]
 
             try:
-                sum += model.wv.similarity(mWord, keyword) * mFrequency
+                similarity = model.wv.similarity(mWord, keyword)
+                if similarity >= 0.5:
+                    similarity = 1
+                sum += similarity * mFrequency
             except KeyError:
                 count += 1
                 continue
