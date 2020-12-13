@@ -5,10 +5,14 @@ from konlpy.tag import *
 import re
 from gensim.models import KeyedVectors
 from datetime import datetime
+
+
 def file_list_in_folder(folderName):
     path_dir = "./mail_data/"+folderName
     file_list = os.listdir(path_dir)
     return file_list
+
+
 def list_of_word_in_file(folderName, fileName):
     f = open("./mail_data/"+folderName+"/"+fileName, 'r')
     full_data = ""
@@ -180,17 +184,9 @@ def findSimilarityBySum(model, mailData, keyword):
 
             try:
                 sum += model.wv.similarity(mWord, keyword) * mFrequency
-                # print(model.wv.similarity(rWord, word))
             except KeyError:
                 count += 1
                 continue
-    # for rWord in rLine:
-    #     try:
-    #         sum += model.wv.similarity(rWord, keyword)
-    #         # print(model.wv.similarity(rWord, word))
-    #     except KeyError:
-    #         # print("no similarity")
-    #         continue
 
     return sum, count
 
