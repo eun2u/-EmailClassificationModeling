@@ -28,12 +28,14 @@ def testfile_list_in_folder(folderName):
     dir_list = os.listdir(path_dir)
     full_file_list = []
     num=0
+    index_info = []
     for dir1 in dir_list:
+        index_info.append([dir1.replace, num])
         path_dir = "./test_data/"+folderName+"/"+dir1
         file_list = os.listdir(path_dir)
         full_file_list.append([{i : num} for i in file_list])
         num+=1
-    return full_file_list
+    return index_info, full_file_list
 
 def list_of_word_in_file(folderName, fileName):
     f = open("./mail_data/"+folderName+"/"+fileName, 'r')
@@ -288,9 +290,9 @@ def printResult(option1, option2, option3, wordlist, model, foldername):
         elif option3 == 2:
             weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, 0.5)
         elif(option3 == 3):
-            weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.3)
+            weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.27)
         elif(option3 == 4):
-            weightFigureList = printByContent_freq(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.3)
+            weightFigureList = printByContent_freq(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.28)
 
         #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
         for wF in weightFigureList:
@@ -344,12 +346,6 @@ def findSimilarityByAvg(model, mailData, word):
 if __name__ == "__main__":
     
     keywordSet = set(splitKeyword())
-    # score_norm = 0.3#스코어 기준, 일단 0.5로 설정해둔다.
-    result = testfile_list_in_folder("test1")
-    for i in result:
-        print(i)
-    
-    # print(result)
 
     while True:
         menu = print_menu()
