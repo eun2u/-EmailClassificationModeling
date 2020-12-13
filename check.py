@@ -1,6 +1,6 @@
 from gensim.models import KeyedVectors
 
-loaded_model = KeyedVectors.load_word2vec_format("data")
+loaded_model = KeyedVectors.load_word2vec_format("training_data/vector_clean_data_final_ver2_iter1000")
 while(True):
     a=input("단어를 입력해주세요 : ")
     model_result=loaded_model.most_similar(a, topn=30)
