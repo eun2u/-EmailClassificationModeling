@@ -6,6 +6,7 @@ from konlpy.tag import *
 import re
 from gensim.models import KeyedVectors
 from datetime import datetime
+import pandas as pd
  
 def createFolder(directory):
     try:
@@ -107,6 +108,18 @@ def data_text_cleaning(data):
         if(i in noun_data):
             noun_data.remove(i)
     return noun_data
+def count_word(data):
+    wordCount = {} 
+    for word in data:
+        # Get 명령어를 통해, Dictionary에 Key가 없으면 0리턴
+        wordCount[word] = wordCount.get(word, 0) + 1   
+        keys = sorted(wordCount.keys())
+    count = sorted(wordCount.items(), 
+                              reverse=True, 
+                              key=lambda item: item[1])
+    count_key = [i[0] for i in count]
+    return count_key[:10]
+    
 
 def print_menu():
     print("1. 키워드 추가")
@@ -158,7 +171,41 @@ def del_keyword():
 
 def lookup_keyword():
     print(list(keywordSet))
+def printByContent_freq(option1, option2, option3, wordlist, model, foldername):
+    folderName_of_file = input("확인할 파일이 있는 폴더명을 입력해주세요 : ")
+    filelist = file_list_in_folder(folderName_of_file)
 
+    createFolder("./consequence/"+foldername)
+    for neighborKeywords in wordlist:
+        print("---------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
+        createFolder("./consequence/"+foldername+"/"+neighborKeywords[0][0])
+        f = open("./consequence/"+foldername+"/"+neighborKeywords[0][0]+".txt", "w")
+        f2 = open("./consequence/"+foldername+"/not_"+neighborKeywords[0][0]+".txt", "w")
+        rankList = []
+        for filename in filelist:
+            full_content , title = list_of_word_in_file(folderName_of_file, filename)
+            wordlist_of_full_content = data_text_cleaning(full_content)
+            weightFigure = 0
+            wordlist_of_full_content = count_word(wordlist_of_full_content)
+            print(wordlist_of_full_content)
+            mailList = word_list(option2, wordlist_of_full_content)
+            for keywordInfo in neighborKeywords:
+                word = keywordInfo[0]
+                frequency = keywordInfo[1]
+
+                if option1 == 1:
+                    weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
+                elif option1 == 2:
+                    weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+            print("{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure)
+            #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
+            if(weightFigure>=score_norm):
+                f.write(filename+" "+title+"\n")
+                write_file("./consequence/"+foldername+"/"+neighborKeywords[0][0], folderName_of_file, filename)
+            else:
+                f2.write(title+"\n")
+        f.close()
+        f2.close()
 def printByContent(option1, option2, option3, wordlist, model, foldername):
     folderName_of_file = input("확인할 파일이 있는 폴더명을 입력해주세요 : ")
     filelist = file_list_in_folder(folderName_of_file)
@@ -192,9 +239,6 @@ def printByContent(option1, option2, option3, wordlist, model, foldername):
                 f2.write(title+"\n")
         f.close()
         f2.close()
-        #sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
-        #for idx in range(30):
-            #print(sortedRankList[idx])  
 
 
 def classify_mail():
@@ -214,7 +258,8 @@ def classify_mail():
         printByTitle(option1, option3, wordlist, model)
     elif option3 == 3:
         printByContent(option1, option2, option3, wordlist, model, foldername)
-    # elif option3 == 4:
+    elif option3 == 4:
+        printByContent_freq(option1, option2, option3, wordlist, model, foldername)
         #함수호출
 
 def findSimilarityBySum(model, mailData, keyword):
