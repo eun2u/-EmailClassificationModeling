@@ -129,8 +129,8 @@ def print_menu():
     menu = input("메뉴 선택: ")
     return int(menu)
 
-def splitMailHead():
-    mailFile = open("./mail_data/input2.txt", "r")
+def splitMailHead(filename):
+    mailFile = open("./mail_data/"+filename, "r")
 
     readdata = []
     line = mailFile.readline()
@@ -141,8 +141,17 @@ def splitMailHead():
     # print(readdata)
     # print(len(readdata))
     mailFile.close()
-
-    return readdata
+    result = []
+    num = 0
+    for line in readdata:
+        num+=1
+        if(num%1000==0):
+            print(num)
+        if(line!="\n"):
+            data = data_text_cleaning(line)
+            if(len(data)!=1):
+                result.append([line, data])
+    return result
 
 
 def splitKeyword():
@@ -192,7 +201,7 @@ def printByContent_freq(option1, option2, option3, wordlist, model, foldername):
                 frequency = keywordInfo[1]
 
 
-def printByTitle(option1, option2, option3, neighborKeywords, model, score_norm):
+def printByTitle(result, option1, option2, option3, neighborKeywords, model, score_norm):
     weightFigureList = []
     rankList = []
     for rLine in result:
@@ -244,6 +253,10 @@ def printByContent(folderName_of_file, filelist, option1, option2, option3, neig
 
 
 def printResult(option1, option2, option3, wordlist, model, foldername):
+    if option3 == 1 or option3 == 2:
+        title_filename = input("파일 이름을 입력해주세요 : ")
+        result = splitMailHead(title_filename)
+        
     if option3 == 3 or option3 == 4:
         folderName_of_file = input("확인할 파일이 있는 폴더명을 입력해주세요 : ")
         filelist = file_list_in_folder(folderName_of_file)
@@ -259,9 +272,9 @@ def printResult(option1, option2, option3, wordlist, model, foldername):
                 score_norm = 0.3
             elif option2 == 2:
                 score_norm = 0.6
-            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, score_norm)
+            weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, score_norm)
         elif option3 == 2:
-            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, 0.5)
+            weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, 0.5)
         elif(option3 == 3):
             weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.3)
         #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
@@ -320,19 +333,10 @@ def findSimilarityByAvg(model, mailData, word):
     return avg
     
 if __name__ == "__main__":
-    readdata = splitMailHead()
+    
     keywordSet = set(splitKeyword())
     # score_norm = 0.3#스코어 기준, 일단 0.5로 설정해둔다.
-    result = []
-    num = 0
-    for line in readdata:
-        num+=1
-        if(num%1000==0):
-            print(num)
-        if(line!="\n"):
-            data = data_text_cleaning(line)
-            if(len(data)!=1):
-                result.append([line, data])
+    
     
     # print(result)
 
