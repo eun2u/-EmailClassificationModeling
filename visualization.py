@@ -62,20 +62,18 @@ def findNeighborWords(loaded_model, keyword):
 def word_list(option, listData):
     wordlist = []
 
-    if option == 1:
-        for keyword in listData:
-            newlist = []
-            newlist.append([keyword, 1])
-            wordlist.append(newlist)
-
-    elif option == 2:
+    if option == 2:
         loaded_model = KeyedVectors.load_word2vec_format("training_data/vector_clean_data_final_ver2_iter1000")
         for keyword in listData:
             newlist, flag = findNeighborWords(loaded_model, keyword)
             if flag:
                 newlist.insert(0, [keyword, 1])
                 wordlist.append(newlist)
-    
+    else:
+        for keyword in listData:
+            newlist = []
+            newlist.append([keyword, 1])
+            wordlist.append(newlist)
     return wordlist
 
 def make_sentence(data):
@@ -119,7 +117,7 @@ def print_menu():
     return int(menu)
 
 def splitMailHead():
-    mailFile = open("./mail_data/input.txt", "r")
+    mailFile = open("./mail_data/input2.txt", "r")
 
     readdata = []
     line = mailFile.readline()
@@ -159,39 +157,87 @@ def del_keyword():
 def lookup_keyword():
     print(list(keywordSet))
 
-def printByContent(option1, option2, option3, wordlist, model, foldername):
-    folderName_of_file = input("확인할 파일이 있는 폴더명을 입력해주세요 : ")
-    filelist = file_list_in_folder(folderName_of_file)
+def printByTitle(option1, option2, option3, neighborKeywords, model, score_norm):
+    weightFigureList = []
+    rankList = []
+    for rLine in result:
+        weightFigure = 0
+        mailList = word_list(option3, rLine[1])
+        for keywordInfo in neighborKeywords:
+            word = keywordInfo[0]
+            frequency = keywordInfo[1]
+
+            if option1 == 1:
+                weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
+            elif option1 == 2:
+                weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+        if weightFigure >= score_norm:
+            weightFigureList.append([weightFigure, rLine[0]])
+            # rankList.append(["{}과 {}사이의 유사도".format(rLine[0], neighborKeywords[0][0]), weightFigure])
+
+    sortedRankList = sorted(weightFigureList, key=lambda t: t[0], reverse=True)
+    for idx in range(len(sortedRankList)):
+        print("[{}]의 유사도: {}".format(sortedRankList[idx][1], sortedRankList[idx][0]))
+    
+    return weightFigureList
+
+
+def printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm):
+    weightFigureList = []
+    for filename in filelist:
+        full_content , title = list_of_word_in_file(folderName_of_file, filename)
+        wordlist_of_full_content = data_text_cleaning(full_content)
+        weightFigure = 0
+        mailList = word_list(option3, wordlist_of_full_content)
+        for keywordInfo in neighborKeywords:
+            word = keywordInfo[0]
+            frequency = keywordInfo[1]
+
+            if option1 == 1:
+                weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
+            elif option1 == 2:
+                weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+        # print("{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure)
+        if weightFigure >= score_norm:
+            weightFigureList.append([weightFigure, title, filename])
+    
+    sortedRankList = sorted(weightFigureList, key=lambda t: t[0], reverse=True)
+    for idx in range(len(sortedRankList)):
+        print("[{}]의 유사도: {}".format(sortedRankList[idx][1], sortedRankList[idx][0]))
+
+    return weightFigureList
+
+
+def printResult(option1, option2, option3, wordlist, model, foldername):
+    if option3 == 3 or option3 == 4:
+        folderName_of_file = input("확인할 파일이 있는 폴더명을 입력해주세요 : ")
+        filelist = file_list_in_folder(folderName_of_file)
 
     createFolder("./consequence/"+foldername)
     for neighborKeywords in wordlist:
         print("---------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
         createFolder("./consequence/"+foldername+"/"+neighborKeywords[0][0])
         f = open("./consequence/"+foldername+"/"+neighborKeywords[0][0]+".txt", "w")
-        f2 = open("./consequence/"+foldername+"/not_"+neighborKeywords[0][0]+".txt", "w")
-        rankList = []
-        for filename in filelist:
-            full_content , title = list_of_word_in_file(folderName_of_file, filename)
-            wordlist_of_full_content = data_text_cleaning(full_content)
-            weightFigure = 0
-            mailList = word_list(option2, wordlist_of_full_content)
-            for keywordInfo in neighborKeywords:
-                word = keywordInfo[0]
-                frequency = keywordInfo[1]
-
-                if option1 == 1:
-                    weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
-                elif option1 == 2:
-                    weightFigure += findSimilarityBySum(model, mailList, word) * frequency
-            print("{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure)
-            #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
-            if(weightFigure>=score_norm):
-                f.write(filename+" "+title+"\n")
-                write_file("./consequence/"+foldername+"/"+neighborKeywords[0][0], folderName_of_file, filename)
-            else:
-                f2.write(title+"\n")
+        # f2 = open("./consequence/"+foldername+"/not_"+neighborKeywords[0][0]+".txt", "w")
+        if option3 == 1:
+            if option2 == 1:
+                score_norm = 0.3
+            elif option2 == 2:
+                score_norm = 0.6
+            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, score_norm)
+        elif option3 == 2:
+            weightFigureList = printByTitle(option1, option2, option3, neighborKeywords, model, 0.5)
+        elif(option3 == 3):
+            weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.3)
+        #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
+        for wF in weightFigureList:
+            f.write(wF[1]+"\n")
+            if option3 >= 3:
+                write_file("./consequence/"+foldername+"/"+neighborKeywords[0][0], folderName_of_file, wF[2])
+        # else:
+        #     f2.write(wF[1]+"\n")
         f.close()
-        f2.close()
+        # f2.close()
         #sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
         #for idx in range(30):
             #print(sortedRankList[idx])  
@@ -208,12 +254,13 @@ def classify_mail():
     print(wordlist)
     # 함수 파라미터: option1, wordlist, model로 통일1
     foldername = folder_name(option1,option2, option3)
-    if option3 == 1:
-        printByTitle(option1, option3, wordlist, model)
-    elif option3 == 2:
-        printByTitle(option1, option3, wordlist, model)
-    elif option3 == 3:
-        printByContent(option1, option2, option3, wordlist, model, foldername)
+    printResult(option1, option2, option3, wordlist, model, foldername)
+    # if option3 == 1:
+    #     printByTitle(option1, option3, wordlist, model)
+    # elif option3 == 2:
+    #     printByTitle(option1, option3, wordlist, model)
+    # elif option3 == 3:
+    #     printByContent(option1, option2, option3, wordlist, model, foldername)
     # elif option3 == 4:
         #함수호출
 
@@ -242,35 +289,11 @@ def findSimilarityByAvg(model, mailData, word):
         avg = 0
 
     return avg
-
-def printByTitle(option1, option3, wordlist, model):
-    # print(wordlist)
-
-    for neighborKeywords in wordlist:
-        print("---------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
-        rankList = []
-        for rLine in result:
-            weightFigure = 0
-            mailList = word_list(option3, rLine[1])
-            for keywordInfo in neighborKeywords:
-                word = keywordInfo[0]
-                frequency = keywordInfo[1]
-
-                if option1 == 1:
-                    weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
-                elif option1 == 2:
-                    weightFigure += findSimilarityBySum(model, mailList, word) * frequency
-                
-            rankList.append(["{}과 {}사이의 유사도".format(rLine[0], neighborKeywords[0][0]), weightFigure])
-
-        sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
-        for idx in range(30):
-            print(sortedRankList[idx])
     
 if __name__ == "__main__":
     readdata = splitMailHead()
     keywordSet = set(splitKeyword())
-    score_norm = 0.3#스코어 기준, 일단 0.5로 설정해둔다.
+    # score_norm = 0.3#스코어 기준, 일단 0.5로 설정해둔다.
     result = []
     num = 0
     for line in readdata:
