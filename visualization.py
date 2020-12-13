@@ -337,6 +337,8 @@ def findSimilarityBySum(model, mailData, keyword):
                 similarity = model.wv.similarity(mWord, keyword)
                 if similarity >= 0.5:
                     similarity = 1
+                if similarity < 0:
+                    similarity = -1
                 sum += similarity * mFrequency
             except KeyError:
                 count += 1
