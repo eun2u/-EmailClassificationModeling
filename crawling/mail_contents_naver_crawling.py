@@ -19,6 +19,8 @@ def crawl_contents(num, title):
 
     print(title[6:])
     fileOut = open('/Users/han-eunju/Desktop/mailCrawl/naver_'+ myId+ '/'+str(cnts)+'.txt', 'w', encoding='utf-8')
+    #fileOut = open('/Users/han-eunju/Desktop/mailCrawl/naver_'+ myId+ '/'+ title[6:] +'.txt', 'w', encoding='utf-8')
+    
     print(title[6:]+'\n',file=fileOut)
     
     time.sleep(0.5)
@@ -109,6 +111,6 @@ driver.find_element_by_xpath('//*[@id="log.login"]').click()
 
 driver.get('https://mail.naver.com/')
 
-move_to_mailbox()
+#move_to_mailbox()
 get_maillist_and_click()
 prevent_close()
