@@ -41,7 +41,7 @@ def findNeighborWords(loaded_model, keyword):
     flag = True
     newlist = []
     try:
-        model_result=loaded_model.most_similar(keyword, topn=1)
+        model_result=loaded_model.most_similar(keyword, topn=4)
         newlist = [[i[0],round(i[1],4)] for i in model_result if i[1] >= 0.5]
     except:
         flag = False
