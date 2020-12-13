@@ -6,7 +6,6 @@ from konlpy.tag import *
 import re
 from gensim.models import KeyedVectors
 from datetime import datetime
-import os
  
 def createFolder(directory):
     try:
@@ -23,6 +22,8 @@ def file_list_in_folder(folderName):
     path_dir = "./mail_data/"+folderName
     file_list = os.listdir(path_dir)
     return file_list
+
+
 def list_of_word_in_file(folderName, fileName):
     f = open("./mail_data/"+folderName+"/"+fileName, 'r')
     full_data = ""
