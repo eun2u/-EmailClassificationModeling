@@ -23,7 +23,17 @@ def file_list_in_folder(folderName):
     path_dir = "./mail_data/"+folderName
     file_list = os.listdir(path_dir)
     return file_list
-
+def testfile_list_in_folder(folderName):
+    path_dir = "./test_data/"+folderName
+    dir_list = os.listdir(path_dir)
+    full_file_list = []
+    num=0
+    for dir1 in dir_list:
+        path_dir = "./test_data/"+folderName+"/"+dir1
+        file_list = os.listdir(path_dir)
+        full_file_list.append([{i : num} for i in file_list])
+        num+=1
+    return full_file_list
 
 def list_of_word_in_file(folderName, fileName):
     f = open("./mail_data/"+folderName+"/"+fileName, 'r')
@@ -178,28 +188,6 @@ def del_keyword():
 
 def lookup_keyword():
     print(list(keywordSet))
-def printByContent_freq(option1, option2, option3, wordlist, model, foldername):
-    folderName_of_file = input("확인할 파일이 있는 폴더명을 입력해주세요 : ")
-    filelist = file_list_in_folder(folderName_of_file)
-
-    createFolder("./consequence/"+foldername)
-    for neighborKeywords in wordlist:
-        print("---------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
-        createFolder("./consequence/"+foldername+"/"+neighborKeywords[0][0])
-        f = open("./consequence/"+foldername+"/"+neighborKeywords[0][0]+".txt", "w")
-        f2 = open("./consequence/"+foldername+"/not_"+neighborKeywords[0][0]+".txt", "w")
-        rankList = []
-        for filename in filelist:
-            full_content , title = list_of_word_in_file(folderName_of_file, filename)
-            wordlist_of_full_content = data_text_cleaning(full_content)
-            weightFigure = 0
-            wordlist_of_full_content = count_word(wordlist_of_full_content)
-            print(wordlist_of_full_content)
-            mailList = word_list(option2, wordlist_of_full_content)
-            for keywordInfo in neighborKeywords:
-                word = keywordInfo[0]
-                frequency = keywordInfo[1]
-
 
 def printByTitle(result, option1, option2, option3, neighborKeywords, model, score_norm):
     weightFigureList = []
@@ -250,7 +238,31 @@ def printByContent(folderName_of_file, filelist, option1, option2, option3, neig
         print("[{}]의 유사도: {}".format(sortedRankList[idx][1], sortedRankList[idx][0]))
 
     return weightFigureList
+def printByContent_freq(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm):
+    weightFigureList = []
+    for filename in filelist:
+        full_content , title = list_of_word_in_file(folderName_of_file, filename)
+        wordlist_of_full_content = data_text_cleaning(full_content)
+        wordlist_of_full_content = count_word(wordlist_of_full_content)
+        weightFigure = 0
+        mailList = word_list(option3, wordlist_of_full_content)
+        for keywordInfo in neighborKeywords:
+            word = keywordInfo[0]
+            frequency = keywordInfo[1]
 
+            if option1 == 1:
+                weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
+            elif option1 == 2:
+                weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+        # print("{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure)
+        if weightFigure >= score_norm:
+            weightFigureList.append([weightFigure, title, filename])
+    
+    sortedRankList = sorted(weightFigureList, key=lambda t: t[0], reverse=True)
+    for idx in range(len(sortedRankList)):
+        print("[{}]의 유사도: {}".format(sortedRankList[idx][1], sortedRankList[idx][0]))
+
+    return weightFigureList
 
 def printResult(option1, option2, option3, wordlist, model, foldername):
     if option3 == 1 or option3 == 2:
@@ -277,18 +289,15 @@ def printResult(option1, option2, option3, wordlist, model, foldername):
             weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, 0.5)
         elif(option3 == 3):
             weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.3)
+        elif(option3 == 4):
+            weightFigureList = printByContent_freq(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, 0.3)
+
         #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
         for wF in weightFigureList:
             f.write(wF[1]+"\n")
             if option3 >= 3:
                 write_file("./consequence/"+foldername+"/"+neighborKeywords[0][0], folderName_of_file, wF[2])
-        # else:
-        #     f2.write(wF[1]+"\n")
         f.close()
-        # f2.close()
-        #sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
-        #for idx in range(30):
-            #print(sortedRankList[idx])  
 
 
 
@@ -336,7 +345,9 @@ if __name__ == "__main__":
     
     keywordSet = set(splitKeyword())
     # score_norm = 0.3#스코어 기준, 일단 0.5로 설정해둔다.
-    
+    result = testfile_list_in_folder("test1")
+    for i in result:
+        print(i)
     
     # print(result)
 
