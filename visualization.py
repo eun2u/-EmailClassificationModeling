@@ -1,10 +1,24 @@
 import os
+import shutil
 import warnings
 import konlpy
 from konlpy.tag import *
 import re
 from gensim.models import KeyedVectors
 from datetime import datetime
+import os
+ 
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
+def write_file(to_folder, from_folder, file):
+    src = "./mail_data/"+from_folder+"/"+file
+    dsc = to_folder+"/"
+    shutil.copy(src,dsc)
+
 def file_list_in_folder(folderName):
     path_dir = "./mail_data/"+folderName
     file_list = os.listdir(path_dir)
@@ -144,6 +158,43 @@ def del_keyword():
 def lookup_keyword():
     print(list(keywordSet))
 
+def printByContent(option1, option2, option3, wordlist, model, foldername):
+    folderName_of_file = input("확인할 파일이 있는 폴더명을 입력해주세요 : ")
+    filelist = file_list_in_folder(folderName_of_file)
+
+    createFolder("./consequence/"+foldername)
+    for neighborKeywords in wordlist:
+        print("---------- {} 키워드 정보 ----------".format(neighborKeywords[0][0]))
+        createFolder("./consequence/"+foldername+"/"+neighborKeywords[0][0])
+        f = open("./consequence/"+foldername+"/"+neighborKeywords[0][0]+".txt", "w")
+        f2 = open("./consequence/"+foldername+"/not_"+neighborKeywords[0][0]+".txt", "w")
+        rankList = []
+        for filename in filelist:
+            full_content , title = list_of_word_in_file(folderName_of_file, filename)
+            wordlist_of_full_content = data_text_cleaning(full_content)
+            weightFigure = 0
+            mailList = word_list(option2, wordlist_of_full_content)
+            for keywordInfo in neighborKeywords:
+                word = keywordInfo[0]
+                frequency = keywordInfo[1]
+
+                if option1 == 1:
+                    weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
+                elif option1 == 2:
+                    weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+            print("{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure)
+            #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
+            if(weightFigure>=score_norm):
+                f.write(filename+" "+title+"\n")
+                write_file("./consequence/"+foldername+"/"+neighborKeywords[0][0], folderName_of_file, filename)
+            else:
+                f2.write(title+"\n")
+        f.close()
+        f2.close()
+        #sortedRankList = sorted(rankList, key=lambda t: t[1], reverse=True)
+        #for idx in range(30):
+            #print(sortedRankList[idx])  
+
 
 def classify_mail():
     option1 = int(input("[option1] 1. avg, 2. sum : "))
@@ -155,17 +206,13 @@ def classify_mail():
     wordlist = word_list(option2, list(keywordSet))
     print(wordlist)
     # 함수 파라미터: option1, wordlist, model로 통일1
-
+    foldername = folder_name(option1,option2, option3)
     if option3 == 1:
         printByTitle(option1, option3, wordlist, model)
     elif option3 == 2:
         printByTitle(option1, option3, wordlist, model)
     elif option3 == 3:
-        folderName = input("폴더명을 입력해주세요 : ")
-        filelist = file_list_in_folder(folderName)
-        print(filelist)
-        full_content , title = list_of_word_in_file(folderName, "1.txt")
-        print(data_text_cleaning(full_content))
+        printByContent(option1, option2, option3, wordlist, model, foldername)
     # elif option3 == 4:
         #함수호출
 
@@ -180,17 +227,9 @@ def findSimilarityBySum(model, mailData, keyword):
 
             try:
                 sum += model.wv.similarity(mWord, keyword) * mFrequency
-                # print(model.wv.similarity(rWord, word))
             except KeyError:
                 count += 1
                 continue
-    # for rWord in rLine:
-    #     try:
-    #         sum += model.wv.similarity(rWord, keyword)
-    #         # print(model.wv.similarity(rWord, word))
-    #     except KeyError:
-    #         # print("no similarity")
-    #         continue
 
     return sum, count
 
@@ -230,7 +269,7 @@ def printByTitle(option1, option3, wordlist, model):
 if __name__ == "__main__":
     readdata = splitMailHead()
     keywordSet = set(splitKeyword())
-
+    score_norm = 0.3#스코어 기준, 일단 0.5로 설정해둔다.
     result = []
     num = 0
     for line in readdata:
