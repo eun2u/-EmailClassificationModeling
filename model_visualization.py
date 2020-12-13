@@ -2,13 +2,14 @@
 from sklearn.manifold import TSNE 
 from sklearn.decomposition import PCA 
 import matplotlib as mpl
+from matplotlib import rc
 import matplotlib.pyplot as plt 
 import pandas as pd 
 from gensim.models import KeyedVectors 
 # 그래프에서 마이너스 폰트 깨지는 문제에 대한 대처 
-#mpl.rc('font', family='AppleGothic') # 한글출력
+mpl.rc('font', family='AppleGothic') # 한글출력
 mpl.rcParams['axes.unicode_minus'] = False 
-plt.rc('font', family='D2Coding') 
+#plt.rc('font', family='D2Coding') 
 
 def show_tsne(): 
     tsne = TSNE(n_components=2) 
@@ -48,7 +49,7 @@ vocab = list(model.wv.vocab)
 X = model[vocab] 
 
 # sz개의 단어에 대해서만 시각화 
-sz = 800 
+sz = 1500 
 X_show = X[:sz,:] 
 vocab_show = vocab[:sz] 
 
