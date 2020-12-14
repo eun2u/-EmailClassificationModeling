@@ -296,7 +296,7 @@ def printResult(option1, option2, option3, wordlist, model, foldername):
             if option2 == 1:
                 score_norm = 0.3
             elif option2 == 2:
-                score_norm = 1.2
+                score_norm = 1.0
             weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
         elif(option3 == 4):
             weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
