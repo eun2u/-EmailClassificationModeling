@@ -203,7 +203,7 @@ def printByTitle(result, option1, option2, option3, neighborKeywords, model, sco
             if option1 == 1:
                 weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
             elif option1 == 2:
-                weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+                weightFigure += findSimilarityBySum(model, mailList, word, 0) * frequency
         if weightFigure >= score_norm:
             weightFigureList.append([weightFigure, rLine[0]])
             # rankList.append(["{}과 {}사이의 유사도".format(rLine[0], neighborKeywords[0][0]), weightFigure])
@@ -220,6 +220,7 @@ def printByContent(folderName_of_file, filelist, option1, option2, option3, neig
     for filename in filelist:
         full_content , title = list_of_word_in_file(folderName_of_file, filename)
         wordlist_of_full_content = data_text_cleaning(full_content)
+        
         weightFigure = 0
         mailList = word_list(option3, wordlist_of_full_content)
         for keywordInfo in neighborKeywords:
@@ -229,7 +230,7 @@ def printByContent(folderName_of_file, filelist, option1, option2, option3, neig
             if option1 == 1:
                 weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
             elif option1 == 2:
-                weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+                weightFigure += findSimilarityBySum(model, mailList, word, 0) * frequency
         # print("{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure)
         if weightFigure >= score_norm:
             weightFigureList.append([weightFigure, title, filename])
@@ -254,7 +255,7 @@ def printByContent_freq(folderName_of_file, filelist, option1, option2, option3,
             if option1 == 1:
                 weightFigure += findSimilarityByAvg(model, mailList, word) * frequency
             elif option1 == 2:
-                weightFigure += findSimilarityBySum(model, mailList, word) * frequency
+                weightFigure += findSimilarityBySum(model, mailList, word, 0) * frequency
         # print("{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure)
         if weightFigure >= score_norm:
             weightFigureList.append([weightFigure, title, filename])
@@ -294,17 +295,18 @@ def printResult(option1, option2, option3, wordlist, model, foldername):
             weightFigureList = printByTitle(result, option1, option2, option3, neighborKeywords, model, score_norm)
         elif(option3 == 3):
             if option2 == 1:
-                score_norm = 0.3
+                # score_norm = float(input("score_num 입력 : "))
+                score_norm = 0.27
             elif option2 == 2:
                 score_norm = 1.0
             weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
         elif(option3 == 4):
-            weightFigureList = printByContent(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
+            weightFigureList = printByContent_freq(folderName_of_file, filelist, option1, option2, option3, neighborKeywords, model, score_norm)
 
         #rankList.append(["{}과 {}사이의 유사도".format(title, neighborKeywords[0][0]), weightFigure])
         for wF in weightFigureList:
             f.write(wF[1]+"\n")
-            if option3 >= 3:
+            if option3 >= 0.26:
                 write_file("./consequence/"+foldername+"/"+neighborKeywords[0][0], folderName_of_file, wF[2])
         f.close()
 
@@ -324,7 +326,7 @@ def classify_mail():
     printResult(option1, option2, option3, wordlist, model, foldername)
 
 
-def findSimilarityBySum(model, mailData, keyword):
+def findSimilarityBySum(model, mailData, keyword, idx):
     sum = 0
     count = 0
 
@@ -335,19 +337,21 @@ def findSimilarityBySum(model, mailData, keyword):
 
             try:
                 similarity = model.wv.similarity(mWord, keyword)
-                if similarity >= 0.5:
-                    similarity = 1
-                if similarity < 0:
-                    similarity = -1
+                # if similarity >= 0.5:
+                #     similarity = 1
+                # if similarity < 0:
+                #     similarity = -1
                 sum += similarity * mFrequency
             except KeyError:
                 count += 1
                 continue
-
-    return sum, count
+    if idx == 1:
+        return sum, count
+    else:
+        return sum
 
 def findSimilarityByAvg(model, mailData, word):
-    sum, count = findSimilarityBySum(model, mailData, word)
+    sum, count = findSimilarityBySum(model, mailData, word, 1)
     try:
         avg = sum / (len(mailData) - count)
     except ZeroDivisionError:
