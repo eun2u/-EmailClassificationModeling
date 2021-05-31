@@ -1,5 +1,0 @@
-쪽 또는 페이지(page)는 종이의 한 단면을 가리킨다. 문서나 기록의 양을 측정하는 데 사용할 수 있다. (예: 이 논제는 12쪽으로 이루어져 있다.)
-
-외부 링크
-http://www.loc.gov/marc/bibliographic/ecbdhome.html
-https://web.archive.org/web/20080706011950/http://www.ifla.org/VI/3/p1996-1/sect.htm
