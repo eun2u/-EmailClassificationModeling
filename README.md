@@ -32,3 +32,40 @@
 
  이처럼 자동 분류 이메일 시스템을 사용하면, 수많은 이메일을 수신하더라도 사용자가 분류하고자 하는 카테고리만 지정해 놓는다면 그 카테고리에 맞는 이메일을 자동으로 분류할 수 있다. 
  더 나아가, 이를 방대한 문서에서 필요한 자료를 추출하는 어떠한 시스템에라도 적용한다면 효율성과 편리성을 극대화할 수 있을 것으로 예상된다.
+
+
+ ### 4. 사용 방법
+ 
+1. mail_data 폴더 안에 분류하기 원하는 메일 데이터를 넣는다.
+  + 파일 형식 : txt
+  + 파일 명 : 메일 제목
+  + 파일 내용 : 메일 본문
+2. visualization.py을 실행한다.
+
+ 
+### 5. 파일 설명
++ visualization.py : 데이터 분류 시스템
+  + 사용자가 선택한 옵션으로 이메일을 분류한다.
++ training.py : 워드 임베딩 학습
++ /crawling : 데이터를 네이버 뉴스, 위키피디아, 네이버 메일, 다음 메일로부터 가져오는 파일
+  + wiki_crawler.py : 위키 피디아 데이터 크롤러
+  + daumNews.py : 다음 뉴스 데이터 크롤러
+  + naverCrawler.py : 네이버 뉴스 데이터 크롤러
+  + mail_contents_naver_crawling.py : 네이버 메일 본문 내용 크롤러
+  + mail_title_naver_crawling.py : 네이버 메일 제목 크롤러
+  + mail_title_daum_crawling.py : 다음 메일 제목 크롤러
++ /consequence : 분류된 결과가 저장되는 폴더
+  + 분류된 시간으로된 폴더 명에 사용자가 등록해둔 키워드 폴더가 저장된다. 각 폴더 내에 분류된 이메일 파일이 저장된다.
++ /data_preprocessing : 데이터 전처리 코드가 저장된 폴더
+  + data_preprocessing_news.py : 뉴스 데이터가 문장형식으로 제대로 크롤링 되지 않은 경우가 있어 이 부분을 수정한 코드
+  + data_preprocessing.py : 데이터에 불용어를 제거하고, 명사만 남도록 전처리
+  + data_preprocessing_multi.py : data_preprocessing.py를 멀티 프로세싱을 하여 더 빠르게 할 수 있도록 개선한 전처리 코드
++ /preprocessing_phase(n) : 데이터를 합치고, 전처리하는 단계를 총 4단계로 나눠서 했는데 이 단계별 데이터를 저장한 폴더
++ /preprocessing_final : 전처리 완료된 데이터를 저장한 폴더
+
+
+ ### 6. 개선사항
+
+ 1. 데이터 전처리 멀티 프로세싱으로 수정 완료(/data_preprocessing/data_preprocessing.py -> /data_preprocessing/data_preprocessing_multi.py)
+
+ 

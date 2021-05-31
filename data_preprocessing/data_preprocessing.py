@@ -2,6 +2,7 @@ import warnings
 import konlpy
 from konlpy.tag import *
 import re
+import time
 def make_sentence(data):
     sentence = ""
     for i in data:
@@ -44,10 +45,11 @@ print(len(readdata))
 f.close()
 result = []
 num = 0
+start = time.time()
 for line in readdata:
     num+=1
-    if(num%1000==0):
-        print(num)
+    # if(num%1000==0):
+    #     print(num)
     if(line!="\n"):
         data = data_text_cleaning(line)
         if(len(data)!=1):
@@ -64,3 +66,4 @@ for i in result:
         print(num)
     f.write("\n")
 f.close()
+print("time :", time.time() - start)  # 현재시각 - 시작시간 = 실행 시간
