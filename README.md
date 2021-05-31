@@ -66,6 +66,7 @@
 
  ### 6. 개선사항
 
- 1. 데이터 전처리 멀티 프로세싱으로 수정 완료(/data_preprocessing/data_preprocessing.py -> /data_preprocessing/data_preprocessing_multi.py)
+ 1. 데이터 전처리 멀티 프로세싱으로 수정 완료
+  (/data_preprocessing/data_preprocessing.py -> /data_preprocessing/data_preprocessing_multi.py)
 
  
