@@ -66,7 +66,10 @@
 
  ### 6. 개선사항
 
- 1. 데이터 전처리 멀티 프로세싱으로 수정 완료
+1. 데이터 전처리 멀티 프로세싱으로 수정 완료
   (/data_preprocessing/data_preprocessing.py -> /data_preprocessing/data_preprocessing_multi.py)
+  + 1개의 프로세스로 하던 것을 8개의 프로세스를 사용해 약 3배의 시간을 줄일 수 있었다.
+2. 데이터 크롤링 멀티 프로세싱으로 수정 완료
+  (/crawling/wiki_crawler.py -> /crawling/wiki_crawler_multi.py)
 
  
